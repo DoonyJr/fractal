@@ -1,6 +1,5 @@
 # Override file for local frontend builds.
 # Usage:
-#   git clone <Fractal-Vue> ./Fractal-Vue
 #   docker compose -f docker-compose.yml -f docker-compose.build.yml up --build
 #
 # Without this override, the main compose file only pulls the prebuilt
@@ -11,14 +10,7 @@
 
 services:
   frontend:
-    # Disable the `pull_policy: always` inherited from docker-compose.yml.
-    # Without this, a plain `docker compose up` (or `pull frontend`) would
-    # silently overwrite the locally-built image with the GHCR `:latest`,
-    # discarding the user's local Vue edits.
     pull_policy: build
     build:
-      context: ${FRONTEND_SRC_PATH:-./Fractal-Vue}
-      dockerfile: Dockerfile
-      args:
-        APP_VERSION: ${APP_VERSION:-}
-        GIT_TAG: ${GIT_TAG:-${FRONTEND_TAG:-${IMAGE_TAG:-}}}
+      context: .
+      dockerfile: frontend.Dockerfile

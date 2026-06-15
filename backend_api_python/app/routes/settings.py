@@ -18,8 +18,15 @@ logger = get_logger(__name__)
 
 settings_blp = Blueprint('settings', __name__)
 
-# .env 文件路径
-ENV_FILE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), '.env')
+# .env 文件路径 — resolve from __file__ to backend root, with fallback to CWD
+_BACKEND_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ENV_FILE_PATH = os.path.join(_BACKEND_ROOT, '.env')
+# If resolved path doesn't exist but CWD has .env, prefer CWD (handles symlinks/renames)
+if not os.path.exists(ENV_FILE_PATH):
+    _cwd_env = os.path.join(os.getcwd(), '.env')
+    if os.path.exists(_cwd_env):
+        ENV_FILE_PATH = _cwd_env
+        _BACKEND_ROOT = os.getcwd()
 
 
 def _reload_runtime_env() -> None:
@@ -532,6 +539,7 @@ CONFIG_SCHEMA = {
                 'label': 'Custom API URL',
                 'type': 'text',
                 'default': '',
+                'required': False,
                 'description': 'Your custom API endpoint (OpenAI-compatible, e.g. https://api.example.com/v1)',
                 'group': 'custom'
             },
@@ -548,7 +556,8 @@ CONFIG_SCHEMA = {
                 'label': 'Custom Model',
                 'type': 'text',
                 'default': '',
-                'description': 'Model name to use (e.g. gpt-4o, claude-3-opus)',
+                'required': False,
+                'description': 'Model name to use (e.g. gpt-4o, claude-3-opus, org/model-name)',
                 'group': 'custom'
             },
             # MiniMax
