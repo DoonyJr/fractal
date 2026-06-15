@@ -1,10 +1,10 @@
 FROM nginx:alpine
 
-ARG BACKEND_URL=http://backend:5000
+ENV BACKEND_URL=http://backend:5000
 
 RUN rm -rf /usr/share/nginx/html/*
 
-COPY Fractal-Vue/dist/ /usr/share/nginx/html/
+COPY frontend-dist/ /usr/share/nginx/html/
 
 RUN printf 'server {\n\
     listen 80;\n\

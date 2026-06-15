@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="./slogo.png">
+    <title>Hades</title>
+    <style>
+      .first-loading-wrp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 420px;
+        height: 100vh;
+        background: #0a0a0f;
+        position: relative;
+        overflow: hidden;
+      }
+      .first-loading-wrp > h2 { font-size: 32px; margin-bottom: 40px; color: #ffffff; font-weight: 600; }
+      .first-loading-wrp .loading-wrp { padding: 40px; display: flex; justify-content: center; align-items: center; flex-direction: column; position: relative; width: 100%; max-width: 600px; }
+      .pixel-cat-container { position: relative; width: 100%; height: 120px; margin: 0 auto 30px; overflow: hidden; }
+      .pixel-cat { position: absolute; left: 0; bottom: 24px; width: 32px; height: 32px; animation: catRun 0.4s steps(2) infinite, catMove 3.5s linear infinite; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; }
+      .pixel-cat * { image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; }
+      .cat-head { position: absolute; left: 2px; top: 0; width: 16px; height: 14px; background: linear-gradient(#fff, #fff) 2px 4px / 12px 10px no-repeat, linear-gradient(#000, #000) 2px 4px / 6px 10px no-repeat, linear-gradient(#fff, #fff) 4px 2px / 8px 2px no-repeat; animation: headBob 0.4s steps(2) infinite; }
+      .cat-ear-left { position: absolute; left: 0px; top: -2px; width: 4px; height: 6px; background: linear-gradient(#000, #000) 0px 4px / 4px 2px no-repeat, linear-gradient(#000, #000) 1px 2px / 2px 2px no-repeat, linear-gradient(#000, #000) 1px 0px / 2px 2px no-repeat; }
+      .cat-ear-right { position: absolute; right: 0px; top: -2px; width: 4px; height: 6px; background: linear-gradient(#fff, #fff) 0px 4px / 4px 2px no-repeat, linear-gradient(#fff, #fff) 1px 2px / 2px 2px no-repeat, linear-gradient(#fff, #fff) 1px 0px / 2px 2px no-repeat; box-shadow: inset 0 0 0 1px #000; }
+      .cat-eye-left { position: absolute; left: 4px; top: 6px; width: 4px; height: 4px; background: #fff; }
+      .cat-eye-left::after { content: ''; position: absolute; left: 2px; top: 1px; width: 2px; height: 2px; background: #000; }
+      .cat-eye-right { position: absolute; right: 2px; top: 6px; width: 4px; height: 4px; background: #fff; border: 1px solid #000; box-sizing: border-box; }
+      .cat-eye-right::after { content: ''; position: absolute; left: 1px; top: 0px; width: 2px; height: 2px; background: #000; }
+      .cat-nose { position: absolute; left: 7px; top: 10px; width: 2px; height: 2px; background: #000; }
+      .cat-whiskers { position: absolute; left: 0; top: 10px; width: 16px; height: 4px; }
+      .cat-whiskers::before { content: ''; position: absolute; left: -4px; top: 0; width: 4px; height: 1px; background: #000; box-shadow: 0 2px 0 #000; }
+      .cat-whiskers::after { content: ''; position: absolute; right: -4px; top: 0; width: 4px; height: 1px; background: #000; box-shadow: 0 2px 0 #000; }
+      .cat-body { position: absolute; left: 4px; top: 14px; width: 14px; height: 10px; background: linear-gradient(#fff, #fff) 6px 0 / 8px 10px no-repeat, linear-gradient(#000, #000) 0 0 / 8px 10px no-repeat; border: 1px solid #000; box-sizing: border-box; }
+      .cat-leg-front-left { position: absolute; left: 6px; top: 22px; width: 3px; height: 8px; background: #000; animation: legFront 0.2s steps(2) infinite; }
+      .cat-leg-front-right { position: absolute; left: 12px; top: 22px; width: 3px; height: 8px; background: #fff; border: 1px solid #000; box-sizing: border-box; animation: legFront 0.2s steps(2) infinite 0.1s; }
+      .cat-leg-back-left { position: absolute; left: 3px; top: 22px; width: 3px; height: 8px; background: #fff; border: 1px solid #000; box-sizing: border-box; animation: legBack 0.2s steps(2) infinite 0.1s; }
+      .cat-leg-back-right { position: absolute; left: 15px; top: 22px; width: 3px; height: 8px; background: #000; animation: legBack 0.2s steps(2) infinite; }
+      .cat-tail { position: absolute; right: -10px; top: 10px; width: 12px; height: 10px; background: linear-gradient(#000, #000) 0 6px / 3px 3px no-repeat, linear-gradient(#000, #000) 3px 4px / 3px 3px no-repeat, linear-gradient(#000, #000) 6px 2px / 3px 3px no-repeat, linear-gradient(#000, #000) 9px 0 / 3px 3px no-repeat; animation: tailWag 0.3s steps(2) infinite alternate; transform-origin: left bottom; }
+      @keyframes catRun { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+      @keyframes catMove { 0% { left: -40px; } 100% { left: calc(100% + 40px); } }
+      @keyframes legFront { 0%, 100% { transform: rotate(-15deg); } 50% { transform: rotate(15deg); } }
+      @keyframes legBack { 0%, 100% { transform: rotate(15deg); } 50% { transform: rotate(-15deg); } }
+      @keyframes tailWag { 0% { transform: rotate(-10deg); } 100% { transform: rotate(10deg); } }
+      @keyframes headBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1px); } }
+      .ground { position: absolute; bottom: 0; left: 0; right: 0; height: 12px; background: repeating-linear-gradient(90deg, #222 0px, #222 6px, #555 6px, #555 12px); animation: groundMove 0.3s linear infinite; image-rendering: pixelated; }
+      @keyframes groundMove { 0% { background-position: 0 0; } 100% { background-position: 12px 0; } }
+      .brand-text { display: flex; justify-content: center; align-items: center; font-size: 24px; font-weight: 600; color: #333; margin-top: 20px; letter-spacing: 2px; }
+      @media (prefers-color-scheme: dark) {
+        .first-loading-wrp { background: #141414; }
+        .first-loading-wrp > h2 { color: #fff; }
+        .brand-text { color: #fff; }
+        .ground { background: repeating-linear-gradient(90deg, #555 0px, #555 6px, #333 6px, #333 12px); }
+        .cat-head { background: linear-gradient(#ddd, #ddd) 2px 4px / 12px 10px no-repeat, linear-gradient(#000, #000) 2px 4px / 6px 10px no-repeat, linear-gradient(#ddd, #ddd) 4px 2px / 8px 2px no-repeat; }
+        .cat-body { background: linear-gradient(#ddd, #ddd) 6px 0 / 8px 10px no-repeat, linear-gradient(#000, #000) 0 0 / 8px 10px no-repeat; }
+        .cat-leg-front-right, .cat-leg-back-left { background: #ddd; }
+        .cat-eye-left, .cat-eye-right { background: #ddd; }
+      }
+      .pixel-cat, .pixel-cat * { image-rendering: -moz-crisp-edges; image-rendering: -webkit-crisp-edges; image-rendering: pixelated; image-rendering: crisp-edges; }
+      @media (max-width: 768px) {
+        .pixel-cat-container { transform: scale(1.5); }
+        .first-loading-wrp > h2 { font-size: 24px; margin-bottom: 30px; }
+        .brand-text { font-size: 20px; }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-DefGSCi5.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/ant-design-vue-BJrhtBSN.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-DDFlFef9.css">
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but Fractal doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <div class="first-loading-wrp">
+        <h2>Landing</h2>
+        <div class="loading-wrp">
+          <div class="pixel-cat-container">
+            <div class="ground"></div>
+            <div class="pixel-cat">
+              <div class="cat-head">
+                <div class="cat-ear-left"></div>
+                <div class="cat-ear-right"></div>
+                <div class="cat-eye-left"></div>
+                <div class="cat-eye-right"></div>
+                <div class="cat-nose"></div>
+                <div class="cat-whiskers"></div>
+              </div>
+              <div class="cat-body"></div>
+              <div class="cat-leg-front-left"></div>
+              <div class="cat-leg-front-right"></div>
+              <div class="cat-leg-back-left"></div>
+              <div class="cat-leg-back-right"></div>
+              <div class="cat-tail"></div>
+            </div>
+          </div>
+        </div>
+        <div class="brand-text">Fractal</div>
+      </div>
+    </div>
+  </body>
+</html>
