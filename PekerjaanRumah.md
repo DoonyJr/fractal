@@ -1,7 +1,7 @@
 # PekerjaanRumah — Integrasi Liquidation Dashboard
 
 > Status per 2026-06-14. Catatan lanjutan untuk integrasi modul `liquidation/`
-> (AMT Liquidation Analysis System) ke QuantDinger sebagai menu web.
+> (AMT Liquidation Analysis System) ke Fractal sebagai menu web.
 
 ## Keputusan Arsitektur (sudah disepakati)
 
