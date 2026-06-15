@@ -499,6 +499,8 @@ class UserService:
         递增用户的 token 版本号，使旧的 token 失效。
         用于实现单一客户端登录（踢出其他设备）。
         
+        Uses UPDATE ... RETURNING for atomicity (single round-trip).
+        
         Args:
             user_id: 用户ID
         
@@ -508,23 +510,17 @@ class UserService:
         try:
             with get_db_connection() as db:
                 cur = db.cursor()
-                # 递增 token_version
                 cur.execute(
                     """
                     UPDATE qd_users 
                     SET token_version = COALESCE(token_version, 0) + 1, updated_at = NOW()
                     WHERE id = ?
+                    RETURNING token_version
                     """,
                     (user_id,)
                 )
-                db.commit()
-                
-                # 获取新的 token_version
-                cur.execute(
-                    "SELECT token_version FROM qd_users WHERE id = ?",
-                    (user_id,)
-                )
                 row = cur.fetchone()
+                db.commit()
                 cur.close()
                 
                 new_version = int(row.get('token_version') or 1) if row else 1

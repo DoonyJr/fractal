@@ -7,7 +7,7 @@
 .DS_Store
 
 # Optional local clone of the private Vue repo (never required)
-QuantDinger-Vue-src/
+Fractal-Vue-src/
 
 # Backend tree not needed for any root-context image
 backend_api_python

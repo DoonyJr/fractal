@@ -1,9 +1,9 @@
 <div align="center">
-  <a href="https://github.com/brokermr810/QuantDinger">
-    <img src="docs/screenshots/logo.jpg" alt="QuantDinger Logo" width="220" height="220">
+  <a href="https://github.com/brokermr810/Fractal">
+    <img src="docs/screenshots/logo.jpg" alt="Fractal Logo" width="220" height="220">
   </a>
 
-  <h1>QuantDinger</h1>
+  <h1>Fractal</h1>
   <h3>The open-source AI infrastructure layer for quant trading</h3>
   <p><strong>Turn trading ideas into Python strategies, backtests, paper trading, and live execution — all in one self-hosted stack.</strong></p>
   <p><em>AI research → Strategy code → Backtest → Paper/Live execution → Monitoring</em></p>
@@ -25,46 +25,46 @@
       <a href="docs/README_AR.md"><strong>العربية</strong></a>
     </p>
     <p style="margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px solid #eaeef2; line-height: 2;">
-      <a href="https://ai.quantdinger.com"><strong>SaaS</strong></a>
+      <a href="https://ai.fractal.com"><strong>SaaS</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
       <a href="docs/api/README.md"><strong>API Docs</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
       <a href="https://www.youtube.com/watch?v=tNAZ9uMiUUw"><strong>Video Demo</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
-      <a href="https://www.quantdinger.com"><strong>Website</strong></a>
+      <a href="https://www.fractal.com"><strong>Website</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
       <a href="https://aws.amazon.com/marketplace/pp/prodview-naanrb7d2mbc6"><strong>AWS Marketplace</strong></a>
     </p>
     <p style="margin: 0; line-height: 2;">
-      <a href="https://t.me/quantdinger"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
+      <a href="https://t.me/fractal"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
       &nbsp;
       <a href="https://discord.com/invite/tyx5B6TChr"><img src="https://img.shields.io/badge/Discord-Server-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
       &nbsp;
-      <a href="https://youtube.com/@quantdinger"><img src="https://img.shields.io/badge/YouTube-%40quantdinger-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
+      <a href="https://youtube.com/@fractal"><img src="https://img.shields.io/badge/YouTube-%40fractal-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
       &nbsp;
-      <a href="https://x.com/QuantDinger_EN"><img src="https://img.shields.io/badge/X-%40QuantDinger_EN-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
+      <a href="https://x.com/Fractal_EN"><img src="https://img.shields.io/badge/X-%40Fractal_EN-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
     </p>
   </div>
 
   <p style="margin-top: 1.45rem; margin-bottom: 10px;">
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&logo=apache" alt="License"></a>
-    <img src="https://img.shields.io/github/v/release/brokermr810/QuantDinger?style=flat-square&color=orange&label=Version" alt="Version">
+    <img src="https://img.shields.io/github/v/release/brokermr810/Fractal?style=flat-square&color=orange&label=Version" alt="Version">
     <img src="https://img.shields.io/badge/Python-3.10%2B%20%7C%20Docker%20image%203.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
     <img src="https://img.shields.io/badge/Docker-Compose%20Ready-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
     <img src="https://img.shields.io/badge/Frontend-Prebuilt-1f8b4c?style=flat-square" alt="Frontend">
     <img src="https://img.shields.io/badge/Agent%20Gateway-MCP%20Ready-6f42c1?style=flat-square" alt="Agent Gateway">
     <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
-    <img src="https://img.shields.io/github/stars/brokermr810/QuantDinger?style=flat-square&logo=github" alt="Stars">
-    <img src="https://img.shields.io/github/forks/brokermr810/QuantDinger?style=flat-square&logo=github&label=Forks" alt="Forks">
+    <img src="https://img.shields.io/github/stars/brokermr810/Fractal?style=flat-square&logo=github" alt="Stars">
+    <img src="https://img.shields.io/github/forks/brokermr810/Fractal?style=flat-square&logo=github&label=Forks" alt="Forks">
   </p>
   <p style="margin: 10px 0 12px;">
-    <a href="https://aws.amazon.com/marketplace/pp/prodview-naanrb7d2mbc6"><img src="https://img.shields.io/badge/AWS%20Marketplace-AMI%20%7C%20CentOS%209-232F3E?style=flat-square&logo=amazonaws&logoColor=white" alt="QuantDinger on AWS Marketplace (ThinkCloud AMI)"></a>
+    <a href="https://aws.amazon.com/marketplace/pp/prodview-naanrb7d2mbc6"><img src="https://img.shields.io/badge/AWS%20Marketplace-AMI%20%7C%20CentOS%209-232F3E?style=flat-square&logo=amazonaws&logoColor=white" alt="Fractal on AWS Marketplace (ThinkCloud AMI)"></a>
   </p>
   <p style="margin: 12px 0 10px;">
-    <a href="https://oosmetrics.com/repo/brokermr810/QuantDinger"><img src="https://api.oosmetrics.com/api/v1/badge/achievement/4991ab54-52d2-46d4-a03a-67b47b61ae4b.svg" alt="oosmetrics — Top 7 in Training by acceleration (2026-04-25)"></a>
+    <a href="https://oosmetrics.com/repo/brokermr810/Fractal"><img src="https://api.oosmetrics.com/api/v1/badge/achievement/4991ab54-52d2-46d4-a03a-67b47b61ae4b.svg" alt="oosmetrics — Top 7 in Training by acceleration (2026-04-25)"></a>
   </p>
   <p style="margin-top: 14px;">
-    <a href="https://www.producthunt.com/products/quantdinger/launches/quantdinger?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-quantdinger" target="_blank" rel="noopener noreferrer"><img alt="QuantDinger - A local-first, open-source AI quant trading workspace | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1057439&amp;theme=light&amp;t=1777556016131"></a>
+    <a href="https://www.producthunt.com/products/fractal/launches/fractal?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-fractal" target="_blank" rel="noopener noreferrer"><img alt="Fractal - A local-first, open-source AI quant trading workspace | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1057439&amp;theme=light&amp;t=1777556016131"></a>
   </p>
 </div>
 
@@ -72,7 +72,7 @@
 
 ## Contents
 
-[Try in 2 minutes](#try-in-2-minutes) · [Why QuantDinger](#why-quantdinger) · [Safety model](#safety-model) · [Technical highlights](#technical-highlights) · [Repositories](#related-repositories) · [AI agents & MCP](#use-it-from-an-ai-agent-cursor--claude-code--codex--mcp) · [Overview](#product-overview) · [Features](#features-at-a-glance) · [Visual tour](#visual-tour) · [Architecture](#architecture) · [Install](#installation--first-time-setup-docker-compose) · [Docs](#documentation) · [FAQ](#faq) · [License](#license-and-commercial-terms)
+[Try in 2 minutes](#try-in-2-minutes) · [Why Fractal](#why-fractal) · [Safety model](#safety-model) · [Technical highlights](#technical-highlights) · [Repositories](#related-repositories) · [AI agents & MCP](#use-it-from-an-ai-agent-cursor--claude-code--codex--mcp) · [Overview](#product-overview) · [Features](#features-at-a-glance) · [Visual tour](#visual-tour) · [Architecture](#architecture) · [Install](#installation--first-time-setup-docker-compose) · [Docs](#documentation) · [FAQ](#faq) · [License](#license-and-commercial-terms)
 
 ---
 
@@ -83,21 +83,21 @@
 **Prerequisites:** [Docker](https://docs.docker.com/get-docker/) with Compose v2 (Docker Desktop on Windows/macOS). **Node.js is not required.**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/brokermr810/QuantDinger/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/brokermr810/Fractal/main/install.sh | bash
 ```
 
-Installs to `~/quantdinger` by default (override: `… | bash -s -- /opt/quantdinger`). Re-run the same command to pull latest images and restart.
+Installs to `~/fractal` by default (override: `… | bash -s -- /opt/fractal`). Re-run the same command to pull latest images and restart.
 
-Then open **`http://localhost:8888`**, sign in with **`quantdinger` / `123456`**, and **change the default admin password**.
+Then open **`http://localhost:8888`**, sign in with **`fractal` / `123456`**, and **change the default admin password**.
 
 <details>
 <summary><b>Windows, manual clone, or mirror troubleshooting</b></summary>
 
-**Windows (PowerShell)** — folder name after clone is **`QuantDinger`**:
+**Windows (PowerShell)** — folder name after clone is **`Fractal`**:
 
 ```powershell
-git clone https://github.com/brokermr810/QuantDinger.git
-Set-Location QuantDinger
+git clone https://github.com/brokermr810/Fractal.git
+Set-Location Fractal
 Copy-Item backend_api_python\env.example -Destination backend_api_python\.env
 $key = & python -c "import secrets; print(secrets.token_hex(32))" 2>$null
 if (-not $key) { $key = & py -c "import secrets; print(secrets.token_hex(32))" 2>$null }
@@ -109,7 +109,7 @@ docker compose up -d
 **Standard clone (macOS / Linux):**
 
 ```bash
-git clone https://github.com/brokermr810/QuantDinger.git && cd QuantDinger && cp backend_api_python/env.example backend_api_python/.env && chmod +x scripts/generate-secret-key.sh && ./scripts/generate-secret-key.sh && docker compose pull && docker compose up -d
+git clone https://github.com/brokermr810/Fractal.git && cd Fractal && cp backend_api_python/env.example backend_api_python/.env && chmod +x scripts/generate-secret-key.sh && ./scripts/generate-secret-key.sh && docker compose pull && docker compose up -d
 ```
 
 **Slow `docker pull` (China / VPN):** add `IMAGE_PREFIX=docker.m.daocloud.io/library/` to a repository-root `.env`, or configure **Docker Desktop → Proxies**.
@@ -120,24 +120,24 @@ For step-by-step detail and troubleshooting, see **[Installation & first-time se
 
 ---
 
-## Why QuantDinger
+## Why Fractal
 
-| Traditional workflow | QuantDinger |
+| Traditional workflow | Fractal |
 |----------------------|-------------|
 | ChatGPT only generates code | Runs, backtests, and executes strategies in one stack |
 | TradingView + Jupyter + exchange bots are fragmented | One self-hosted stack from research to execution |
 | SaaS platforms hold API keys | User-owned deployment — your infra, your keys |
 | AI agents without scopes or audit | Scoped Agent Gateway, paper-only default, audit logs |
 
-QuantDinger is a **self-hosted, local-first** quantitative infrastructure layer — not a chatbot with a buy button. It unifies **multi-LLM research**, **Python-native strategy engines**, **server-side backtesting**, and **multi-broker live execution** (10+ crypto venues, IBKR, MT5, Alpaca) in one production-grade stack you fully control.
+Fractal is a **self-hosted, local-first** quantitative infrastructure layer — not a chatbot with a buy button. It unifies **multi-LLM research**, **Python-native strategy engines**, **server-side backtesting**, and **multi-broker live execution** (10+ crypto venues, IBKR, MT5, Alpaca) in one production-grade stack you fully control.
 
 ## Safety model
 
 - **Agent tokens are paper-only by default** — live trading requires explicit server-side unlock.
 - **Live execution requires explicit permission** — token scope + `AGENT_LIVE_TRADING_ENABLED` on self-hosted stacks.
-- **Exchange keys stay inside the user's own deployment** — not held by QuantDinger SaaS operators on self-hosted installs.
+- **Exchange keys stay inside the user's own deployment** — not held by Fractal SaaS operators on self-hosted installs.
 - **Every agent call is audit-logged** — append-only audit trail for automation and compliance review.
-- **QuantDinger does not provide investment advice** — software for lawful research and execution only; you are responsible for compliance and risk.
+- **Fractal does not provide investment advice** — software for lawful research and execution only; you are responsible for compliance and risk.
 
 ## API documentation
 
@@ -151,21 +151,21 @@ QuantDinger is a **self-hosted, local-first** quantitative infrastructure layer 
 ---
 
 <div align="center">
-  <img src="docs/screenshots/ezgif.com-animated-gif-maker.gif" alt="QuantDinger quick demo: install, sign in, charting, AI analysis, and strategy workflow" width="920" style="border-radius: 12px; border: 1px solid #eaeef2;">
+  <img src="docs/screenshots/ezgif.com-animated-gif-maker.gif" alt="Fractal quick demo: install, sign in, charting, AI analysis, and strategy workflow" width="920" style="border-radius: 12px; border: 1px solid #eaeef2;">
   <p><sub><em>From zero to running stack — charting, AI research, and strategy workflow in minutes.</em></sub></p>
 </div>
 
 <div align="center">
-  <img src="docs/screenshots/architecture.png" alt="QuantDinger system architecture: Data Sources → Indicator / Signal / Strategy / Backtesting / AI Analysis layers → Execution, with the closed-loop quant workflow (Idea → Indicator → Strategy → Backtest → Optimize → Execute → Monitor)" width="960">
+  <img src="docs/screenshots/architecture.png" alt="Fractal system architecture: Data Sources → Indicator / Signal / Strategy / Backtesting / AI Analysis layers → Execution, with the closed-loop quant workflow (Idea → Indicator → Strategy → Backtest → Optimize → Execute → Monitor)" width="960">
   <p><sub><em>Closed loop: <strong>AI research → Strategy code → Backtest → Paper/Live execution → Monitoring</strong> — market data in, audited orders out.</em></sub></p>
 </div>
 
 ## Technical highlights
 
-| | What makes QuantDinger different |
+| | What makes Fractal different |
 |---|----------------------------------|
 | **Full-stack quant OS** | Charting, indicator IDE, AI research, backtests, live bots, quick trade, and broker account management — one product, one Postgres state store. |
-| **Agent-native** | First-class **Agent Gateway** (`/api/agent/v1`) + **[`quantdinger-mcp`](https://pypi.org/project/quantdinger-mcp/)** on PyPI — Cursor, Claude Code, and Codex can read markets, run backtests, and trade (paper by default) with full audit logs. |
+| **Agent-native** | First-class **Agent Gateway** (`/api/agent/v1`) + **[`fractal-mcp`](https://pypi.org/project/fractal-mcp/)** on PyPI — Cursor, Claude Code, and Codex can read markets, run backtests, and trade (paper by default) with full audit logs. |
 | **Dual strategy runtimes** | **`IndicatorStrategy`** (vectorized dataframe signals + chart overlays) and **`ScriptStrategy`** (event-driven `on_bar`, explicit orders) — research and production in the same codebase. |
 | **Multi-venue execution** | CCXT crypto (Binance, OKX, Bybit, …), **IBKR** stocks, **MT5** forex, **Alpaca** US equities/ETFs/crypto — unified Broker Accounts page with isolated multi-tenant sessions. |
 | **Production-grade infra** | **PostgreSQL 16** + **Redis 7**, connection pooling, background workers (orders, portfolio monitor, reflection), idempotent schema bootstrap, GHCR multi-arch images (amd64/arm64). |
@@ -178,8 +178,8 @@ QuantDinger is a **self-hosted, local-first** quantitative infrastructure layer 
 **Lightest — two files only (no `git clone`):**
 
 ```bash
-curl -O https://raw.githubusercontent.com/brokermr810/QuantDinger/main/docker-compose.ghcr.yml
-curl -o backend.env https://raw.githubusercontent.com/brokermr810/QuantDinger/main/backend_api_python/env.example
+curl -O https://raw.githubusercontent.com/brokermr810/Fractal/main/docker-compose.ghcr.yml
+curl -o backend.env https://raw.githubusercontent.com/brokermr810/Fractal/main/backend_api_python/env.example
 docker compose -f docker-compose.ghcr.yml pull
 docker compose -f docker-compose.ghcr.yml up -d
 ```
@@ -194,30 +194,30 @@ This repo ships the **backend**, **Docker Compose** stack, and **documentation**
 
 | Repository | What it is |
 |------------|------------|
-| **[QuantDinger](https://github.com/brokermr810/QuantDinger)** (this repo) | Backend (Flask/Python), Compose stack, docs |
-| **[QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue)** | **Web frontend source** (Vue) — tagging `v*` publishes `ghcr.io/brokermr810/quantdinger-frontend` automatically |
-| **[QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile)** | **Open-source mobile client** — pairs with your self-hosted or SaaS backend |
+| **[Fractal](https://github.com/brokermr810/Fractal)** (this repo) | Backend (Flask/Python), Compose stack, docs |
+| **[Fractal-Vue](https://github.com/brokermr810/Fractal-Vue)** | **Web frontend source** (Vue) — tagging `v*` publishes `ghcr.io/brokermr810/fractal-frontend` automatically |
+| **[Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile)** | **Open-source mobile client** — pairs with your self-hosted or SaaS backend |
 
-**Note:** Node.js is only required if you build the web UI from **QuantDinger-Vue**; the default Docker quick start pulls the published image and does not need it.
+**Note:** Node.js is only required if you build the web UI from **Fractal-Vue**; the default Docker quick start pulls the published image and does not need it.
 
 ## Use it from an AI agent (Cursor / Claude Code / Codex / MCP)
 
-QuantDinger ships an **Agent Gateway** at `/api/agent/v1` plus a small **MCP server** ([`quantdinger-mcp`](https://pypi.org/project/quantdinger-mcp/) on PyPI) that wraps it as Model Context Protocol tools. Issue a token once and your AI client can read markets, manage strategies, run backtests, and (paper-only by default) place trades — without ever seeing your exchange keys or your admin JWT.
+Fractal ships an **Agent Gateway** at `/api/agent/v1` plus a small **MCP server** ([`fractal-mcp`](https://pypi.org/project/fractal-mcp/) on PyPI) that wraps it as Model Context Protocol tools. Issue a token once and your AI client can read markets, manage strategies, run backtests, and (paper-only by default) place trades — without ever seeing your exchange keys or your admin JWT.
 
 > Every agent call is **audit-logged**, and trading-class tokens are **paper-only by default**. Live execution requires both `paper_only=false` on the token AND `AGENT_LIVE_TRADING_ENABLED=true` on the server.
 
-**Two backends, same client config — only `QUANTDINGER_BASE_URL` differs:**
+**Two backends, same client config — only `FRACTAL_BASE_URL` differs:**
 
-- **Hosted (30 s try-out)** — sign up at [ai.quantdinger.com](https://ai.quantdinger.com) → **Profile → My Agent Token** → Issue Token. T (Trading) scope is available; **paper-only by default**. Live execution still requires `paper_only=false` on the token, explicit risk acknowledgment at issuance, and `AGENT_LIVE_TRADING_ENABLED=true` on the server. On multi-tenant SaaS, opening T scope increases shared infrastructure load and platform operational risk — see the in-app risk disclosure.
+- **Hosted (30 s try-out)** — sign up at [ai.fractal.com](https://ai.fractal.com) → **Profile → My Agent Token** → Issue Token. T (Trading) scope is available; **paper-only by default**. Live execution still requires `paper_only=false` on the token, explicit risk acknowledgment at issuance, and `AGENT_LIVE_TRADING_ENABLED=true` on the server. On multi-tenant SaaS, opening T scope increases shared infrastructure load and platform operational risk — see the in-app risk disclosure.
 - **Self-hosted (this repo)** — after the [Try in 2 minutes](#try-in-2-minutes) Docker bring-up, open **Profile → My Agent Token** (or the admin-only `/agent-tokens` page for cross-tenant audit). You control scopes, allowlists, rate limits, and the live-trading flag.
 
 Then point Cursor / Claude Code / Codex at the MCP server (`.cursor/mcp.json` template: [`docs/agent/cursor-mcp.example.json`](docs/agent/cursor-mcp.example.json)):
 
 ```json
-{ "mcpServers": { "quantdinger": {
-  "command": "uvx", "args": ["quantdinger-mcp"],
-  "env": { "QUANTDINGER_BASE_URL": "http://localhost:8888",
-           "QUANTDINGER_AGENT_TOKEN": "qd_agent_xxxxxxxx" }
+{ "mcpServers": { "fractal": {
+  "command": "uvx", "args": ["fractal-mcp"],
+  "env": { "FRACTAL_BASE_URL": "http://localhost:8888",
+           "FRACTAL_AGENT_TOKEN": "qd_agent_xxxxxxxx" }
 } } }
 ```
 
@@ -269,11 +269,11 @@ Deeper references: [AI Integration design](docs/agent/AI_INTEGRATION_DESIGN.md) 
 
 **Design principle:** separate **market data ingestion**, **strategy/backtest compute**, and **order execution** so research never shares a code path with live capital unless you explicitly promote a strategy.
 
-**Stack:** Nginx serves the prebuilt Vue SPA (`ghcr.io/brokermr810/quantdinger-frontend`); **Flask + Gunicorn** API hosts strategy, AI, billing, and agent services; **PostgreSQL 16** is the system of record; **Redis 7** backs cache and worker coordination. Exchanges, brokers, LLMs, and payment rails plug in through env-driven adapters — swap providers without forking core code.
+**Stack:** Nginx serves the prebuilt Vue SPA (`ghcr.io/brokermr810/fractal-frontend`); **Flask + Gunicorn** API hosts strategy, AI, billing, and agent services; **PostgreSQL 16** is the system of record; **Redis 7** backs cache and worker coordination. Exchanges, brokers, LLMs, and payment rails plug in through env-driven adapters — swap providers without forking core code.
 
 **Runtime flow:** market feeds → indicator/signal layer → strategy engine → backtest or live runtime → venue-specific execution adapters; pending orders dispatched by background workers with health checks and retry semantics.
 
-**Deploy surfaces:** one-line `install.sh`, zero-repo GHCR Compose, full-repo Compose (local backend build), AWS Marketplace AMI, and SaaS at [ai.quantdinger.com](https://ai.quantdinger.com) for trials.
+**Deploy surfaces:** one-line `install.sh`, zero-repo GHCR Compose, full-repo Compose (local backend build), AWS Marketplace AMI, and SaaS at [ai.fractal.com](https://ai.fractal.com) for trials.
 
 ### System diagram
 
@@ -335,7 +335,7 @@ flowchart LR
 
 > **Already ran [Try in 2 minutes](#try-in-2-minutes)?** Skip this section — it's the same outcome, just expanded into a step-by-step checklist for first-time deployers and operations folks who want to understand every knob.
 
-This section mirrors a typical “local deploy” path: **prepare the host → obtain the code → configure secrets → start the stack → verify → harden → optionally wire AI**. Node.js is **not** required: the `frontend` service pulls `ghcr.io/brokermr810/quantdinger-frontend` directly, so Nginx serves the SPA without any local build step.
+This section mirrors a typical “local deploy” path: **prepare the host → obtain the code → configure secrets → start the stack → verify → harden → optionally wire AI**. Node.js is **not** required: the `frontend` service pulls `ghcr.io/brokermr810/fractal-frontend` directly, so Nginx serves the SPA without any local build step.
 
 ### Prerequisites
 
@@ -349,8 +349,8 @@ This section mirrors a typical “local deploy” path: **prepare the host → o
 ### 1) Clone the repository
 
 ```bash
-git clone https://github.com/brokermr810/QuantDinger.git
-cd QuantDinger
+git clone https://github.com/brokermr810/Fractal.git
+cd Fractal
 ```
 
 ### 2) Create backend configuration (mandatory)
@@ -382,9 +382,9 @@ docker compose pull
 docker compose up -d
 ```
 
-- **`frontend`** — pulls `ghcr.io/brokermr810/quantdinger-frontend:latest` (no local Vue tree required).
+- **`frontend`** — pulls `ghcr.io/brokermr810/fractal-frontend:latest` (no local Vue tree required).
 - **`backend`** — built from `./backend_api_python` on first start if no local image exists yet.
-- For UI development from Vue source, clone **QuantDinger-Vue** into `./QuantDinger-Vue/` and add `-f docker-compose.build.yml` to the command (see *Build the frontend from Vue source* below).
+- For UI development from Vue source, clone **Fractal-Vue** into `./Fractal-Vue/` and add `-f docker-compose.build.yml` to the command (see *Build the frontend from Vue source* below).
 
 Services: **`postgres`**, **`redis`**, **`backend`**, **`frontend`** (see `docker-compose.yml`).
 
@@ -393,8 +393,8 @@ Services: **`postgres`**, **`redis`**, **`backend`**, **`frontend`** (see `docke
 Prebuilt multi-arch (amd64/arm64) images for **both** backend and frontend — no `git clone`:
 
 ```bash
-curl -O https://raw.githubusercontent.com/brokermr810/QuantDinger/main/docker-compose.ghcr.yml
-curl -o backend.env https://raw.githubusercontent.com/brokermr810/QuantDinger/main/backend_api_python/env.example
+curl -O https://raw.githubusercontent.com/brokermr810/Fractal/main/docker-compose.ghcr.yml
+curl -o backend.env https://raw.githubusercontent.com/brokermr810/Fractal/main/backend_api_python/env.example
 docker compose -f docker-compose.ghcr.yml pull
 docker compose -f docker-compose.ghcr.yml up -d
 ```
@@ -410,11 +410,11 @@ IMAGE_TAG=3.0.22
 # BACKEND_TAG=v3.0.9
 # FRONTEND_TAG=v3.1.0-rc1
 
-# BACKEND_IMAGE=ghcr.io/<your-fork>/quantdinger-backend     # optional, for forks
-# FRONTEND_IMAGE=ghcr.io/<your-fork>/quantdinger-frontend
+# BACKEND_IMAGE=ghcr.io/<your-fork>/fractal-backend     # optional, for forks
+# FRONTEND_IMAGE=ghcr.io/<your-fork>/fractal-frontend
 ```
 
-Tag resolution: `BACKEND_TAG` / `FRONTEND_TAG` → `IMAGE_TAG` → compose default (`latest`). Without a root `.env`, both compose files pull `ghcr.io/brokermr810/quantdinger-{backend,frontend}:latest`. Pin a specific release by setting `IMAGE_TAG` (lockstep) or `BACKEND_TAG` / `FRONTEND_TAG` (per-side) — see [GitHub Releases](https://github.com/brokermr810/QuantDinger/releases) for available tags.
+Tag resolution: `BACKEND_TAG` / `FRONTEND_TAG` → `IMAGE_TAG` → compose default (`latest`). Without a root `.env`, both compose files pull `ghcr.io/brokermr810/fractal-{backend,frontend}:latest`. Pin a specific release by setting `IMAGE_TAG` (lockstep) or `BACKEND_TAG` / `FRONTEND_TAG` (per-side) — see [GitHub Releases](https://github.com/brokermr810/Fractal/releases) for available tags.
 
 #### Version stamping
 
@@ -426,14 +426,14 @@ APP_VERSION=$(git describe --tags --abbrev=0 | sed 's/^v//') docker compose up -
 
 #### Alternative: build the frontend from Vue source
 
-If you have access to the **QuantDinger-Vue** repo and want to iterate on UI source (theme tweaks, forks, debugging) instead of pulling the published image, clone it into the `./QuantDinger-Vue/` slot at the repo root (gitignored) and let Compose build from there:
+If you have access to the **Fractal-Vue** repo and want to iterate on UI source (theme tweaks, forks, debugging) instead of pulling the published image, clone it into the `./Fractal-Vue/` slot at the repo root (gitignored) and let Compose build from there:
 
 ```bash
-git clone https://github.com/brokermr810/QuantDinger-Vue.git QuantDinger-Vue
+git clone https://github.com/brokermr810/Fractal-Vue.git Fractal-Vue
 docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build
 ```
 
-The main `docker-compose.yml` only pulls the GHCR image; the override file `docker-compose.build.yml` adds the local `build:` block. Without the override, `./QuantDinger-Vue/` does not need to exist. Point `FRONTEND_SRC_PATH=/abs/path/to/QuantDinger-Vue` if you'd rather keep the source somewhere else, or set `COMPOSE_FILE=docker-compose.yml:docker-compose.build.yml` in a root `.env` to skip the long `-f -f` invocation. The locally built image is tagged the same way as the published one (`FRONTEND_TAG` / `IMAGE_TAG` rules apply), so it slots into the rest of the stack with no further changes.
+The main `docker-compose.yml` only pulls the GHCR image; the override file `docker-compose.build.yml` adds the local `build:` block. Without the override, `./Fractal-Vue/` does not need to exist. Point `FRONTEND_SRC_PATH=/abs/path/to/Fractal-Vue` if you'd rather keep the source somewhere else, or set `COMPOSE_FILE=docker-compose.yml:docker-compose.build.yml` in a root `.env` to skip the long `-f -f` invocation. The locally built image is tagged the same way as the published one (`FRONTEND_TAG` / `IMAGE_TAG` rules apply), so it slots into the rest of the stack with no further changes.
 
 ### 5) Verify and sign in
 
@@ -445,7 +445,7 @@ The main `docker-compose.yml` only pulls the GHCR image; the override file `dock
 
 Default admin (change immediately in production):
 
-- **User**: `quantdinger`
+- **User**: `fractal`
 - **Password**: `123456` (from `env.example`; override with `ADMIN_USER` / `ADMIN_PASSWORD` in `.env` before first use if you prefer).
 
 If `ADMIN_PASSWORD` is set to any value other than `123456`, the bootstrap
@@ -473,8 +473,8 @@ ATLASCLOUD_BASE_URL=https://api.atlascloud.ai/v1
 Use **Docker Desktop** (WSL2 backend recommended). From PowerShell in the repo root:
 
 ```powershell
-git clone https://github.com/brokermr810/QuantDinger.git
-Set-Location QuantDinger
+git clone https://github.com/brokermr810/Fractal.git
+Set-Location Fractal
 Copy-Item backend_api_python\env.example -Destination backend_api_python\.env
 $key = py -c "import secrets; print(secrets.token_hex(32))"
 (Get-Content backend_api_python\.env) -replace '^SECRET_KEY=.*$', "SECRET_KEY=$key" | Set-Content backend_api_python\.env -Encoding UTF8
@@ -488,7 +488,7 @@ If `py` is not on PATH, use `python` or `python3` in the one-liner that generate
 
 | Symptom | What to check |
 |---------|----------------|
-| `QuantDinger-Vue` not found | You added `-f docker-compose.build.yml` without cloning Vue source. Drop the override (plain `docker compose up -d`) or clone into `./QuantDinger-Vue/` first. |
+| `Fractal-Vue` not found | You added `-f docker-compose.build.yml` without cloning Vue source. Drop the override (plain `docker compose up -d`) or clone into `./Fractal-Vue/` first. |
 | `redis` / `python` / `node` pull fails, `content size of zero` | Docker Hub unreachable from Docker Desktop. Set root `.env` `IMAGE_PREFIX=docker.m.daocloud.io/library/` and/or configure **Docker Desktop → Proxies** (system VPN alone is often not enough). |
 | Backend exits immediately | `SECRET_KEY` still default, or invalid `.env` syntax. Read `docker compose logs backend`. |
 | Blank page or API errors from browser | `FRONTEND_URL` / origins mismatch; API not reachable from the host you opened. |
@@ -525,7 +525,7 @@ After the stack is healthy: (1) run an **AI asset / market analysis** so LLM and
 
 ## Minimal Example: Python Indicator Strategy
 
-This is the kind of Python-native strategy logic QuantDinger is designed for:
+This is the kind of Python-native strategy logic Fractal is designed for:
 
 ```python
 # @param sma_short int 14 Short moving average
@@ -597,7 +597,7 @@ See full examples:
 
 ## Strategy Development Modes
 
-QuantDinger supports two main strategy authoring models:
+Fractal supports two main strategy authoring models:
 
 ### IndicatorStrategy
 
@@ -623,7 +623,7 @@ The example scripts live in `docs/examples/` and are kept aligned with the curre
 ## Repository Layout
 
 ```text
-QuantDinger/
+Fractal/
 ├── backend_api_python/      # Open backend source code
 │   ├── app/routes/          # REST endpoints
 │   ├── app/services/        # AI, trading, billing, backtest, integrations
@@ -632,7 +632,7 @@ QuantDinger/
 │   └── Dockerfile
 ├── docs/                    # Product, strategy, and deployment documentation
 ├── install.sh               # One-line GHCR install (curl | bash)
-├── docker-compose.yml       # Web UI via GHCR; optional ./QuantDinger-Vue/ for local UI builds
+├── docker-compose.yml       # Web UI via GHCR; optional ./Fractal-Vue/ for local UI builds
 ├── docker-compose.ghcr.yml  # Zero-repo deploy — both images from GHCR
 ├── LICENSE
 └── TRADEMARKS.md
@@ -668,7 +668,7 @@ Use `backend_api_python/env.example` as the primary template. Key areas include:
 | [JA](docs/README_JA.md) · [KO](docs/README_KO.md) · [TH](docs/README_TH.md) · [VI](docs/README_VI.md) · [AR](docs/README_AR.md) | Concise localized READMEs (Japanese, Korean, Thai, Vietnamese, Arabic) |
 | [Cloud deployment](docs/CLOUD_DEPLOYMENT_EN.md) | HTTPS, reverse proxy, production |
 | [Multi-user](docs/multi-user-setup.md) | Postgres multi-tenant patterns |
-| [Agent environment](docs/agent/AGENT_ENVIRONMENT_DESIGN.md) · [AI integration](docs/agent/AI_INTEGRATION_DESIGN.md) · [Quickstart](docs/agent/AGENT_QUICKSTART.md) · [OpenAPI](docs/agent/agent-openapi.json) · [MCP server](mcp_server/README.md) | Coding agents & MCP (`quantdinger-mcp` on PyPI) |
+| [Agent environment](docs/agent/AGENT_ENVIRONMENT_DESIGN.md) · [AI integration](docs/agent/AI_INTEGRATION_DESIGN.md) · [Quickstart](docs/agent/AGENT_QUICKSTART.md) · [OpenAPI](docs/agent/agent-openapi.json) · [MCP server](mcp_server/README.md) | Coding agents & MCP (`fractal-mcp` on PyPI) |
 
 **Strategy:** [EN](docs/STRATEGY_DEV_GUIDE.md) · [CN](docs/STRATEGY_DEV_GUIDE_CN.md) · [TW](docs/STRATEGY_DEV_GUIDE_TW.md) · [JA](docs/STRATEGY_DEV_GUIDE_JA.md) · [KO](docs/STRATEGY_DEV_GUIDE_KO.md) · [Cross-sectional EN](docs/CROSS_SECTIONAL_STRATEGY_GUIDE_EN.md) / [CN](docs/CROSS_SECTIONAL_STRATEGY_GUIDE_CN.md) · [Examples](docs/examples/)
 
@@ -676,29 +676,29 @@ Use `backend_api_python/env.example` as the primary template. Key areas include:
 
 ## FAQ
 
-### Is QuantDinger really self-hosted?
+### Is Fractal really self-hosted?
 
 Yes. The default deployment model is your own Docker Compose stack with your own database, Redis instance, credentials, and environment configuration.
 
-### Is QuantDinger only for crypto trading?
+### Is Fractal only for crypto trading?
 
 No. Crypto is a major focus, but the platform also includes IBKR and Alpaca workflows for US stocks / ETFs (Alpaca additionally covers crypto) and MT5 workflows for forex.
 
 ### Can I write strategies directly in Python?
 
-Yes. QuantDinger supports both dataframe-style `IndicatorStrategy` development and event-driven `ScriptStrategy` development. You can also use AI to generate a starting point and then edit it yourself.
+Yes. Fractal supports both dataframe-style `IndicatorStrategy` development and event-driven `ScriptStrategy` development. You can also use AI to generate a starting point and then edit it yourself.
 
 ### Is this a research tool or a live trading platform?
 
-It is both. QuantDinger is built to connect AI research, charting, strategy development, backtesting, quick trade flows, and live execution operations in one system.
+It is both. Fractal is built to connect AI research, charting, strategy development, backtesting, quick trade flows, and live execution operations in one system.
 
-### Can I use QuantDinger commercially?
+### Can I use Fractal commercially?
 
-The backend is licensed under Apache 2.0. The **web** frontend source ([QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue)) uses a separate source-available license—review both and contact the project for commercial frontend authorization if needed. The **[mobile app repo](https://github.com/brokermr810/QuantDinger-Mobile)** is open source under its own license (see that repository).
+The backend is licensed under Apache 2.0. The **web** frontend source ([Fractal-Vue](https://github.com/brokermr810/Fractal-Vue)) uses a separate source-available license—review both and contact the project for commercial frontend authorization if needed. The **[mobile app repo](https://github.com/brokermr810/Fractal-Mobile)** is open source under its own license (see that repository).
 
 ### Is there a mobile app?
 
-Yes—see **[QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile)** (open source). It connects to the same backend you self-host or to SaaS.
+Yes—see **[Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile)** (open source). It connects to the same backend you self-host or to SaaS.
 
 ## Exchange Partner Links
 
@@ -708,10 +708,10 @@ The following links are available in-app under **Profile → Open account** or *
 
 | Exchange | Signup Link |
 |----------|-------------|
-| Binance | [Register](https://www.bsmkweb.cc/register?ref=QUANTDINGER) |
+| Binance | [Register](https://www.bsmkweb.cc/register?ref=FRACTAL) |
 | Bitget | [Register](https://partner.hdmune.cn/bg/7r4xz8kd) |
 | Bybit | [Register](https://partner.bybit.com/b/DINGER) |
-| OKX | [Register](https://www.xqmnobxky.com/join/QUANTDINGER) |
+| OKX | [Register](https://www.xqmnobxky.com/join/FRACTAL) |
 | Gate.io | [Register](https://www.gateport.business/share/DINGER) |
 | HTX | [Register](https://www.htx.com/invite/zh-cn/1f?invite_code=dinger) |
 
@@ -727,32 +727,32 @@ After opening a TMGM account, install MetaTrader 5 and bind your server/login un
 
 - Backend source code is licensed under **Apache License 2.0**. See `LICENSE`.
 - This repository distributes the frontend UI here as **prebuilt files** for integrated deployment.
-- The frontend source code is available separately at [QuantDinger Frontend](https://github.com/brokermr810/QuantDinger-Vue) under the **QuantDinger Frontend Source-Available License v1.0**.
+- The frontend source code is available separately at [Fractal Frontend](https://github.com/brokermr810/Fractal-Vue) under the **Fractal Frontend Source-Available License v1.0**.
 - Under that frontend license, non-commercial use and eligible qualified non-profit use are permitted free of charge, while commercial use requires a separate commercial license from the copyright holder.
 - Trademark, branding, attribution, and watermark usage are governed separately and may not be removed or altered without permission. See `TRADEMARKS.md`.
 
 For commercial licensing, frontend source access, branding authorization, or deployment support:
 
-- Website: [quantdinger.com](https://quantdinger.com)
+- Website: [fractal.com](https://fractal.com)
 - Telegram: [t.me/worldinbroker](https://t.me/worldinbroker)
-- Email: [support@quantdinger.com](mailto:support@quantdinger.com)
+- Email: [support@fractal.com](mailto:support@fractal.com)
 
 ## Legal Notice and Compliance
 
-QuantDinger is intended for **lawful** research, education, and compliant trading only—not for fraud, market manipulation, sanctions evasion, money laundering, or other illegal activity. Operators must follow applicable laws, licensing, and exchange rules in every jurisdiction where they deploy. **This project does not provide legal, tax, investment, or regulatory advice.** You use the software at your own risk; to the extent permitted by law, contributors disclaim liability for trading losses, service interruption, or regulatory enforcement arising from use or misuse.
+Fractal is intended for **lawful** research, education, and compliant trading only—not for fraud, market manipulation, sanctions evasion, money laundering, or other illegal activity. Operators must follow applicable laws, licensing, and exchange rules in every jurisdiction where they deploy. **This project does not provide legal, tax, investment, or regulatory advice.** You use the software at your own risk; to the extent permitted by law, contributors disclaim liability for trading losses, service interruption, or regulatory enforcement arising from use or misuse.
 
 ## Community and Support
 
 <p>
-  <a href="https://t.me/quantdinger"><img src="https://img.shields.io/badge/Telegram-Group-26A5E4?style=for-the-badge&logo=telegram" alt="Telegram"></a>
+  <a href="https://t.me/fractal"><img src="https://img.shields.io/badge/Telegram-Group-26A5E4?style=for-the-badge&logo=telegram" alt="Telegram"></a>
   <a href="https://discord.com/invite/tyx5B6TChr"><img src="https://img.shields.io/badge/Discord-Server-5865F2?style=for-the-badge&logo=discord" alt="Discord"></a>
-  <a href="https://youtube.com/@quantdinger"><img src="https://img.shields.io/badge/YouTube-Channel-FF0000?style=for-the-badge&logo=youtube" alt="YouTube"></a>
+  <a href="https://youtube.com/@fractal"><img src="https://img.shields.io/badge/YouTube-Channel-FF0000?style=for-the-badge&logo=youtube" alt="YouTube"></a>
 </p>
 
 - [Contributing Guide](CONTRIBUTING.md)
 - [Contributors](CONTRIBUTORS.md)
-- [Report Bugs / Request Features](https://github.com/brokermr810/QuantDinger/issues)
-- Email: [support@quantdinger.com](mailto:support@quantdinger.com)
+- [Report Bugs / Request Features](https://github.com/brokermr810/Fractal/issues)
+- Email: [support@fractal.com](mailto:support@fractal.com)
 
 ## Support the Project
 
@@ -764,11 +764,11 @@ Crypto donations:
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=brokermr810/QuantDinger&type=Date)](https://star-history.com/#brokermr810/QuantDinger&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=brokermr810/Fractal&type=Date)](https://star-history.com/#brokermr810/Fractal&Date)
 
 ## Acknowledgements
 
-QuantDinger stands on top of a strong open-source ecosystem. Special thanks to projects such as:
+Fractal stands on top of a strong open-source ecosystem. Special thanks to projects such as:
 
 - [Flask](https://flask.palletsprojects.com/)
 - [Pandas](https://pandas.pydata.org/)
@@ -783,6 +783,6 @@ QuantDinger stands on top of a strong open-source ecosystem. Special thanks to p
 
 ## P.S. — A Note on the Name
 
-**QuantDinger** is a small tribute to **[Erwin Schrödinger](https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger)** — the "-dinger" in our name is the tail of "Schrödinger". The cat in the box was a thought experiment; every un-fired strategy is its own little version of it — simultaneously winning and losing until the order actually fills. Backtests open the box. Live trading collapses the wavefunction. Trade carefully.
+**Fractal** is a small tribute to **[Erwin Schrödinger](https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger)** — the "-dinger" in our name is the tail of "Schrödinger". The cat in the box was a thought experiment; every un-fired strategy is its own little version of it — simultaneously winning and losing until the order actually fills. Backtests open the box. Live trading collapses the wavefunction. Trade carefully.
 
-<p align="center"><sub>If QuantDinger is useful to you, a GitHub star helps the project a lot.</sub></p>
+<p align="center"><sub>If Fractal is useful to you, a GitHub star helps the project a lot.</sub></p>

@@ -1,9 +1,9 @@
 <div align="center">
-  <a href="https://github.com/brokermr810/QuantDinger">
-    <img src="screenshots/logo.jpg" alt="QuantDinger Logo" width="220" height="220">
+  <a href="https://github.com/brokermr810/Fractal">
+    <img src="screenshots/logo.jpg" alt="Fractal Logo" width="220" height="220">
   </a>
 
-  <h1>QuantDinger</h1>
+  <h1>Fractal</h1>
   <h3>プライベート AI クオンツ OS</h3>
   <p><strong>チャート、マルチ LLM リサーチ、Python 戦略、機関級バックテスト、マルチ venue ライブ執行を 1 つの Docker スタックで—完全セルフホスト、自前キー、自前データ。</strong></p>
   <p><em>オープンソース quant OS：AI 支援コーディング → バックテスト → ペーパー → ライブ（crypto / IBKR / MT5 / Alpaca）、Agent Gateway・MCP 内蔵。</em></p>
@@ -25,33 +25,33 @@
       <a href="README_AR.md"><strong>العربية</strong></a>
     </p>
     <p style="margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px solid #eaeef2; line-height: 2;">
-      <a href="https://ai.quantdinger.com"><strong>SaaS</strong></a>
+      <a href="https://ai.fractal.com"><strong>SaaS</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
       <a href="https://www.youtube.com/watch?v=tNAZ9uMiUUw"><strong>デモ動画</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
-      <a href="https://www.quantdinger.com"><strong>公式サイト</strong></a>
+      <a href="https://www.fractal.com"><strong>公式サイト</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
       <a href="https://aws.amazon.com/marketplace/pp/prodview-naanrb7d2mbc6"><strong>AWS Marketplace</strong></a>
     </p>
     <p style="margin: 0; line-height: 2;">
-      <a href="https://t.me/quantdinger"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
+      <a href="https://t.me/fractal"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
       &nbsp;
       <a href="https://discord.com/invite/tyx5B6TChr"><img src="https://img.shields.io/badge/Discord-Server-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
       &nbsp;
-      <a href="https://youtube.com/@quantdinger"><img src="https://img.shields.io/badge/YouTube-%40quantdinger-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
+      <a href="https://youtube.com/@fractal"><img src="https://img.shields.io/badge/YouTube-%40fractal-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
       &nbsp;
-      <a href="https://x.com/QuantDinger_EN"><img src="https://img.shields.io/badge/X-%40QuantDinger_EN-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
+      <a href="https://x.com/Fractal_EN"><img src="https://img.shields.io/badge/X-%40Fractal_EN-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
     </p>
   </div>
 
   <p style="margin-top: 1.45rem; margin-bottom: 10px;">
     <a href="../LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&logo=apache" alt="License"></a>
-    <img src="https://img.shields.io/github/v/release/brokermr810/QuantDinger?style=flat-square&color=orange&label=Version" alt="Version">
+    <img src="https://img.shields.io/github/v/release/brokermr810/Fractal?style=flat-square&color=orange&label=Version" alt="Version">
     <img src="https://img.shields.io/badge/Python-3.10%2B%20%7C%20Docker%203.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
     <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
     <img src="https://img.shields.io/badge/Agent%20Gateway-MCP%20Ready-6f42c1?style=flat-square" alt="Agent Gateway">
     <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
-    <img src="https://img.shields.io/github/stars/brokermr810/QuantDinger?style=flat-square&logo=github" alt="Stars">
+    <img src="https://img.shields.io/github/stars/brokermr810/Fractal?style=flat-square&logo=github" alt="Stars">
   </p>
 </div>
 
@@ -63,24 +63,24 @@
 
 ---
 
-> QuantDinger は **セルフホスト・ローカルファースト** のクオンツ **OS** です。買いボタン付きチャットボットではなく、**マルチ LLM リサーチ**、**Python ネイティブ戦略**、**サーバサイドバックテスト**、**マルチブローカーライブ**（10+ crypto venue、IBKR、MT5、Alpaca）を 1 つの本番グレードスタックに統合します。
+> Fractal は **セルフホスト・ローカルファースト** のクオンツ **OS** です。買いボタン付きチャットボットではなく、**マルチ LLM リサーチ**、**Python ネイティブ戦略**、**サーバサイドバックテスト**、**マルチブローカーライブ**（10+ crypto venue、IBKR、MT5、Alpaca）を 1 つの本番グレードスタックに統合します。
 
 <div align="center">
-  <img src="screenshots/ezgif.com-animated-gif-maker.gif" alt="QuantDinger クイックデモ" width="920" style="border-radius: 12px; border: 1px solid #eaeef2;">
+  <img src="screenshots/ezgif.com-animated-gif-maker.gif" alt="Fractal クイックデモ" width="920" style="border-radius: 12px; border: 1px solid #eaeef2;">
   <p><sub><em>ゼロから起動まで—チャート、AI リサーチ、戦略ワークフローを数分で。</em></sub></p>
 </div>
 
 <div align="center">
-  <img src="screenshots/architecture.png" alt="QuantDinger アーキテクチャ" width="960">
+  <img src="screenshots/architecture.png" alt="Fractal アーキテクチャ" width="960">
   <p><sub><em>五層エンジンのクローズドループ：<strong>アイデア → インジケータ → 戦略 → バックテスト → 最適化 → 執行 → 監視</strong></em></sub></p>
 </div>
 
 ## 技術ハイライト
 
-| | QuantDinger の強み |
+| | Fractal の強み |
 |---|-------------------|
 | **フルスタック quant OS** | チャート、IDE、AI、バックテスト、ライブ bot、クイックトレード、ブローカー管理を 1 製品に。 |
-| **Agent ネイティブ** | **Agent Gateway** + PyPI [`quantdinger-mcp`](https://pypi.org/project/quantdinger-mcp/) — Cursor / Claude Code / Codex 連携、監査ログ付き。 |
+| **Agent ネイティブ** | **Agent Gateway** + PyPI [`fractal-mcp`](https://pypi.org/project/fractal-mcp/) — Cursor / Claude Code / Codex 連携、監査ログ付き。 |
 | **二重戦略ランタイム** | `IndicatorStrategy`（ベクトル化シグナル）と `ScriptStrategy`（`on_bar` イベント駆動）。 |
 | **マルチ venue** | CCXT crypto、IBKR、MT5、Alpaca — 統合ブローカーアカウントページ。 |
 | **本番インフラ** | PostgreSQL 16 + Redis 7、Worker、GHCR マルチアーキイメージ。 |
@@ -93,15 +93,15 @@
 ### 一行インストール（Linux / macOS）
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/brokermr810/QuantDinger/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/brokermr810/Fractal/main/install.sh | bash
 ```
 
-デフォルト `~/quantdinger`。再実行で最新イメージを pull。→ **`http://localhost:8888`**（`quantdinger` / `123456`、直ちにパスワード変更）。
+デフォルト `~/fractal`。再実行で最新イメージを pull。→ **`http://localhost:8888`**（`fractal` / `123456`、直ちにパスワード変更）。
 
 ### 標準：リポジトリをクローン（macOS / Linux）
 
 ```bash
-git clone https://github.com/brokermr810/QuantDinger.git && cd QuantDinger && cp backend_api_python/env.example backend_api_python/.env && chmod +x scripts/generate-secret-key.sh && ./scripts/generate-secret-key.sh && docker-compose up -d --build
+git clone https://github.com/brokermr810/Fractal.git && cd Fractal && cp backend_api_python/env.example backend_api_python/.env && chmod +x scripts/generate-secret-key.sh && ./scripts/generate-secret-key.sh && docker-compose up -d --build
 ```
 
 `docker-compose` が無い場合は `docker compose` を試してください。
@@ -111,8 +111,8 @@ git clone https://github.com/brokermr810/QuantDinger.git && cd QuantDinger && cp
 **Docker Desktop** を起動し、PowerShell で：
 
 ```powershell
-git clone https://github.com/brokermr810/QuantDinger.git
-Set-Location QuantDinger
+git clone https://github.com/brokermr810/Fractal.git
+Set-Location Fractal
 Copy-Item backend_api_python\env.example -Destination backend_api_python\.env
 $key = & python -c "import secrets; print(secrets.token_hex(32))" 2>$null
 if (-not $key) { $key = & py -c "import secrets; print(secrets.token_hex(32))" 2>$null }
@@ -127,15 +127,15 @@ Git for Windows の Bash なら、上記 macOS/Linux の 1 行コマンドが使
 
 ---
 
-ブラウザで **`http://localhost:8888`** を開き、**`quantdinger` / `123456`** でログインし、**直ちに管理者パスワードを変更**してください。詳細は下記 [インストールと初回起動](#インストールと初回起動) を参照。
+ブラウザで **`http://localhost:8888`** を開き、**`fractal` / `123456`** でログインし、**直ちに管理者パスワードを変更**してください。詳細は下記 [インストールと初回起動](#インストールと初回起動) を参照。
 
 ## 関連リポジトリ
 
 | リポジトリ | 内容 |
 |------------|------|
-| **[QuantDinger](https://github.com/brokermr810/QuantDinger)**（本倉庫） | バックエンド、Compose、ドキュメント、プリビルド Web |
-| **[QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue)** | **Web フロントソース**（Vue）— `v*` タグで `ghcr.io/brokermr810/quantdinger-frontend` を自動発行 |
-| **[QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile)** | **モバイルクライアント**（オープンソース） |
+| **[Fractal](https://github.com/brokermr810/Fractal)**（本倉庫） | バックエンド、Compose、ドキュメント、プリビルド Web |
+| **[Fractal-Vue](https://github.com/brokermr810/Fractal-Vue)** | **Web フロントソース**（Vue）— `v*` タグで `ghcr.io/brokermr810/fractal-frontend` を自動発行 |
+| **[Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile)** | **モバイルクライアント**（オープンソース） |
 
 <h2 id="mcp--agent-ゲートウェイ">MCP / Agent ゲートウェイ</h2>
 
@@ -143,7 +143,7 @@ Git for Windows の Bash なら、上記 macOS/Linux の 1 行コマンドが使
 
 - **接続レシピ:** [**MCP_SETUP.md**](agent/MCP_SETUP.md) — ホスト版 / セルフホスト、ローカル stdio、リモート HTTP、Claude Code CLI、すべてここに集約。
 - [AGENT_QUICKSTART.md](agent/AGENT_QUICKSTART.md) · [AI_INTEGRATION_DESIGN.md](agent/AI_INTEGRATION_DESIGN.md) · [agent-openapi.json](agent/agent-openapi.json)
-- MCP サーバー: [`../mcp_server/README.md`](../mcp_server/README.md) · PyPI [`quantdinger-mcp`](https://pypi.org/project/quantdinger-mcp/)
+- MCP サーバー: [`../mcp_server/README.md`](../mcp_server/README.md) · PyPI [`fractal-mcp`](https://pypi.org/project/fractal-mcp/)
 
 **セキュリティ:** 全 Agent 呼び出しは監査ログに記録。取引系（T）トークンはデフォルト **ペーパーのみ**；ライブにはサーバ側 `AGENT_LIVE_TRADING_ENABLED=true` とトークン `paper_only=false` の両方が必要です。
 
@@ -161,7 +161,7 @@ Git for Windows の Bash なら、上記 macOS/Linux の 1 行コマンドが使
 
 ## アーキテクチャ
 
-**設計原則：** 行情取得・戦略/バックテスト・執行を分離。Nginx + Vue SPA、Flask + Gunicorn、PostgreSQL 16、Redis 7。デプロイ：`install.sh` 一行、GHCR ゼロ repo、フル repo Compose、AWS AMI、[SaaS](https://ai.quantdinger.com)。
+**設計原則：** 行情取得・戦略/バックテスト・執行を分離。Nginx + Vue SPA、Flask + Gunicorn、PostgreSQL 16、Redis 7。デプロイ：`install.sh` 一行、GHCR ゼロ repo、フル repo Compose、AWS AMI、[SaaS](https://ai.fractal.com)。
 
 ## ビジュアルツアー
 
@@ -191,12 +191,12 @@ Git for Windows の Bash なら、上記 macOS/Linux の 1 行コマンドが使
 3. `docker-compose up -d --build`
    - **代替（リポジトリ不要）**：プリビルド多架構（amd64/arm64）の backend + frontend を GHCR から直接プルする場合：
      ```bash
-     curl -O https://raw.githubusercontent.com/brokermr810/QuantDinger/main/docker-compose.ghcr.yml
-     curl -o backend.env https://raw.githubusercontent.com/brokermr810/QuantDinger/main/backend_api_python/env.example
+     curl -O https://raw.githubusercontent.com/brokermr810/Fractal/main/docker-compose.ghcr.yml
+     curl -o backend.env https://raw.githubusercontent.com/brokermr810/Fractal/main/backend_api_python/env.example
      docker compose -f docker-compose.ghcr.yml up -d
      ```
-     デフォルトイメージは `ghcr.io/brokermr810/quantdinger-{backend,frontend}:latest`。両側を同時に固定するならローカル `.env` で `IMAGE_TAG=v3.0.9`、片側だけなら `BACKEND_TAG` / `FRONTEND_TAG` を設定。
-   - **フロントエンドのローカル開発**: `QuantDinger-Vue` を `./QuantDinger-Vue/` (gitignore 済) にクローンして `docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build`。詳細は[英語 README](../README.md#alternative-build-the-frontend-from-vue-source)。
+     デフォルトイメージは `ghcr.io/brokermr810/fractal-{backend,frontend}:latest`。両側を同時に固定するならローカル `.env` で `IMAGE_TAG=v3.0.9`、片側だけなら `BACKEND_TAG` / `FRONTEND_TAG` を設定。
+   - **フロントエンドのローカル開発**: `Fractal-Vue` を `./Fractal-Vue/` (gitignore 済) にクローンして `docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build`。詳細は[英語 README](../README.md#alternative-build-the-frontend-from-vue-source)。
 4. **Web:** `http://localhost:8888` · **API ヘルス:** `http://localhost:5000/api/health`
 5. 本番前にデフォルト管理者パスワードを変更。`backend_api_python/.env` の **`FRONTEND_URL`** を実際の URL に合わせる。
 
@@ -222,36 +222,36 @@ AI 機能には `env.example` の **AI / LLM** 節を `.env` に反映し、back
 
 **Python で戦略を書ける？** はい。`IndicatorStrategy` と `ScriptStrategy` をサポート。
 
-**商用利用？** バックエンドは **Apache 2.0**。[QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue) フロントは別のソース利用可能ライセンス—商用前に同梱条項を確認してください。モバイルは [QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile) のライセンスに従います。
+**商用利用？** バックエンドは **Apache 2.0**。[Fractal-Vue](https://github.com/brokermr810/Fractal-Vue) フロントは別のソース利用可能ライセンス—商用前に同梱条項を確認してください。モバイルは [Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile) のライセンスに従います。
 
-**モバイルは？** [QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile) を参照。
+**モバイルは？** [Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile) を参照。
 
 ## 取引所紹介リンク（参考）
 
 | 取引所 | リンク |
 |--------|--------|
-| Binance | [登録](https://www.bsmkweb.cc/register?ref=QUANTDINGER) |
-| OKX | [登録](https://www.xqmnobxky.com/join/QUANTDINGER) |
+| Binance | [登録](https://www.bsmkweb.cc/register?ref=FRACTAL) |
+| OKX | [登録](https://www.xqmnobxky.com/join/FRACTAL) |
 | Bybit | [登録](https://partner.bybit.com/b/DINGER) |
 
 ## ライセンス
 
 - バックエンド: **Apache License 2.0**（[`../LICENSE`](../LICENSE)）
-- 同梱 Web UI: プリビルド配布。ソースは [QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue)（別ライセンス）
+- 同梱 Web UI: プリビルド配布。ソースは [Fractal-Vue](https://github.com/brokermr810/Fractal-Vue)（別ライセンス）
 - 商標: [`../TRADEMARKS.md`](../TRADEMARKS.md)
 
 ## 免責事項
 
-QuantDinger は合法的な研究・教育・コンプライアントな取引向けです。**投資助言ではありません。** 利用は自己責任で。
+Fractal は合法的な研究・教育・コンプライアントな取引向けです。**投資助言ではありません。** 利用は自己責任で。
 
 ## コミュニティ
 
-- [Telegram](https://t.me/quantdinger) · [Discord](https://discord.com/invite/tyx5B6TChr) · [Issues](https://github.com/brokermr810/QuantDinger/issues)
-- Email: [support@quantdinger.com](mailto:support@quantdinger.com)
+- [Telegram](https://t.me/fractal) · [Discord](https://discord.com/invite/tyx5B6TChr) · [Issues](https://github.com/brokermr810/Fractal/issues)
+- Email: [support@fractal.com](mailto:support@fractal.com)
 
 ## Star 履歴
 
-[![Star History Chart](https://api.star-history.com/svg?repos=brokermr810/QuantDinger&type=Date)](https://star-history.com/#brokermr810/QuantDinger&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=brokermr810/Fractal&type=Date)](https://star-history.com/#brokermr810/Fractal&Date)
 
 ## 謝辞
 

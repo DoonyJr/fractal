@@ -1,9 +1,9 @@
 <div align="center" dir="rtl">
-  <a href="https://github.com/brokermr810/QuantDinger">
-    <img src="screenshots/logo.jpg" alt="QuantDinger Logo" width="220" height="220">
+  <a href="https://github.com/brokermr810/Fractal">
+    <img src="screenshots/logo.jpg" alt="Fractal Logo" width="220" height="220">
   </a>
 
-  <h1>QuantDinger</h1>
+  <h1>Fractal</h1>
   <h3>نظام تشغيل كمّي خاص مدعوم بالذكاء الاصطناعي</h3>
   <p><strong>حزمة Docker واحدة للرسوم، بحوث متعددة LLM، استراتيجيات بايثون، اختبار رجعي بمستوى مؤسسي، وتنفيذ مباشر متعدد الأسواق—استضافة ذاتية كاملة، مفاتيحك وبياناتك.</strong></p>
   <p><em>quant OS مفتوح المصدر: برمجة بمساعدة AI → اختبار رجعي → ورقي → مباشر (crypto/IBKR/MT5/Alpaca) مع Agent Gateway وMCP.</em></p>
@@ -25,33 +25,33 @@
       <a href="README_AR.md"><strong>العربية</strong></a>
     </p>
     <p style="margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px solid #eaeef2; line-height: 2;">
-      <a href="https://ai.quantdinger.com"><strong>SaaS</strong></a>
+      <a href="https://ai.fractal.com"><strong>SaaS</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
       <a href="https://www.youtube.com/watch?v=tNAZ9uMiUUw"><strong>فيديو تجريبي</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
-      <a href="https://www.quantdinger.com"><strong>الموقع</strong></a>
+      <a href="https://www.fractal.com"><strong>الموقع</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
       <a href="https://aws.amazon.com/marketplace/pp/prodview-naanrb7d2mbc6"><strong>AWS Marketplace</strong></a>
     </p>
     <p style="margin: 0; line-height: 2;">
-      <a href="https://t.me/quantdinger"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
+      <a href="https://t.me/fractal"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
       &nbsp;
       <a href="https://discord.com/invite/tyx5B6TChr"><img src="https://img.shields.io/badge/Discord-Server-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
       &nbsp;
-      <a href="https://youtube.com/@quantdinger"><img src="https://img.shields.io/badge/YouTube-%40quantdinger-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
+      <a href="https://youtube.com/@fractal"><img src="https://img.shields.io/badge/YouTube-%40fractal-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
       &nbsp;
-      <a href="https://x.com/QuantDinger_EN"><img src="https://img.shields.io/badge/X-%40QuantDinger_EN-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
+      <a href="https://x.com/Fractal_EN"><img src="https://img.shields.io/badge/X-%40Fractal_EN-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
     </p>
   </div>
 
   <p style="margin-top: 1.45rem; margin-bottom: 10px;" dir="ltr">
     <a href="../LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&logo=apache" alt="License"></a>
-    <img src="https://img.shields.io/github/v/release/brokermr810/QuantDinger?style=flat-square&color=orange&label=Version" alt="Version">
+    <img src="https://img.shields.io/github/v/release/brokermr810/Fractal?style=flat-square&color=orange&label=Version" alt="Version">
     <img src="https://img.shields.io/badge/Python-3.10%2B%20%7C%20Docker%203.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
     <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
     <img src="https://img.shields.io/badge/Agent%20Gateway-MCP%20Ready-6f42c1?style=flat-square" alt="Agent Gateway">
     <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
-    <img src="https://img.shields.io/github/stars/brokermr810/QuantDinger?style=flat-square&logo=github" alt="Stars">
+    <img src="https://img.shields.io/github/stars/brokermr810/Fractal?style=flat-square&logo=github" alt="Stars">
   </p>
 </div>
 
@@ -65,17 +65,17 @@
 
 ---
 
-> QuantDinger **نظام تشغيل كمّي ذاتي الاستضافة** — ليس chatbot بزر شراء. يوحّد **بحوث متعددة LLM** و**محركات استراتيجية بايثون** و**اختبارًا رجعيًا على الخادم** و**تداولًا مباشرًا متعدد الوسطاء** (10+ crypto venue، IBKR، MT5، Alpaca) في حزمة production تتحكم بها بالكامل.
+> Fractal **نظام تشغيل كمّي ذاتي الاستضافة** — ليس chatbot بزر شراء. يوحّد **بحوث متعددة LLM** و**محركات استراتيجية بايثون** و**اختبارًا رجعيًا على الخادم** و**تداولًا مباشرًا متعدد الوسطاء** (10+ crypto venue، IBKR، MT5، Alpaca) في حزمة production تتحكم بها بالكامل.
 
 </div>
 
 <div align="center">
-  <img src="screenshots/ezgif.com-animated-gif-maker.gif" alt="QuantDinger demo" width="920" style="border-radius: 12px; border: 1px solid #eaeef2;">
+  <img src="screenshots/ezgif.com-animated-gif-maker.gif" alt="Fractal demo" width="920" style="border-radius: 12px; border: 1px solid #eaeef2;">
   <p dir="rtl"><sub><em>من الصفر إلى التشغيل—رسوم، بحث AI، وسير عمل الاستراتيجية في دقائق.</em></sub></p>
 </div>
 
 <div align="center">
-  <img src="screenshots/architecture.png" alt="بنية QuantDinger" width="960">
+  <img src="screenshots/architecture.png" alt="بنية Fractal" width="960">
   <p dir="rtl"><sub><em>حلقة مغلقة من 5 طبقات: <strong>فكرة → مؤشر → استراتيجية → اختبار رجعي → تحسين → تنفيذ → مراقبة</strong></em></sub></p>
 </div>
 
@@ -83,10 +83,10 @@
 
 ## أبرز التقنيات
 
-| | ما يميز QuantDinger |
+| | ما يميز Fractal |
 |---|---------------------|
 | **quant OS متكامل** | رسوم، IDE، AI، اختبار رجعي، bots مباشرة، quick trade، إدارة حسابات الوسطاء—منتج واحد |
-| **Agent-native** | **Agent Gateway** + PyPI [`quantdinger-mcp`](https://pypi.org/project/quantdinger-mcp/) — Cursor / Claude Code / Codex مع سجل تدقيق |
+| **Agent-native** | **Agent Gateway** + PyPI [`fractal-mcp`](https://pypi.org/project/fractal-mcp/) — Cursor / Claude Code / Codex مع سجل تدقيق |
 | **محركان للاستراتيجية** | `IndicatorStrategy` (إشارات متجهة) و`ScriptStrategy` (`on_bar`) |
 | **أسواق متعددة** | CCXT crypto، IBKR، MT5، Alpaca — صفحة حسابات وسيط موحّدة |
 | **بنية production** | PostgreSQL 16 + Redis 7، Workers، صور GHCR multi-arch |
@@ -101,19 +101,19 @@
 </div>
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/brokermr810/QuantDinger/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/brokermr810/Fractal/main/install.sh | bash
 ```
 
 <div dir="rtl">
 
-افتراضيًا `~/quantdinger`. أعد التشغيل لسحب أحدث الصور. → **`http://localhost:8888`** (`quantdinger` / `123456`، غيّر كلمة المرور فورًا).
+افتراضيًا `~/fractal`. أعد التشغيل لسحب أحدث الصور. → **`http://localhost:8888`** (`fractal` / `123456`، غيّر كلمة المرور فورًا).
 
 ### قياسي: استنساخ المستودع (macOS / Linux)
 
 </div>
 
 ```bash
-git clone https://github.com/brokermr810/QuantDinger.git && cd QuantDinger && cp backend_api_python/env.example backend_api_python/.env && chmod +x scripts/generate-secret-key.sh && ./scripts/generate-secret-key.sh && docker-compose up -d --build
+git clone https://github.com/brokermr810/Fractal.git && cd Fractal && cp backend_api_python/env.example backend_api_python/.env && chmod +x scripts/generate-secret-key.sh && ./scripts/generate-secret-key.sh && docker-compose up -d --build
 ```
 
 <div dir="rtl">
@@ -127,8 +127,8 @@ git clone https://github.com/brokermr810/QuantDinger.git && cd QuantDinger && cp
 </div>
 
 ```powershell
-git clone https://github.com/brokermr810/QuantDinger.git
-Set-Location QuantDinger
+git clone https://github.com/brokermr810/Fractal.git
+Set-Location Fractal
 Copy-Item backend_api_python\env.example -Destination backend_api_python\.env
 $key = & python -c "import secrets; print(secrets.token_hex(32))" 2>$null
 if (-not $key) { $key = & py -c "import secrets; print(secrets.token_hex(32))" 2>$null }
@@ -145,15 +145,15 @@ docker-compose up -d --build
 
 ---
 
-افتح **`http://localhost:8888`**، سجّل الدخول بـ **`quantdinger` / `123456`**، ثم **غيّر كلمة مرور المسؤول فورًا**. للتفاصيل راجع [التثبيت والتشغيل الأول](#التثبيت-والتشغيل-الأول).
+افتح **`http://localhost:8888`**، سجّل الدخول بـ **`fractal` / `123456`**، ثم **غيّر كلمة مرور المسؤول فورًا**. للتفاصيل راجع [التثبيت والتشغيل الأول](#التثبيت-والتشغيل-الأول).
 
 ## مستودعات ذات صلة
 
 | المستودع | المحتوى |
 |----------|---------|
-| **[QuantDinger](https://github.com/brokermr810/QuantDinger)** (هذا المستودع) | الخلفية، Compose، الوثائق، ويب مُجمَّع |
-| **[QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue)** | **مصدر الويب** (Vue) — وسم `v*` ينشر تلقائيًا `ghcr.io/brokermr810/quantdinger-frontend` |
-| **[QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile)** | **عميل الجوال** (مفتوح المصدر) |
+| **[Fractal](https://github.com/brokermr810/Fractal)** (هذا المستودع) | الخلفية، Compose، الوثائق، ويب مُجمَّع |
+| **[Fractal-Vue](https://github.com/brokermr810/Fractal-Vue)** | **مصدر الويب** (Vue) — وسم `v*` ينشر تلقائيًا `ghcr.io/brokermr810/fractal-frontend` |
+| **[Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile)** | **عميل الجوال** (مفتوح المصدر) |
 
 </div>
 
@@ -165,7 +165,7 @@ docker-compose up -d --build
 
 - **دليل التوصيل:** [**MCP_SETUP.md**](agent/MCP_SETUP.md) — مستضاف / ذاتي الاستضافة، stdio محلي، HTTP عن بُعد، Claude Code CLI، كله في صفحة واحدة.
 - [AGENT_QUICKSTART.md](agent/AGENT_QUICKSTART.md) · [AI_INTEGRATION_DESIGN.md](agent/AI_INTEGRATION_DESIGN.md) · [agent-openapi.json](agent/agent-openapi.json)
-- خادم MCP: [`../mcp_server/README.md`](../mcp_server/README.md) · PyPI [`quantdinger-mcp`](https://pypi.org/project/quantdinger-mcp/)
+- خادم MCP: [`../mcp_server/README.md`](../mcp_server/README.md) · PyPI [`fractal-mcp`](https://pypi.org/project/fractal-mcp/)
 
 **الأمان:** تُسجَّل جميع استدعاءات Agent في سجل التدقيق. رموز التداول (T) افتراضيًا **ورقي فقط**؛ التداول المباشر يتطلب `AGENT_LIVE_TRADING_ENABLED=true` على الخادم و`paper_only=false` على الرمز.
 
@@ -183,7 +183,7 @@ docker-compose up -d --build
 
 ## البنية
 
-**المبدأ:** فصل بيانات السوق · الاستراتيجية/الاختبار · التنفيذ. Nginx + Vue SPA، Flask + Gunicorn، PostgreSQL 16، Redis 7. النشر: `install.sh` بسطر واحد، GHCR zero-repo، full repo Compose، AWS AMI، [SaaS](https://ai.quantdinger.com).
+**المبدأ:** فصل بيانات السوق · الاستراتيجية/الاختبار · التنفيذ. Nginx + Vue SPA، Flask + Gunicorn، PostgreSQL 16، Redis 7. النشر: `install.sh` بسطر واحد، GHCR zero-repo، full repo Compose، AWS AMI، [SaaS](https://ai.fractal.com).
 
 ## جولة بصرية
 
@@ -213,12 +213,12 @@ docker-compose up -d --build
 3. `docker-compose up -d --build`
    - **بديل (بدون استنساخ المستودع)**: اسحب صور backend + frontend الجاهزة المتعددة المعماريات (amd64/arm64) من GHCR مباشرة:
      ```bash
-     curl -O https://raw.githubusercontent.com/brokermr810/QuantDinger/main/docker-compose.ghcr.yml
-     curl -o backend.env https://raw.githubusercontent.com/brokermr810/QuantDinger/main/backend_api_python/env.example
+     curl -O https://raw.githubusercontent.com/brokermr810/Fractal/main/docker-compose.ghcr.yml
+     curl -o backend.env https://raw.githubusercontent.com/brokermr810/Fractal/main/backend_api_python/env.example
      docker compose -f docker-compose.ghcr.yml up -d
      ```
-     الصور الافتراضية: `ghcr.io/brokermr810/quantdinger-{backend,frontend}:latest`. لتثبيت إصدار محدد اضبط `IMAGE_TAG=v3.0.9` في ملف `.env` محلي (أو `BACKEND_TAG` / `FRONTEND_TAG` لتجاوز جانب واحد فقط).
-   - **التطوير المحلي للواجهة**: استنسخ `QuantDinger-Vue` إلى `./QuantDinger-Vue/` (مُتجاهَل من Git) وشغّل `docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build`. التفاصيل في [README الإنجليزي](../README.md#alternative-build-the-frontend-from-vue-source).
+     الصور الافتراضية: `ghcr.io/brokermr810/fractal-{backend,frontend}:latest`. لتثبيت إصدار محدد اضبط `IMAGE_TAG=v3.0.9` في ملف `.env` محلي (أو `BACKEND_TAG` / `FRONTEND_TAG` لتجاوز جانب واحد فقط).
+   - **التطوير المحلي للواجهة**: استنسخ `Fractal-Vue` إلى `./Fractal-Vue/` (مُتجاهَل من Git) وشغّل `docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build`. التفاصيل في [README الإنجليزي](../README.md#alternative-build-the-frontend-from-vue-source).
 4. **الويب:** `http://localhost:8888` · **صحة API:** `http://localhost:5000/api/health`
 5. غيّر كلمة مرور المسؤول الافتراضية قبل الإنتاج. اضبط **`FRONTEND_URL`** في `backend_api_python/.env` على عنوانك الفعلي.
 
@@ -244,36 +244,36 @@ docker-compose up -d --build
 
 **هل يمكن كتابة استراتيجيات بايثون؟** نعم، `IndicatorStrategy` و`ScriptStrategy`.
 
-**الاستخدام التجاري؟** الخلفية **Apache 2.0**. الواجهة [QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue) بترخيص منفصل—اقرأه قبل الاستخدام التجاري. الجوال وفق [QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile).
+**الاستخدام التجاري؟** الخلفية **Apache 2.0**. الواجهة [Fractal-Vue](https://github.com/brokermr810/Fractal-Vue) بترخيص منفصل—اقرأه قبل الاستخدام التجاري. الجوال وفق [Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile).
 
-**هل يوجد تطبيق جوال؟** راجع [QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile).
+**هل يوجد تطبيق جوال؟** راجع [Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile).
 
 ## روابط إحالة للبورصات (مرجعية)
 
 | البورصة | الرابط |
 |---------|--------|
-| Binance | [تسجيل](https://www.bsmkweb.cc/register?ref=QUANTDINGER) |
-| OKX | [تسجيل](https://www.xqmnobxky.com/join/QUANTDINGER) |
+| Binance | [تسجيل](https://www.bsmkweb.cc/register?ref=FRACTAL) |
+| OKX | [تسجيل](https://www.xqmnobxky.com/join/FRACTAL) |
 | Bybit | [تسجيل](https://partner.bybit.com/b/DINGER) |
 
 ## الترخيص
 
 - الخلفية: **Apache License 2.0** ([`../LICENSE`](../LICENSE))
-- واجهة الويب المرفقة: توزيع مُجمَّع. المصدر في [QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue) (ترخيص منفصل)
+- واجهة الويب المرفقة: توزيع مُجمَّع. المصدر في [Fractal-Vue](https://github.com/brokermr810/Fractal-Vue) (ترخيص منفصل)
 - العلامات التجارية: [`../TRADEMARKS.md`](../TRADEMARKS.md)
 
 ## إخلاء مسؤولية
 
-QuantDinger مخصّص للبحث والتعليم والتداول المتوافق مع القانون **الشرعي**. **ليس نصيحة استثمارية.** الاستخدام على مسؤوليتك.
+Fractal مخصّص للبحث والتعليم والتداول المتوافق مع القانون **الشرعي**. **ليس نصيحة استثمارية.** الاستخدام على مسؤوليتك.
 
 ## المجتمع
 
-- [Telegram](https://t.me/quantdinger) · [Discord](https://discord.com/invite/tyx5B6TChr) · [Issues](https://github.com/brokermr810/QuantDinger/issues)
-- البريد: [support@quantdinger.com](mailto:support@quantdinger.com)
+- [Telegram](https://t.me/fractal) · [Discord](https://discord.com/invite/tyx5B6TChr) · [Issues](https://github.com/brokermr810/Fractal/issues)
+- البريد: [support@fractal.com](mailto:support@fractal.com)
 
 ## اتجاه النجوم
 
-[![Star History Chart](https://api.star-history.com/svg?repos=brokermr810/QuantDinger&type=Date)](https://star-history.com/#brokermr810/QuantDinger&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=brokermr810/Fractal&type=Date)](https://star-history.com/#brokermr810/Fractal&Date)
 
 ## شكر وتقدير
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# QuantDinger Python API 启动脚本
+# Fractal Python API 启动脚本
 
 # 激活虚拟环境（如果使用虚拟环境）
 # source venv/bin/activate
@@ -12,7 +12,7 @@ if ! python -c "import flask" 2>/dev/null; then
 fi
 
 # 启动服务
-echo "启动 QuantDinger Python API 服务..."
+echo "启动 Fractal Python API 服务..."
 echo "服务地址: http://0.0.0.0:5000"
 
 # 创建日志目录

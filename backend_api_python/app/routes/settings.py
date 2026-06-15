@@ -93,7 +93,7 @@ ADVANCED_KEYS = {
     # Trading internals
     'MAKER_WAIT_SEC',
     # Agent gateway (operator-level)
-    'AGENT_JOBS_MAX_WORKERS', 'AGENT_LIVE_TRADING_ENABLED', 'QUANTDINGER_DEPLOYMENT_MODE',
+    'AGENT_JOBS_MAX_WORKERS', 'AGENT_LIVE_TRADING_ENABLED', 'FRACTAL_DEPLOYMENT_MODE',
     'ENABLE_PENDING_ORDER_WORKER', 'DISABLE_RESTORE_RUNNING_STRATEGIES',
     # OAuth advanced
     'OAUTH_ALLOWED_REDIRECTS', 'OAUTH_STATE_TTL_MINUTES',
@@ -136,14 +136,14 @@ CONFIG_SCHEMA = {
                 'key': 'BRAND_APP_NAME',
                 'label': 'App Name',
                 'type': 'text',
-                'default': 'QuantDinger',
+                'default': 'Hades',
                 'description': 'Product name shown in the browser tab title and footer copyright.'
             },
             {
                 'key': 'BRAND_COPYRIGHT',
                 'label': 'Footer Copyright',
                 'type': 'text',
-                'default': '© 2025-2026 QuantDinger. All rights reserved.',
+                'default': '© 2025-2026 Hades. All rights reserved.',
                 'description': 'Plain-text copyright line shown at the bottom of every page.'
             },
             {
@@ -194,21 +194,21 @@ CONFIG_SCHEMA = {
                 'key': 'BRAND_CONTACT_SUPPORT_URL',
                 'label': 'Support / Help URL',
                 'type': 'text',
-                'default': 'https://t.me/quantdinger',
+                'default': 'https://t.me/fractal',
                 'description': 'Link target for the "Support" footer item (Telegram group, ticket portal, etc.).'
             },
             {
                 'key': 'BRAND_CONTACT_LIVE_CHAT_URL',
                 'label': 'Live Chat URL',
                 'type': 'text',
-                'default': 'https://t.me/quantdinger',
+                'default': 'https://t.me/fractal',
                 'description': 'Link target for the "Live Chat" footer item.'
             },
             {
                 'key': 'BRAND_CONTACT_FEATURE_REQUEST_URL',
                 'label': 'Feature Request URL',
                 'type': 'text',
-                'default': 'https://github.com/brokermr810/QuantDinger/issues',
+                'default': 'https://github.com/brokermr810/Fractal/issues',
                 'description': 'Where to send users who want to file an issue or feature request.'
             },
         ]
@@ -319,14 +319,14 @@ CONFIG_SCHEMA = {
                 'key': 'SECRET_KEY',
                 'label': 'Secret Key',
                 'type': 'password',
-                'default': 'quantdinger-secret-key-change-me',
+                'default': 'fractal-secret-key-change-me',
                 'description': 'JWT signing secret key. MUST change in production for security'
             },
             {
                 'key': 'ADMIN_USER',
                 'label': 'Admin Username',
                 'type': 'text',
-                'default': 'quantdinger',
+                'default': 'fractal',
                 'description': 'Administrator login username'
             },
             {
@@ -949,7 +949,7 @@ CONFIG_SCHEMA = {
                 'description': 'Hard kill switch for live trading from agent tokens. When False, T-class agent calls always record paper orders even if the token allows live mode.'
             },
             {
-                'key': 'QUANTDINGER_DEPLOYMENT_MODE',
+                'key': 'FRACTAL_DEPLOYMENT_MODE',
                 'label': 'Deployment Mode',
                 'type': 'select',
                 'options': [
@@ -1081,7 +1081,7 @@ CONFIG_SCHEMA = {
                 'label': 'Extra OAuth Redirect Targets',
                 'type': 'text',
                 'required': False,
-                'description': 'Comma-separated scheme+host (+ optional port) of additional frontends allowed as OAuth post-login redirect targets, e.g. https://m.quantdinger.com,https://app.quantdinger.com. FRONTEND_URL is always allowed implicitly.'
+                'description': 'Comma-separated scheme+host (+ optional port) of additional frontends allowed as OAuth post-login redirect targets, e.g. https://m.fractal.com,https://app.fractal.com. FRONTEND_URL is always allowed implicitly.'
             },
             {
                 'key': 'OAUTH_STATE_TTL_MINUTES',
@@ -1542,17 +1542,17 @@ def get_public_config():
 # Default brand values. Used when the matching ENV var is empty or absent so a
 # fresh install still ships with sane copy / links instead of blanks.
 _BRAND_DEFAULTS = {
-    'app_name': 'QuantDinger',
-    'copyright': '© 2025-2026 QuantDinger. All rights reserved.',
+    'app_name': 'Hades',
+    'copyright': '© 2025-2026 Hades. All rights reserved.',
     'contact_email': 'brokermr810@gmail.com',
-    'contact_support_url': 'https://t.me/quantdinger',
-    'contact_feature_request_url': 'https://github.com/brokermr810/QuantDinger/issues',
-    'contact_live_chat_url': 'https://t.me/quantdinger',
-    'social_github': 'https://github.com/brokermr810/QuantDinger',
-    'social_x': 'https://x.com/quantdinger_en',
+    'contact_support_url': 'https://t.me/fractal',
+    'contact_feature_request_url': 'https://github.com/brokermr810/Fractal/issues',
+    'contact_live_chat_url': 'https://t.me/fractal',
+    'social_github': 'https://github.com/brokermr810/Fractal',
+    'social_x': 'https://x.com/fractal_en',
     'social_discord': 'https://discord.com/invite/tyx5B6TChr',
-    'social_telegram': 'https://t.me/quantdinger',
-    'social_youtube': 'https://youtube.com/@quantdinger',
+    'social_telegram': 'https://t.me/fractal',
+    'social_youtube': 'https://youtube.com/@fractal',
 }
 
 
@@ -1575,7 +1575,7 @@ def get_brand_config():
     label entirely from backend ENV vars so operators can rebrand a deployment
     by editing ``.env`` (or the Settings page) — no frontend rebuild required.
 
-    Empty ENV values fall back to the bundled QuantDinger defaults so a fresh
+    Empty ENV values fall back to the bundled Fractal defaults so a fresh
     install still ships with working links instead of blanks.
     """
     social_specs = [
@@ -1794,41 +1794,262 @@ def get_openrouter_balance():
 @login_required
 @admin_required
 def test_connection():
-    """Test third-party API connectivity (admin only)."""
+    """Test third-party API connectivity (admin only).
+
+    Accepts ``api_key`` and ``base_url`` from the request body so the
+    operator can test *before* saving to ``.env``.  Falls back to the
+    current env var when the field is omitted / empty.
+    """
+    import requests as http_requests
+
     try:
         data = request.get_json()
-        service = data.get('service')
-        
-        if service == 'openrouter':
-            # 测试 OpenRouter 连接
-            from app.services.llm import LLMService
-            llm = LLMService()
-            result = llm.test_connection()
-            if result:
-                return jsonify({'code': 1, 'msg': 'OpenRouter connection successful'})
+        service = data.get('service', '')
+        api_key = (data.get('api_key') or '').strip()
+        base_url = (data.get('base_url') or '').strip()
+
+        # ---- helpers ----
+        def _env(key):
+            return (os.getenv(key) or '').strip()
+
+        def _openai_compat_test(key, url):
+            """Probe an OpenAI-compatible ``/models`` endpoint."""
+            if not key and not url:
+                return False, 'API key and base URL are not configured'
+            headers = {'Content-Type': 'application/json'}
+            if key:
+                headers['Authorization'] = f'Bearer {key}'
+            target = f"{url.rstrip('/')}/models"
+            resp = http_requests.get(target, headers=headers, timeout=15)
+            if resp.status_code == 200:
+                body = resp.json()
+                count = len(body.get('data', []))
+                return True, f'Connected — {count} models available'
+            elif resp.status_code == 401:
+                return False, 'Authentication failed — check your API key'
             else:
-                return jsonify({'code': 0, 'msg': 'OpenRouter connection failed'})
-        
+                return False, f'HTTP {resp.status_code}: {resp.text[:200]}'
+
+        # ---- provider dispatch ----
+        if service == 'openrouter':
+            key = api_key or _env('OPENROUTER_API_KEY')
+            ok, msg = _openai_compat_test(key, 'https://openrouter.ai/api/v1')
+            return jsonify({'code': 1 if ok else 0, 'msg': msg})
+
+        elif service == 'openai':
+            key = api_key or _env('OPENAI_API_KEY')
+            url = base_url or _env('OPENAI_BASE_URL') or 'https://api.openai.com/v1'
+            ok, msg = _openai_compat_test(key, url)
+            return jsonify({'code': 1 if ok else 0, 'msg': msg})
+
+        elif service == 'google':
+            key = api_key or _env('GOOGLE_API_KEY')
+            if not key:
+                return jsonify({'code': 0, 'msg': 'Google API key is not configured'})
+            resp = http_requests.get(
+                f'https://generativelanguage.googleapis.com/v1beta/models?key={key}',
+                timeout=15,
+            )
+            if resp.status_code == 200:
+                count = len(resp.json().get('models', []))
+                return jsonify({'code': 1, 'msg': f'Connected — {count} models available'})
+            elif resp.status_code == 400 or resp.status_code == 401:
+                return jsonify({'code': 0, 'msg': 'Authentication failed — check your API key'})
+            else:
+                return jsonify({'code': 0, 'msg': f'HTTP {resp.status_code}'})
+
+        elif service == 'deepseek':
+            key = api_key or _env('DEEPSEEK_API_KEY')
+            url = base_url or _env('DEEPSEEK_BASE_URL') or 'https://api.deepseek.com/v1'
+            ok, msg = _openai_compat_test(key, url)
+            return jsonify({'code': 1 if ok else 0, 'msg': msg})
+
+        elif service == 'grok':
+            key = api_key or _env('GROK_API_KEY')
+            url = base_url or _env('GROK_BASE_URL') or 'https://api.x.ai/v1'
+            ok, msg = _openai_compat_test(key, url)
+            return jsonify({'code': 1 if ok else 0, 'msg': msg})
+
+        elif service == 'atlascloud':
+            key = api_key or _env('ATLASCLOUD_API_KEY')
+            url = base_url or _env('ATLASCLOUD_BASE_URL') or 'https://api.atlascloud.ai/v1'
+            ok, msg = _openai_compat_test(key, url)
+            return jsonify({'code': 1 if ok else 0, 'msg': msg})
+
+        elif service == 'custom':
+            key = api_key or _env('CUSTOM_API_KEY')
+            url = base_url or _env('CUSTOM_API_URL')
+            if not url:
+                return jsonify({'code': 0, 'msg': 'Custom API URL is not configured'})
+            ok, msg = _openai_compat_test(key, url)
+            return jsonify({'code': 1 if ok else 0, 'msg': msg})
+
+        elif service == 'minimax':
+            key = api_key or _env('MINIMAX_API_KEY')
+            url = base_url or _env('MINIMAX_BASE_URL') or 'https://api.minimax.io/v1'
+            ok, msg = _openai_compat_test(key, url)
+            return jsonify({'code': 1 if ok else 0, 'msg': msg})
+
+        elif service == 'litellm':
+            key = api_key or _env('LITELLM_API_KEY')
+            url = base_url or _env('LITELLM_BASE_URL')
+            if not url:
+                return jsonify({'code': 0, 'msg': 'LiteLLM base URL is not configured'})
+            ok, msg = _openai_compat_test(key, url)
+            return jsonify({'code': 1 if ok else 0, 'msg': msg})
+
         elif service == 'finnhub':
-            # 测试 Finnhub 连接
-            import requests
-            api_key = data.get('api_key') or os.getenv('FINNHUB_API_KEY')
-            if not api_key:
+            key = api_key or _env('FINNHUB_API_KEY')
+            if not key:
                 return jsonify({'code': 0, 'msg': 'API key is not configured'})
-            resp = requests.get(
-                f'https://finnhub.io/api/v1/quote?symbol=AAPL&token={api_key}',
-                timeout=10
+            resp = http_requests.get(
+                f'https://finnhub.io/api/v1/quote?symbol=AAPL&token={key}',
+                timeout=10,
             )
             if resp.status_code == 200:
                 return jsonify({'code': 1, 'msg': 'Finnhub connection successful'})
             else:
                 return jsonify({'code': 0, 'msg': f'Finnhub connection failed: {resp.status_code}'})
-        
-        return jsonify({'code': 0, 'msg': 'Unknown service'})
-    
+
+        return jsonify({'code': 0, 'msg': f'Unknown service: {service}'})
+
+    except http_requests.exceptions.Timeout:
+        return jsonify({'code': 0, 'msg': 'Connection timed out — check your network or the provider URL'})
+    except http_requests.exceptions.ConnectionError as e:
+        return jsonify({'code': 0, 'msg': f'Connection error: {e}'})
     except Exception as e:
         logger.error(f"Connection test failed: {e}")
         return jsonify({'code': 0, 'msg': f'Test failed: {str(e)}'})
 
+
+@settings_blp.route('/provider-models', methods=['POST'])
+@login_required
+@admin_required
+def get_provider_models():
+    """Fetch available model list from a provider's API (admin only).
+
+    Accepts ``api_key`` and ``base_url`` from the request body so the
+    operator can browse models *before* saving credentials to ``.env``.
+    """
+    import requests as http_requests
+
+    try:
+        data = request.get_json()
+        provider = data.get('provider', '')
+        api_key = (data.get('api_key') or '').strip()
+        base_url = (data.get('base_url') or '').strip()
+
+        def _env(key):
+            return (os.getenv(key) or '').strip()
+
+        def _openai_compat_models(key, url):
+            """Fetch models from an OpenAI-compatible /models endpoint."""
+            headers = {'Content-Type': 'application/json'}
+            if key:
+                headers['Authorization'] = f'Bearer {key}'
+            target = f"{url.rstrip('/')}/models"
+            resp = http_requests.get(target, headers=headers, timeout=20)
+            if resp.status_code != 200:
+                return None, f'HTTP {resp.status_code}: {resp.text[:200]}'
+            body = resp.json()
+            models = []
+            for m in body.get('data', []):
+                mid = m.get('id', '')
+                if mid:
+                    models.append({
+                        'id': mid,
+                        'name': m.get('name') or mid,
+                    })
+            models.sort(key=lambda x: x['id'])
+            return models, None
+
+        # ---- provider dispatch ----
+        if provider == 'openrouter':
+            key = api_key or _env('OPENROUTER_API_KEY')
+            models, err = _openai_compat_models(key, 'https://openrouter.ai/api/v1')
+
+        elif provider == 'openai':
+            key = api_key or _env('OPENAI_API_KEY')
+            url = base_url or _env('OPENAI_BASE_URL') or 'https://api.openai.com/v1'
+            models, err = _openai_compat_models(key, url)
+
+        elif provider == 'google':
+            key = api_key or _env('GOOGLE_API_KEY')
+            if not key:
+                return jsonify({'code': 0, 'msg': 'Google API key is not configured'})
+            resp = http_requests.get(
+                f'https://generativelanguage.googleapis.com/v1beta/models?key={key}',
+                timeout=20,
+            )
+            if resp.status_code != 200:
+                return jsonify({'code': 0, 'msg': f'HTTP {resp.status_code}'})
+            raw = resp.json().get('models', [])
+            models = []
+            for m in raw:
+                name = m.get('name', '')
+                # name format: "models/gemini-1.5-flash" -> "gemini-1.5-flash"
+                mid = name.replace('models/', '') if name.startswith('models/') else name
+                display = m.get('displayName', mid)
+                if mid:
+                    models.append({'id': mid, 'name': display})
+            models.sort(key=lambda x: x['id'])
+            err = None
+
+        elif provider == 'deepseek':
+            key = api_key or _env('DEEPSEEK_API_KEY')
+            url = base_url or _env('DEEPSEEK_BASE_URL') or 'https://api.deepseek.com/v1'
+            models, err = _openai_compat_models(key, url)
+
+        elif provider == 'grok':
+            key = api_key or _env('GROK_API_KEY')
+            url = base_url or _env('GROK_BASE_URL') or 'https://api.x.ai/v1'
+            models, err = _openai_compat_models(key, url)
+
+        elif provider == 'atlascloud':
+            key = api_key or _env('ATLASCLOUD_API_KEY')
+            url = base_url or _env('ATLASCLOUD_BASE_URL') or 'https://api.atlascloud.ai/v1'
+            models, err = _openai_compat_models(key, url)
+
+        elif provider == 'custom':
+            key = api_key or _env('CUSTOM_API_KEY')
+            url = base_url or _env('CUSTOM_API_URL')
+            if not url:
+                return jsonify({'code': 0, 'msg': 'Custom API URL is not configured'})
+            models, err = _openai_compat_models(key, url)
+
+        elif provider == 'minimax':
+            key = api_key or _env('MINIMAX_API_KEY')
+            url = base_url or _env('MINIMAX_BASE_URL') or 'https://api.minimax.io/v1'
+            models, err = _openai_compat_models(key, url)
+
+        elif provider == 'litellm':
+            key = api_key or _env('LITELLM_API_KEY')
+            url = base_url or _env('LITELLM_BASE_URL')
+            if not url:
+                return jsonify({'code': 0, 'msg': 'LiteLLM base URL is not configured'})
+            models, err = _openai_compat_models(key, url)
+
+        else:
+            return jsonify({'code': 0, 'msg': f'Unknown provider: {provider}'})
+
+        if err:
+            return jsonify({'code': 0, 'msg': err})
+
+        return jsonify({
+            'code': 1,
+            'msg': f'{len(models)} models found',
+            'data': {'models': models}
+        })
+
+    except http_requests.exceptions.Timeout:
+        return jsonify({'code': 0, 'msg': 'Request timed out'})
+    except http_requests.exceptions.ConnectionError as e:
+        return jsonify({'code': 0, 'msg': f'Connection error: {e}'})
+    except Exception as e:
+        logger.error(f"Fetch provider models failed: {e}")
+        return jsonify({'code': 0, 'msg': f'Failed: {str(e)}'})
+
+
 # openapi-compat: legacy import name
 settings_bp = settings_blp
+

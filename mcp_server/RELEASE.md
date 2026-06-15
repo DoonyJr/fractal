@@ -1,4 +1,4 @@
-# Release quantdinger-mcp to PyPI
+# Release fractal-mcp to PyPI
 
 ## This release: 0.2.0
 
@@ -13,7 +13,7 @@ python -m pytest tests/ -q
 
 # 3. Clean old artifacts (optional)
 Remove-Item -Recurse -Force dist, build -ErrorAction SilentlyContinue
-Remove-Item -Recurse -Force src\quantdinger_mcp.egg-info -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force src\fractal_mcp.egg-info -ErrorAction SilentlyContinue
 
 # 4. Build
 python -m build
@@ -21,11 +21,11 @@ python -m build
 # 5. Upload (you run this — needs your PyPI token)
 $env:TWINE_USERNAME = "__token__"
 $env:TWINE_PASSWORD = "pypi-Ag..."   # your API token
-python -m twine upload dist/quantdinger_mcp-0.2.0*
+python -m twine upload dist/fractal_mcp-0.2.0*
 
 # 6. Verify
-pip install --upgrade "quantdinger-mcp==0.2.0"
-quantdinger-mcp
+pip install --upgrade "fractal-mcp==0.2.0"
+fractal-mcp
 ```
 
 Linux / macOS upload:
@@ -36,11 +36,11 @@ pip install -e ".[dev]"
 python -m pytest tests/ -q
 rm -rf dist build src/*.egg-info
 python -m build
-TWINE_USERNAME=__token__ TWINE_PASSWORD=pypi-... python -m twine upload dist/quantdinger_mcp-0.2.0*
+TWINE_USERNAME=__token__ TWINE_PASSWORD=pypi-... python -m twine upload dist/fractal_mcp-0.2.0*
 ```
 
 ## Notes
 
 - Upload **only** the `0.2.0` files from `dist/` — do not upload older versions again.
-- PyPI token: Account settings → API tokens → scope `quantdinger-mcp` or entire account.
-- After publish: restart Cursor MCP or `pip install --upgrade quantdinger-mcp`.
+- PyPI token: Account settings → API tokens → scope `fractal-mcp` or entire account.
+- After publish: restart Cursor MCP or `pip install --upgrade fractal-mcp`.

@@ -11,17 +11,17 @@ pytest.importorskip("mcp")
 
 @pytest.fixture
 def fresh_module(monkeypatch):
-    monkeypatch.setenv("QUANTDINGER_BASE_URL", "http://localhost:8888")
-    monkeypatch.setenv("QUANTDINGER_AGENT_TOKEN", "qd_agent_test_token")
-    sys.modules.pop("quantdinger_mcp.server", None)
-    sys.modules.pop("quantdinger_mcp.security", None)
+    monkeypatch.setenv("FRACTAL_BASE_URL", "http://localhost:8888")
+    monkeypatch.setenv("FRACTAL_AGENT_TOKEN", "qd_agent_test_token")
+    sys.modules.pop("fractal_mcp.server", None)
+    sys.modules.pop("fractal_mcp.security", None)
     import os
     src_dir = os.path.normpath(
         os.path.join(os.path.dirname(__file__), "..", "src")
     )
     if src_dir not in sys.path:
         sys.path.insert(0, src_dir)
-    return importlib.import_module("quantdinger_mcp.server")
+    return importlib.import_module("fractal_mcp.server")
 
 
 def test_mcp_tool_registry_complete(fresh_module):
@@ -44,7 +44,7 @@ def test_update_strategy_blocks_running_without_trade_scope(fresh_module):
 
 
 def test_indicator_code_size_rejected_in_mcp(monkeypatch, fresh_module):
-    from quantdinger_mcp import security as sec
+    from fractal_mcp import security as sec
 
     huge = "x" * (sec.MAX_INDICATOR_CODE_BYTES + 1)
     with pytest.raises(ValueError, match="KiB"):
@@ -52,7 +52,7 @@ def test_indicator_code_size_rejected_in_mcp(monkeypatch, fresh_module):
 
 
 def test_parse_sse_chunk():
-    from quantdinger_mcp.security import parse_sse_chunk
+    from fractal_mcp.security import parse_sse_chunk
 
     text = (
         'event: snapshot\n'

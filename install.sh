@@ -1,13 +1,13 @@
 #!/bin/bash
 #
-# QuantDinger One-Click Installation Script
-# https://github.com/brokermr810/QuantDinger
+# Fractal One-Click Installation Script
+# https://github.com/brokermr810/Fractal
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/brokermr810/QuantDinger/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/brokermr810/Fractal/main/install.sh | bash
 #
 # Custom install directory:
-#   curl -fsSL https://raw.githubusercontent.com/brokermr810/QuantDinger/main/install.sh | bash -s -- /opt/quantdinger
+#   curl -fsSL https://raw.githubusercontent.com/brokermr810/Fractal/main/install.sh | bash -s -- /opt/fractal
 #
 
 set -e
@@ -19,15 +19,15 @@ BLUE='\033[0;34m'
 CYAN='\033[0;36m'
 NC='\033[0m'
 
-INSTALL_DIR="${1:-$HOME/quantdinger}"
+INSTALL_DIR="${1:-$HOME/fractal}"
 COMPOSE_SOURCE="docker-compose.ghcr.yml"
-GITHUB_RAW="https://raw.githubusercontent.com/brokermr810/QuantDinger/main"
+GITHUB_RAW="https://raw.githubusercontent.com/brokermr810/Fractal/main"
 FRONTEND_PORT="${FRONTEND_PORT:-8888}"
 BACKEND_PORT="${BACKEND_PORT:-5000}"
 
 echo -e "${BLUE}"
 echo "╔════════════════════════════════════════════════════════════╗"
-echo "║           QuantDinger — AI Quant Operating System          ║"
+echo "║           Fractal — AI Quant Operating System          ║"
 echo "║                  One-Click Installation                    ║"
 echo "╚════════════════════════════════════════════════════════════╝"
 echo -e "${NC}"
@@ -88,7 +88,7 @@ pull_images() {
 }
 
 start_services() {
-    echo -e "${YELLOW}Starting QuantDinger services...${NC}"
+    echo -e "${YELLOW}Starting Fractal services...${NC}"
     $COMPOSE_CMD up -d
     echo -e "${GREEN}✓ Services started${NC}"
 }
@@ -142,14 +142,14 @@ print_success() {
     echo -e "  ${BLUE}API:${NC}          http://${SERVER_IP}:${BACKEND_PORT}"
     echo -e "  ${BLUE}Install dir:${NC}  ${INSTALL_DIR}"
     echo ""
-    echo -e "  ${BLUE}Default login:${NC}  quantdinger / 123456"
+    echo -e "  ${BLUE}Default login:${NC}  fractal / 123456"
     echo -e "  ${YELLOW}Change the admin password before any real use.${NC}"
     echo ""
     echo -e "${CYAN}╔════════════════════════════════════════════════════════════╗"
     echo -e "║  Re-run the one-liner anytime to pull latest images        ║"
     echo -e "╚════════════════════════════════════════════════════════════╝${NC}"
     echo ""
-    echo -e "  ${GREEN}curl -fsSL https://raw.githubusercontent.com/brokermr810/QuantDinger/main/install.sh | bash${NC}"
+    echo -e "  ${GREEN}curl -fsSL https://raw.githubusercontent.com/brokermr810/Fractal/main/install.sh | bash${NC}"
     echo ""
     echo -e "${YELLOW}Quick commands:${NC}"
     echo "  cd ${INSTALL_DIR}"

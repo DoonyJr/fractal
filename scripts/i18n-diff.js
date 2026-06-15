@@ -9,7 +9,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const LANG_DIR = path.join(__dirname, '..', 'QuantDinger-Vue-src', 'src', 'locales', 'lang')
+const LANG_DIR = path.join(__dirname, '..', 'Fractal-Vue-src', 'src', 'locales', 'lang')
 const BASE = 'zh-CN'
 
 function extractKeys (filePath) {

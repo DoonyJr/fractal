@@ -1,5 +1,5 @@
 """
-QuantDinger Python API entrypoint.
+Fractal Python API entrypoint.
 """
 import os
 import sys
@@ -104,12 +104,12 @@ app = create_app()
 def main():
     """启动应用"""
     # Keep startup messages ASCII-only and short.
-    print("QuantDinger Python API v2.2.2")
+    print("Hades Python API v2.2.2")
     
     # ========== Critical Security Check for SECRET_KEY ==========
     # In production (DEBUG=False), the SECRET_KEY MUST NOT use the default example value.
     # This prevents attackers from forging JWT tokens with admin privileges.
-    default_secret = "quantdinger-secret-key-change-me"
+    default_secret = "fractal-secret-key-change-me"
     current_secret = Config.SECRET_KEY
     if not Config.DEBUG and current_secret == default_secret:
         import secrets as _secrets

@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1] / "QuantDinger-Vue-src" / "src" / "locales" / "lang"
+ROOT = Path(__file__).resolve().parents[1] / "Fractal-Vue-src" / "src" / "locales" / "lang"
 
 # Keys to upsert: key -> value per locale file stem
 LOCALE_PATCHES: dict[str, dict[str, str]] = {

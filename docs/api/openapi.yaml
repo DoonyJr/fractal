@@ -1,12 +1,12 @@
 info:
-  description: 'Human-facing REST API for QuantDinger. Agent integrations use `/api/agent/v1`
+  description: 'Human-facing REST API for Fractal. Agent integrations use `/api/agent/v1`
     — see `docs/agent/agent-openapi.json`. Conventions: `docs/API_CONVENTIONS.md`.'
   contact:
-    name: QuantDinger
-    url: https://github.com/brokermr810/quantdinger
+    name: Fractal
+    url: https://github.com/brokermr810/fractal
   license:
     name: See repository LICENSE
-  title: QuantDinger Web API
+  title: Fractal Web API
   version: 1.0.0
 components:
   securitySchemes:
@@ -128,7 +128,7 @@ components:
       properties:
         name:
           type: string
-          example: QuantDinger Python API
+          example: Fractal Python API
         version:
           type: string
           example: 3.0.23
@@ -1532,7 +1532,7 @@ paths:
       operationId: getApiMarketConfig
       description: 'Public config for frontend (local mode).
 
-        Mirrors the old PHP `/addons/quantdinger/index/getConfig` shape.'
+        Mirrors the old PHP `/addons/fractal/index/getConfig` shape.'
       x-visibility: public
   /api/market/types:
     get:
@@ -3008,7 +3008,7 @@ paths:
         by editing ``.env`` (or the Settings page) — no frontend rebuild required.
 
 
-        Empty ENV values fall back to the bundled QuantDinger defaults so a fresh
+        Empty ENV values fall back to the bundled Fractal defaults so a fresh
 
         install still ships with working links instead of blanks.'
       tags:

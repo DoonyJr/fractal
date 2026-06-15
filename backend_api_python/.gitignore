@@ -39,6 +39,6 @@ wheels/
 .env.testnet.local
 
 # Local runtime data (do not commit)
-quantdinger.db
+fractal.db
 /data/
 /logs/

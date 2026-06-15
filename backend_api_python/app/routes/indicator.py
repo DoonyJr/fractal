@@ -3,7 +3,7 @@ Indicator APIs (local-first).
 
 These endpoints are used by the frontend `/indicator-analysis` page.
 In the original architecture, the frontend called PHP endpoints like:
-`/addons/quantdinger/indicator/getIndicators`.
+`/addons/fractal/indicator/getIndicators`.
 
 For local mode, we expose Python equivalents under `/api/indicator/*`.
 """
@@ -279,7 +279,7 @@ def _validate_indicator_code_internal(code: str, user_params: Dict[str, Any] | N
         return {
             "success": False,
             "msg": (
-                "Missing execution columns. New QuantDinger indicator scripts must define "
+                "Missing execution columns. New Fractal indicator scripts must define "
                 "df['open_long'], df['close_long'], df['open_short'], and df['close_short'] "
                 "as boolean columns. output['signals'] is chart-only and cannot place orders."
             ),
@@ -879,10 +879,10 @@ def ai_generate():
             headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
         )
 
-    # QuantDinger indicator IDE: chart render + backtest; must pass server verify-code + safe_exec rules.
+    # Fractal indicator IDE: chart render + backtest; must pass server verify-code + safe_exec rules.
     SYSTEM_PROMPT = """# Role
 
-You write production-ready **QuantDinger** indicator scripts: Python that runs in the Indicator IDE, renders on the K-line chart, and drives **backtest entries/exits** via boolean signals. Code must be syntactically valid, safe for the host sandbox, and match the exact I/O contract below.
+You write production-ready **Fractal** indicator scripts: Python that runs in the Indicator IDE, renders on the K-line chart, and drives **backtest entries/exits** via boolean signals. Code must be syntactically valid, safe for the host sandbox, and match the exact I/O contract below.
 
 # Runtime (strict)
 
@@ -1080,11 +1080,11 @@ Return **only** valid Python source: **no** markdown fences, **no** ` ``` `, **n
         user_prompt = prompt
         if existing:
             user_prompt = (
-                "# Existing QuantDinger indicator code (migrate it to the four-way execution contract):\n\n```python\n"
+                "# Existing Fractal indicator code (migrate it to the four-way execution contract):\n\n```python\n"
                 + existing.strip()
                 + "\n```\n\n# Change request:\n\n"
                 + prompt
-                + "\n\nReturn one full replacement script: same QuantDinger rules (my_indicator_name/description, df = df.copy(), declared @param values must be read via params.get(...), four-way execution columns, output dict, list lengths == len(df)). "
+                + "\n\nReturn one full replacement script: same Fractal rules (my_indicator_name/description, df = df.copy(), declared @param values must be read via params.get(...), four-way execution columns, output dict, list lengths == len(df)). "
                 "Python only — no markdown, no prose outside the code."
             )
 
@@ -1158,7 +1158,7 @@ Return **only** valid Python source: **no** markdown fences, **no** ` ``` `, **n
 
         issues_text = _format_validation_issues(validation)
         repair_prompt = (
-            "You produced QuantDinger indicator code that failed automatic validation. "
+            "You produced Fractal indicator code that failed automatic validation. "
             "Fix the code while preserving the user's trading idea and parameters. "
             "Return one full replacement script only.\n\n"
             f"# Original user request\n{prompt}\n\n"
@@ -1167,7 +1167,7 @@ Return **only** valid Python source: **no** markdown fences, **no** ` ``` `, **n
             + bad_code.strip()
             + "\n```\n\n"
             "# Repair requirements\n"
-            "- Keep QuantDinger indicator contract intact.\n"
+            "- Keep Fractal indicator contract intact.\n"
             "- If code declares # @param, read each declared param via params.get(...).\n"
             "- Ensure df['open_long'], df['close_long'], df['open_short'], and df['close_short'] are boolean Series.\n"
             "- Ensure output exists and all plot/signal data lengths equal len(df).\n"

@@ -1,0 +1,21 @@
+{
+  "enabledPlugins": {
+    "business-growth-skills@claude-code-skills": true,
+    "chaos-engineering@claude-code-skills": true,
+    "autoresearch-agent@claude-code-skills": true,
+    "agenthub@claude-code-skills": true,
+    "agile-product-owner@claude-code-skills": true,
+    "andreessen@claude-code-skills": true,
+    "apple-hig-expert@claude-code-skills": true,
+    "business-operations-skills@claude-code-skills": true,
+    "c-level-agents@claude-code-skills": true,
+    "c-level-skills@claude-code-skills": true,
+    "caveman@claude-code-skills": true,
+    "chief-ai-officer-advisor@claude-code-skills": true,
+    "chief-customer-officer-advisor@claude-code-skills": true,
+    "chief-data-officer-advisor@claude-code-skills": true,
+    "code-tour@claude-code-skills": true,
+    "code-to-prd@claude-code-skills": true,
+    "demo-video@claude-code-skills": true
+  }
+}

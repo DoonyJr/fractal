@@ -1,5 +1,5 @@
 """
-QuantDinger Python API - Flask application factory.
+Fractal Python API - Flask application factory.
 """
 import math
 import os
@@ -340,7 +340,7 @@ def create_app(config_name='default'):
     #   - iOS legacy (ionic://)                       → ionic://localhost
     #   - Cordova / file:// loaded apps               → null  (Origin: null)
     #
-    # We always allow these so a packaged QuantDinger mobile app can call
+    # We always allow these so a packaged Fractal mobile app can call
     # the backend without each user editing FRONTEND_URL. They are *fixed
     # synthetic origins controlled by the OS / Capacitor*, not user input,
     # so this does not widen exposure to real third-party sites.

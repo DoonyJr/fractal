@@ -1,4 +1,4 @@
-# QuantDinger Web API (OpenAPI)
+# Fractal Web API (OpenAPI)
 
 Human-facing REST API specification generated from **flask-smorest** (`app/openapi/`).
 

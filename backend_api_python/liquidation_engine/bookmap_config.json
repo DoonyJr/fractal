@@ -1,0 +1,35 @@
+{
+  "default": {
+    "wall_multiplier": 5.0,
+    "track_levels": 50,
+    "persistence_window": 300,
+    "min_dwell": 10.0,
+    "persistence_norm": 300.0,
+    "absorption_scale": 10.0,
+    "depletion_strong": 50.0,
+    "iceberg_min_refills": 3,
+    "iceberg_norm": 10.0
+  },
+  "BTCUSDT": {
+    "wall_multiplier": 6.0,
+    "depletion_strong": 80.0,
+    "absorption_scale": 15.0
+  },
+  "ETHUSDT": {
+    "depletion_strong": 60.0,
+    "absorption_scale": 12.0
+  },
+  "ZECUSDT": {
+    "wall_multiplier": 4.0,
+    "depletion_strong": 15.0,
+    "absorption_scale": 5.0,
+    "min_dwell": 8.0
+  },
+  "HYPEUSDT": {
+    "wall_multiplier": 4.0,
+    "depletion_strong": 20.0,
+    "absorption_scale": 6.0,
+    "min_dwell": 6.0,
+    "persistence_norm": 180.0
+  }
+}

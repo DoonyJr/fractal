@@ -1,6 +1,6 @@
-# QuantDinger Python API (backend)
+# Fractal Python API (backend)
 
-Flask-based backend for QuantDinger: market data, indicators, AI analysis, backtesting, and a strategy runtime with multi-user support.
+Flask-based backend for Fractal: market data, indicators, AI analysis, backtesting, and a strategy runtime with multi-user support.
 
 ## What you get
 
@@ -57,9 +57,9 @@ Create `.env` file in project root:
 
 ```bash
 # Database
-POSTGRES_USER=quantdinger
+POSTGRES_USER=fractal
 POSTGRES_PASSWORD=your_secure_password
-POSTGRES_DB=quantdinger
+POSTGRES_DB=fractal
 
 # Admin account (created on first startup)
 ADMIN_USER=admin
@@ -115,13 +115,13 @@ This will:
 ```bash
 # Create database and user
 sudo -u postgres psql
-CREATE DATABASE quantdinger;
-CREATE USER quantdinger WITH ENCRYPTED PASSWORD 'your_password';
-GRANT ALL PRIVILEGES ON DATABASE quantdinger TO quantdinger;
+CREATE DATABASE fractal;
+CREATE USER fractal WITH ENCRYPTED PASSWORD 'your_password';
+GRANT ALL PRIVILEGES ON DATABASE fractal TO fractal;
 \q
 
 # Initialize schema
-psql -U quantdinger -d quantdinger -f migrations/init.sql
+psql -U fractal -d fractal -f migrations/init.sql
 ```
 
 ### 2) Install dependencies
@@ -147,7 +147,7 @@ Then edit `.env` and set:
 
 ```bash
 # Required
-DATABASE_URL=postgresql://quantdinger:your_password@localhost:5432/quantdinger
+DATABASE_URL=postgresql://fractal:your_password@localhost:5432/fractal
 SECRET_KEY=your-secret-key-change-me
 ADMIN_USER=admin
 ADMIN_PASSWORD=your_admin_password
@@ -229,7 +229,7 @@ POST /api/fast-analysis/feedback   - User feedback on analysis
 
 Set `ADANOS_API_KEY` to enable optional US stock sentiment enrichment from the
 Adanos Market Sentiment API. If the key is not configured, the endpoint returns
-`enabled=false` and the rest of QuantDinger continues to work normally.
+`enabled=false` and the rest of Fractal continues to work normally.
 
 ```bash
 ADANOS_API_KEY=your_adanos_key

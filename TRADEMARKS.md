@@ -1,6 +1,6 @@
-# QuantDinger Trademarks & Branding Policy
+# Fractal Trademarks & Branding Policy
 
-This document governs the use of **QuantDinger** trademarks and brand assets (including the name, logo, and visual identity).  
+This document governs the use of **Fractal** trademarks and brand assets (including the name, logo, and visual identity).  
 It is **separate** from the code license. The code in this repository is licensed under the **Apache License 2.0** (see `LICENSE`).
 
 > Note: This policy is provided for clarity and is not legal advice.
@@ -9,10 +9,10 @@ It is **separate** from the code license. The code in this repository is license
 
 ## 1) What is covered
 
-The following are considered **QuantDinger brand assets**:
+The following are considered **Fractal brand assets**:
 
-- The **QuantDinger** name and word marks
-- The QuantDinger **logo**, icon, and related images
+- The **Fractal** name and word marks
+- The Fractal **logo**, icon, and related images
 - Project branding used in the UI/website/marketing materials
 - Any confusingly similar marks or visual identity that may imply association
 
@@ -31,8 +31,8 @@ You must still comply with Apache 2.0 requirements (e.g., preserving license/cop
 
 You may:
 
-- **Accurately refer** to the project as “QuantDinger” when discussing the unmodified project (e.g., tutorials, reviews, bug reports).
-- Use the name “QuantDinger” to **link to this repository** or the official community channels.
+- **Accurately refer** to the project as “Fractal” when discussing the unmodified project (e.g., tutorials, reviews, bug reports).
+- Use the name “Fractal” to **link to this repository** or the official community channels.
 - Use the logo/name for **non-commercial editorial references** (e.g., blog posts) as long as it does not imply endorsement, and the logo is used **unmodified**.
 
 ---
@@ -41,11 +41,11 @@ You may:
 
 You may **not**, without written permission:
 
-- Use QuantDinger trademarks/branding in a way that **suggests endorsement**, sponsorship, affiliation, or official status when it is not true.
-- Redistribute a **modified** version of the software while keeping QuantDinger branding in a way that could confuse users about the origin.
-- **Modify, adapt, recolor, distort, crop, or create derivative works** of the QuantDinger logo or other brand assets.
-- **Replace/alter/remove** QuantDinger branding in a redistribution **while still using the QuantDinger name/logo/brand** (including in-app UI branding), unless you have a commercial license.
-- Use QuantDinger branding to market a competing product/service as “official”, “certified”, or “approved” by QuantDinger.
+- Use Fractal trademarks/branding in a way that **suggests endorsement**, sponsorship, affiliation, or official status when it is not true.
+- Redistribute a **modified** version of the software while keeping Fractal branding in a way that could confuse users about the origin.
+- **Modify, adapt, recolor, distort, crop, or create derivative works** of the Fractal logo or other brand assets.
+- **Replace/alter/remove** Fractal branding in a redistribution **while still using the Fractal name/logo/brand** (including in-app UI branding), unless you have a commercial license.
+- Use Fractal branding to market a competing product/service as “official”, “certified”, or “approved” by Fractal.
 - Register or use confusingly similar names/domains/social accounts that may mislead users.
 
 ---
@@ -54,11 +54,11 @@ You may **not**, without written permission:
 
 If you fork and distribute a modified version:
 
-- **Do not** use “QuantDinger” as the primary product name.
-- **Do not modify** QuantDinger logos/brand assets. If you do not have a commercial license, you should **remove QuantDinger branding and rebrand** your distribution to avoid confusion.
+- **Do not** use “Fractal” as the primary product name.
+- **Do not modify** Fractal logos/brand assets. If you do not have a commercial license, you should **remove Fractal branding and rebrand** your distribution to avoid confusion.
 - Keep required Apache 2.0 notices (LICENSE/NOTICE) and do not misrepresent authorship.
 
-If you distribute an **unmodified** build, you may keep QuantDinger branding, but you must not imply that your organization is the official owner unless authorized.
+If you distribute an **unmodified** build, you may keep Fractal branding, but you must not imply that your organization is the official owner unless authorized.
 
 ---
 
@@ -66,8 +66,8 @@ If you distribute an **unmodified** build, you may keep QuantDinger branding, bu
 
 If you need any of the following, please contact us for a **commercial license / written permission**:
 
-- Keeping QuantDinger branding in a redistributed modified version
-- **Changing/replacing/removing** QuantDinger branding in the UI/distribution (as agreed)
+- Keeping Fractal branding in a redistributed modified version
+- **Changing/replacing/removing** Fractal branding in the UI/distribution (as agreed)
 - Modifying/removing copyright display as agreed
 - White-labeling / OEM / enterprise deployments
 
@@ -82,5 +82,5 @@ Commercial licensing can include:
 ## 7) Contact
 
 - Telegram: `https://t.me/worldinbroker`
-- Email: `mailto:support@quantdinger.com`
+- Email: `mailto:support@fractal.com`
 

@@ -1,4 +1,4 @@
--- QuantDinger PostgreSQL Schema Initialization
+-- Fractal PostgreSQL Schema Initialization
 -- This script runs automatically when PostgreSQL container starts for the first time.
 
 -- =============================================================================
@@ -1340,5 +1340,5 @@ ALTER TABLE qd_agent_jobs ADD COLUMN IF NOT EXISTS progress JSONB;
 -- =============================================================================
 DO $$
 BEGIN
-    RAISE NOTICE 'QuantDinger PostgreSQL schema initialized successfully!';
+    RAISE NOTICE 'Fractal PostgreSQL schema initialized successfully!';
 END $$;

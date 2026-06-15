@@ -1,11 +1,11 @@
 #!/bin/sh
-# QuantDinger Docker Entrypoint Script
+# Fractal Docker Entrypoint Script
 # Checks and validates SECRET_KEY before starting the application
 
 set -e
 
 echo "============================================"
-echo "  QuantDinger Backend - Starting..."
+echo "  Fractal Backend - Starting..."
 echo "============================================"
 
 # Check if .env file exists
@@ -23,7 +23,7 @@ if [ ! -f /app/.env ]; then
 fi
 
 # Check SECRET_KEY configuration
-DEFAULT_SECRET="quantdinger-secret-key-change-me"
+DEFAULT_SECRET="fractal-secret-key-change-me"
 CURRENT_SECRET=$(grep -E "^SECRET_KEY=" /app/.env 2>/dev/null | cut -d'=' -f2- | tr -d '"' | tr -d "'" | xargs || echo "")
 
 if [ -z "$CURRENT_SECRET" ]; then

@@ -20,7 +20,7 @@ def local_desktop_brokers_allowed() -> bool:
 def desktop_broker_cloud_reject_message() -> str:
     return (
         "当前部署环境已关闭 IBKR / MT5（需本机 TWS、IB Gateway 或 MT5 终端）。"
-        "请在个人电脑或私有服务器上本地部署 QuantDinger，并安装 Interactive Brokers TWS/Gateway 或 MetaTrader 5。"
+        "请在个人电脑或私有服务器上本地部署 Fractal，并安装 Interactive Brokers TWS/Gateway 或 MetaTrader 5。"
         " | This server has disabled IBKR/MT5 (requires local TWS/Gateway or MT5). "
-        "Deploy QuantDinger on your own machine and install IBKR or MetaTrader 5."
+        "Deploy Fractal on your own machine and install IBKR or MetaTrader 5."
     )

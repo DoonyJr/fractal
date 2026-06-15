@@ -1,4 +1,4 @@
-# QuantDinger Docker Compose - One-Click Deployment
+# Fractal Docker Compose - One-Click Deployment
 # Usage:
 #   1. Copy env.example to .env and edit your settings
 #      cp backend_api_python/env.example backend_api_python/.env
@@ -9,8 +9,8 @@
 #   4. Open http://localhost:8888
 #
 # Backend is built from local source. Frontend is pulled from GHCR — its source
-# lives in the private QuantDinger-Vue repo, which publishes
-# `ghcr.io/<owner>/quantdinger-frontend` on every `v*` tag. Override the tag
+# lives in the private Fractal-Vue repo, which publishes
+# `ghcr.io/<owner>/fractal-frontend` on every `v*` tag. Override the tag
 # or image path via FRONTEND_IMAGE / IMAGE_TAG in a project-root `.env`.
 #
 # Note: The container will NOT start if SECRET_KEY is using the default value.
@@ -30,12 +30,12 @@ services:
   # ========================
   postgres:
     image: ${IMAGE_PREFIX:-}postgres:16-alpine
-    container_name: quantdinger-db
+    container_name: fractal-db
     restart: unless-stopped
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-quantdinger}
-      POSTGRES_USER: ${POSTGRES_USER:-quantdinger}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-quantdinger123}
+      POSTGRES_DB: ${POSTGRES_DB:-fractal}
+      POSTGRES_USER: ${POSTGRES_USER:-fractal}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-fractal123}
       TZ: ${TZ:-Asia/Shanghai}
     # Raise PostgreSQL's max_connections so the backend pool (default
     # DB_POOL_MAX=50) plus psql/admin connections never exceed PG's own
@@ -52,9 +52,9 @@ services:
     ports:
       - "${DB_PORT:-127.0.0.1:5432}:5432"
     networks:
-      - quantdinger-network
+      - fractal-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-quantdinger} -d ${POSTGRES_DB:-quantdinger}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-fractal} -d ${POSTGRES_DB:-fractal}"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -64,13 +64,13 @@ services:
   # ========================
   redis:
     image: ${IMAGE_PREFIX:-}redis:7-alpine
-    container_name: quantdinger-redis
+    container_name: fractal-redis
     restart: unless-stopped
     command: ["redis-server", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru"]
     ports:
       - "${REDIS_PORT:-127.0.0.1:6379}:6379"
     networks:
-      - quantdinger-network
+      - fractal-network
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s
@@ -93,7 +93,7 @@ services:
         # APP_VERSION explicitly, or GIT_TAG/IMAGE_TAG as a non-floating fallback.
         APP_VERSION: ${APP_VERSION:-}
         GIT_TAG: ${GIT_TAG:-${IMAGE_TAG:-}}
-    container_name: quantdinger-backend
+    container_name: fractal-backend
     restart: unless-stopped
     depends_on:
       postgres:
@@ -112,7 +112,7 @@ services:
       - PYTHON_API_PORT=5000
       - GIT_TAG=${GIT_TAG:-${IMAGE_TAG:-}}
       - TZ=${TZ:-Asia/Shanghai}
-      - DATABASE_URL=postgresql://${POSTGRES_USER:-quantdinger}:${POSTGRES_PASSWORD:-quantdinger123}@postgres:5432/${POSTGRES_DB:-quantdinger}
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-fractal}:${POSTGRES_PASSWORD:-fractal123}@postgres:5432/${POSTGRES_DB:-fractal}
       - DB_TYPE=postgresql
       - REDIS_HOST=redis
       - REDIS_PORT=6379
@@ -139,7 +139,7 @@ services:
       # Include :8000 when using Vite dev server alongside this stack.
       - FRONTEND_URL=${FRONTEND_URL:-http://localhost:8888,http://localhost:8000}
     networks:
-      - quantdinger-network
+      - fractal-network
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
       interval: 30s
@@ -150,20 +150,20 @@ services:
   # Frontend (Nginx serving prebuilt SPA)
   # ========================
   # Default behaviour: pull the prebuilt multi-arch image from GHCR.
-  # Local iteration: clone QuantDinger-Vue into `./QuantDinger-Vue/`
+  # Local iteration: clone Fractal-Vue into `./Fractal-Vue/`
   # (gitignored) and layer the build override on top:
   #   docker compose -f docker-compose.yml -f docker-compose.build.yml up --build
   # The `build:` block lives in docker-compose.build.yml so users who only
-  # pull never need the `./QuantDinger-Vue/` directory to exist (Compose
+  # pull never need the `./Fractal-Vue/` directory to exist (Compose
   # validates build context paths eagerly when `build:` is present).
   frontend:
     # Tag resolution (highest precedence wins):
     #   FRONTEND_TAG   — per-side override, decouples FE from BE
     #   IMAGE_TAG      — unified knob, sets both FE and BE (BE only relevant in ghcr.yml)
     #   latest         — fallback; pin semver in project-root .env (e.g. IMAGE_TAG=3.0.10)
-    image: ${FRONTEND_IMAGE:-ghcr.io/brokermr810/quantdinger-frontend}:${FRONTEND_TAG:-${IMAGE_TAG:-latest}}
+    image: ${FRONTEND_IMAGE:-ghcr.io/brokermr810/fractal-frontend}:${FRONTEND_TAG:-${IMAGE_TAG:-latest}}
     pull_policy: always
-    container_name: quantdinger-frontend
+    container_name: fractal-frontend
     restart: unless-stopped
     ports:
       - "${FRONTEND_PORT:-8888}:80"
@@ -175,7 +175,7 @@ services:
     depends_on:
       - backend
     networks:
-      - quantdinger-network
+      - fractal-network
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost/health"]
       interval: 30s
@@ -191,5 +191,5 @@ volumes:
     driver: local
 
 networks:
-  quantdinger-network:
+  fractal-network:
     driver: bridge

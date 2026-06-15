@@ -210,8 +210,8 @@ class LLMService:
         
         # OpenRouter specific headers
         if "openrouter" in base_url:
-            headers["HTTP-Referer"] = "https://quantdinger.com"
-            headers["X-Title"] = "QuantDinger Analysis"
+            headers["HTTP-Referer"] = "https://fractal.com"
+            headers["X-Title"] = "Fractal Analysis"
 
         data = {
             "model": model,

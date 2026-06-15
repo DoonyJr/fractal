@@ -1,5 +1,5 @@
 """
-QuantDinger MCP server — exposes the Agent Gateway as MCP tools.
+Fractal MCP server — exposes the Agent Gateway as MCP tools.
 
 This is intentionally a thin wrapper:
   * REST stays the source of truth (`/api/agent/v1`).
@@ -63,19 +63,19 @@ def _env(name: str, required: bool = True) -> str:
     value = (os.environ.get(name) or "").strip()
     if not value and required:
         print(
-            f"[quantdinger-mcp] missing required env var: {name}",
+            f"[fractal-mcp] missing required env var: {name}",
             file=sys.stderr,
         )
         sys.exit(2)
     return value
 
 
-BASE_URL = _env("QUANTDINGER_BASE_URL").rstrip("/")
-AGENT_TOKEN = _env("QUANTDINGER_AGENT_TOKEN")
-TIMEOUT_S = float(os.environ.get("QUANTDINGER_TIMEOUT_S", "60"))
-JOB_STREAM_MAX_EVENTS = int(os.environ.get("QUANTDINGER_MCP_JOB_STREAM_MAX_EVENTS", "200"))
-JOB_STREAM_MAX_SECONDS = float(os.environ.get("QUANTDINGER_MCP_JOB_STREAM_MAX_SECONDS", "300"))
-JOB_POLL_MAX_SECONDS = float(os.environ.get("QUANTDINGER_MCP_JOB_POLL_MAX_SECONDS", "300"))
+BASE_URL = _env("FRACTAL_BASE_URL").rstrip("/")
+AGENT_TOKEN = _env("FRACTAL_AGENT_TOKEN")
+TIMEOUT_S = float(os.environ.get("FRACTAL_TIMEOUT_S", "60"))
+JOB_STREAM_MAX_EVENTS = int(os.environ.get("FRACTAL_MCP_JOB_STREAM_MAX_EVENTS", "200"))
+JOB_STREAM_MAX_SECONDS = float(os.environ.get("FRACTAL_MCP_JOB_STREAM_MAX_SECONDS", "300"))
+JOB_POLL_MAX_SECONDS = float(os.environ.get("FRACTAL_MCP_JOB_POLL_MAX_SECONDS", "300"))
 
 
 _client = httpx.Client(
@@ -124,9 +124,9 @@ def _unwrap(r: httpx.Response) -> Any:
 
 
 mcp = FastMCP(
-    "quantdinger",
+    "fractal",
     instructions=(
-        "Tools for the QuantDinger self-hosted quant platform. "
+        "Tools for the Fractal self-hosted quant platform. "
         "All tools are tenant-scoped via the configured agent token. "
         "Trading is intentionally NOT exposed via MCP; use the REST API for that. "
         "SECURITY: never log or paste the agent token; responses may include "
@@ -299,7 +299,7 @@ def stream_job_until_done(
 
 @mcp.tool()
 def get_indicator_authoring_contract() -> Any:
-    """Fetch QuantDinger indicator I/O contract + starter Python template.
+    """Fetch Fractal indicator I/O contract + starter Python template.
 
     Call this BEFORE writing indicator code. The `code` field in backtests
     and strategies must be valid Python matching this contract — not natural
@@ -546,12 +546,12 @@ _TRANSPORTS = {"stdio", "sse", "streamable-http"}
 
 
 def _resolve_transport() -> str:
-    raw = (os.environ.get("QUANTDINGER_MCP_TRANSPORT") or "stdio").strip().lower()
+    raw = (os.environ.get("FRACTAL_MCP_TRANSPORT") or "stdio").strip().lower()
     if raw in ("http", "streaming-http", "streamable_http"):
         raw = "streamable-http"
     if raw not in _TRANSPORTS:
         print(
-            f"[quantdinger-mcp] unknown transport '{raw}'. "
+            f"[fractal-mcp] unknown transport '{raw}'. "
             f"Expected one of: {sorted(_TRANSPORTS)} (or http/streaming-http alias).",
             file=sys.stderr,
         )
@@ -560,8 +560,8 @@ def _resolve_transport() -> str:
 
 
 def _apply_http_settings_from_env() -> None:
-    host = (os.environ.get("QUANTDINGER_MCP_HOST") or "").strip()
-    port_raw = (os.environ.get("QUANTDINGER_MCP_PORT") or "").strip()
+    host = (os.environ.get("FRACTAL_MCP_HOST") or "").strip()
+    port_raw = (os.environ.get("FRACTAL_MCP_PORT") or "").strip()
     settings = getattr(mcp, "settings", None)
     if settings is None:
         return
@@ -575,7 +575,7 @@ def _apply_http_settings_from_env() -> None:
             settings.port = int(port_raw)
         except Exception:
             print(
-                f"[quantdinger-mcp] invalid QUANTDINGER_MCP_PORT='{port_raw}', ignoring.",
+                f"[fractal-mcp] invalid FRACTAL_MCP_PORT='{port_raw}', ignoring.",
                 file=sys.stderr,
             )
 
@@ -584,11 +584,11 @@ def main() -> None:
     """Entrypoint.
 
     Transport selection (env-only — works in both desktop and cloud):
-      QUANTDINGER_MCP_TRANSPORT=stdio              (default; stdin/stdout)
-      QUANTDINGER_MCP_TRANSPORT=sse                (SSE over HTTP)
-      QUANTDINGER_MCP_TRANSPORT=streamable-http    (newer MCP HTTP transport)
-      QUANTDINGER_MCP_HOST=0.0.0.0                 (bind for HTTP transports)
-      QUANTDINGER_MCP_PORT=7800                    (port for HTTP transports)
+      FRACTAL_MCP_TRANSPORT=stdio              (default; stdin/stdout)
+      FRACTAL_MCP_TRANSPORT=sse                (SSE over HTTP)
+      FRACTAL_MCP_TRANSPORT=streamable-http    (newer MCP HTTP transport)
+      FRACTAL_MCP_HOST=0.0.0.0                 (bind for HTTP transports)
+      FRACTAL_MCP_PORT=7800                    (port for HTTP transports)
     """
     transport = _resolve_transport()
     if transport in ("sse", "streamable-http"):

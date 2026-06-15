@@ -1,4 +1,4 @@
-# QuantDinger Launch Materials
+# Fractal Launch Materials
 
 ## One-liner
 
@@ -10,18 +10,18 @@
 
 ## Short Description (200 chars)
 
-QuantDinger turns your trading ideas into automated strategies using 7 AI agents. Describe what you want in plain language, backtest with real data, and deploy to 10+ exchanges. Self-hosted, open source.
+Fractal turns your trading ideas into automated strategies using 7 AI agents. Describe what you want in plain language, backtest with real data, and deploy to 10+ exchanges. Self-hosted, open source.
 
 ## HN "Show HN" Title
 
-Show HN: QuantDinger – Self-hosted AI trading platform (idea → strategy → backtest → live)
+Show HN: Fractal – Self-hosted AI trading platform (idea → strategy → backtest → live)
 
 ## HN Comment Body
 
 ```
 Hey HN,
 
-I built QuantDinger because I was tired of paying $200+/mo for trading platforms 
+I built Fractal because I was tired of paying $200+/mo for trading platforms 
 that lock you into their ecosystem. It's a self-hosted, open-source quantitative 
 trading platform where you describe your strategy in natural language, AI writes 
 the Python code, you backtest it, then deploy to live trading.
@@ -38,8 +38,8 @@ Stack: Flask + Vue 2 + PostgreSQL + Redis
 
 Self-hosted means your API keys, strategies, and alpha never leave your machine.
 
-Live demo: https://ai.quantdinger.com
-GitHub: https://github.com/brokermr810/QuantDinger
+Live demo: https://ai.fractal.com
+GitHub: https://github.com/brokermr810/Fractal
 
 Would love feedback on the UX and what data sources / exchanges you'd like to see next.
 ```
@@ -57,7 +57,7 @@ Would love feedback on the UX and what data sources / exchanges you'd like to se
 ```
 Hi everyone! 👋
 
-I'm excited to share QuantDinger — a project born from frustration with 
+I'm excited to share Fractal — a project born from frustration with 
 expensive, closed-source trading platforms.
 
 The core idea: you describe your trading strategy in plain English (or Chinese), 

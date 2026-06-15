@@ -15,11 +15,11 @@ RUN pip install --no-cache-dir .
 # Cloud defaults: bind streamable-http to all interfaces on the platform-supplied
 # port. Override any of these on the platform side; stdio still works locally
 # because pipx/uvx invocations don't inherit these.
-ENV QUANTDINGER_MCP_TRANSPORT=streamable-http \
-    QUANTDINGER_MCP_HOST=0.0.0.0 \
-    QUANTDINGER_MCP_PORT=7800 \
+ENV FRACTAL_MCP_TRANSPORT=streamable-http \
+    FRACTAL_MCP_HOST=0.0.0.0 \
+    FRACTAL_MCP_PORT=7800 \
     PYTHONUNBUFFERED=1
 
 EXPOSE 7800
 
-CMD ["quantdinger-mcp"]
+CMD ["fractal-mcp"]

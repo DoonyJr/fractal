@@ -123,7 +123,7 @@ def export_users():
                 user.get('updated_at') or '',
             ])
 
-        filename = 'quantdinger_users_export.csv'
+        filename = 'fractal_users_export.csv'
         return Response(
             output.getvalue(),
             mimetype='text/csv; charset=utf-8',

@@ -23,9 +23,9 @@ SEMVER = r"\d+\.\d+\.\d+"
 # The captured group is compared against the VERSION file.
 CHECKS: list[tuple[str, str]] = [
     ("backend_api_python/VERSION", rf"^({SEMVER})$"),
-    ("QuantDinger-Vue-src/package.json", rf'"version"\s*:\s*"({SEMVER})"'),
+    ("Fractal-Vue-src/package.json", rf'"version"\s*:\s*"({SEMVER})"'),
     # README shields.io badges are dynamic (GitHub release endpoint) and not checked here.
-    # README `quantdinger-frontend:X.Y.Z` mentions are not checked — FE and BE
+    # README `fractal-frontend:X.Y.Z` mentions are not checked — FE and BE
     # are versioned independently and the compose default is `latest`.
 ]
 

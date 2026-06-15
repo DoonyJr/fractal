@@ -1,4 +1,4 @@
-# Helper script to generate a secure SECRET_KEY for QuantDinger (Windows PowerShell)
+# Helper script to generate a secure SECRET_KEY for Fractal (Windows PowerShell)
 # Usage: .\scripts\generate-secret-key.ps1
 
 $envFile = "backend_api_python\.env"

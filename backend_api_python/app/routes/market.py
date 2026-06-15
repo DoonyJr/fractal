@@ -156,7 +156,7 @@ def _ensure_watchlist_table():
 def get_public_config():
     """
     Public config for frontend (local mode).
-    Mirrors the old PHP `/addons/quantdinger/index/getConfig` shape.
+    Mirrors the old PHP `/addons/fractal/index/getConfig` shape.
     """
     try:
         cfg = load_addon_config()
@@ -268,7 +268,7 @@ def get_menu_footer_config():
             'user_agreement': '',
             'privacy_policy': ''
         },
-        'copyright': '© 2025-2026 QuantDinger'
+        'copyright': '© 2025-2026 Hades'
     }
     return jsonify({'code': 1, 'msg': 'success', 'data': data})
 

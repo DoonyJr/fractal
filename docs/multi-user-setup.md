@@ -1,6 +1,6 @@
 # Multi-User System Setup Guide
 
-This guide explains how to configure QuantDinger for multi-user mode with PostgreSQL database.
+This guide explains how to configure Fractal for multi-user mode with PostgreSQL database.
 
 ## Architecture Overview
 
@@ -27,9 +27,9 @@ The new `docker-compose.yml` already includes PostgreSQL. Just set the password:
 ```bash
 # Create .env file in project root
 cat > .env << EOF
-POSTGRES_USER=quantdinger
+POSTGRES_USER=fractal
 POSTGRES_PASSWORD=your_secure_password_here
-POSTGRES_DB=quantdinger
+POSTGRES_DB=fractal
 EOF
 ```
 
@@ -74,9 +74,9 @@ brew install postgresql
 sudo -u postgres psql
 
 # Create database and user
-CREATE DATABASE quantdinger;
-CREATE USER quantdinger WITH ENCRYPTED PASSWORD 'your_password';
-GRANT ALL PRIVILEGES ON DATABASE quantdinger TO quantdinger;
+CREATE DATABASE fractal;
+CREATE USER fractal WITH ENCRYPTED PASSWORD 'your_password';
+GRANT ALL PRIVILEGES ON DATABASE fractal TO fractal;
 \q
 ```
 
@@ -84,7 +84,7 @@ GRANT ALL PRIVILEGES ON DATABASE quantdinger TO quantdinger;
 
 ```bash
 # Run init.sql
-psql -U quantdinger -d quantdinger -f backend_api_python/migrations/init.sql
+psql -U fractal -d fractal -f backend_api_python/migrations/init.sql
 ```
 
 ### 4. Configure Backend
@@ -94,7 +94,7 @@ Create/update `backend_api_python/.env`:
 ```bash
 # Database Configuration
 DB_TYPE=postgresql
-DATABASE_URL=postgresql://quantdinger:your_password@localhost:5432/quantdinger
+DATABASE_URL=postgresql://fractal:your_password@localhost:5432/fractal
 
 # Disable single-user legacy mode
 SINGLE_USER_MODE=false
@@ -119,7 +119,7 @@ If you have existing data in SQLite:
 
 ```bash
 # Set environment variables
-export DATABASE_URL=postgresql://quantdinger:your_password@localhost:5432/quantdinger
+export DATABASE_URL=postgresql://fractal:your_password@localhost:5432/fractal
 
 # Run migration script
 python scripts/migrate_sqlite_to_postgres.py
@@ -181,17 +181,17 @@ POST /api/users/change-password - Change own password
 sudo systemctl status postgresql
 
 # Check connection
-psql -U quantdinger -d quantdinger -c "SELECT 1"
+psql -U fractal -d fractal -c "SELECT 1"
 ```
 
 ### Migration fails
 
 ```bash
 # Check SQLite path
-ls -la backend_api_python/data/quantdinger.db
+ls -la backend_api_python/data/fractal.db
 
 # Check PostgreSQL tables
-psql -U quantdinger -d quantdinger -c "\dt"
+psql -U fractal -d fractal -c "\dt"
 ```
 
 ### Token invalid after restart

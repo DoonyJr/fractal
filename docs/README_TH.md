@@ -1,9 +1,9 @@
 <div align="center">
-  <a href="https://github.com/brokermr810/QuantDinger">
-    <img src="screenshots/logo.jpg" alt="QuantDinger Logo" width="220" height="220">
+  <a href="https://github.com/brokermr810/Fractal">
+    <img src="screenshots/logo.jpg" alt="Fractal Logo" width="220" height="220">
   </a>
 
-  <h1>QuantDinger</h1>
+  <h1>Fractal</h1>
   <h3>ระบบปฏิบัติการเทรดเชิงปริมาณ AI ส่วนตัวของคุณ</h3>
   <p><strong>สแต็ก Docker เดียวสำหรับกราฟ มัลติ LLM วิจัย กลยุทธ์ Python แบ็คเทสต์ระดับสถาบัน และไลฟ์หลาย venue—โฮสต์เอง คีย์ของคุณ ข้อมูลของคุณ</strong></p>
   <p><em>quant OS โอเพนซอร์ส: AI ช่วยเขียนโค้ด → แบ็คเทสต์ → เทรดจำลอง → ไลฟ์ (crypto/IBKR/MT5/Alpaca) พร้อม Agent Gateway และ MCP</em></p>
@@ -25,33 +25,33 @@
       <a href="README_AR.md"><strong>العربية</strong></a>
     </p>
     <p style="margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px solid #eaeef2; line-height: 2;">
-      <a href="https://ai.quantdinger.com"><strong>SaaS</strong></a>
+      <a href="https://ai.fractal.com"><strong>SaaS</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
       <a href="https://www.youtube.com/watch?v=tNAZ9uMiUUw"><strong>วิดีโอสาธิต</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
-      <a href="https://www.quantdinger.com"><strong>เว็บไซต์</strong></a>
+      <a href="https://www.fractal.com"><strong>เว็บไซต์</strong></a>
       <span style="color: #d8dee4;"> &nbsp;·&nbsp; </span>
       <a href="https://aws.amazon.com/marketplace/pp/prodview-naanrb7d2mbc6"><strong>AWS Marketplace</strong></a>
     </p>
     <p style="margin: 0; line-height: 2;">
-      <a href="https://t.me/quantdinger"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
+      <a href="https://t.me/fractal"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
       &nbsp;
       <a href="https://discord.com/invite/tyx5B6TChr"><img src="https://img.shields.io/badge/Discord-Server-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
       &nbsp;
-      <a href="https://youtube.com/@quantdinger"><img src="https://img.shields.io/badge/YouTube-%40quantdinger-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
+      <a href="https://youtube.com/@fractal"><img src="https://img.shields.io/badge/YouTube-%40fractal-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
       &nbsp;
-      <a href="https://x.com/QuantDinger_EN"><img src="https://img.shields.io/badge/X-%40QuantDinger_EN-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
+      <a href="https://x.com/Fractal_EN"><img src="https://img.shields.io/badge/X-%40Fractal_EN-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
     </p>
   </div>
 
   <p style="margin-top: 1.45rem; margin-bottom: 10px;">
     <a href="../LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&logo=apache" alt="License"></a>
-    <img src="https://img.shields.io/github/v/release/brokermr810/QuantDinger?style=flat-square&color=orange&label=Version" alt="Version">
+    <img src="https://img.shields.io/github/v/release/brokermr810/Fractal?style=flat-square&color=orange&label=Version" alt="Version">
     <img src="https://img.shields.io/badge/Python-3.10%2B%20%7C%20Docker%203.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
     <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
     <img src="https://img.shields.io/badge/Agent%20Gateway-MCP%20Ready-6f42c1?style=flat-square" alt="Agent Gateway">
     <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
-    <img src="https://img.shields.io/github/stars/brokermr810/QuantDinger?style=flat-square&logo=github" alt="Stars">
+    <img src="https://img.shields.io/github/stars/brokermr810/Fractal?style=flat-square&logo=github" alt="Stars">
   </p>
 </div>
 
@@ -63,24 +63,24 @@
 
 ---
 
-> QuantDinger เป็น **quant OS แบบ self-hosted และเน้นโลคัล** — ไม่ใช่แชทบอทที่มีปุ่มซื้อ รวม **มัลติ LLM วิจัย** **กลยุทธ์ Python เนทีฟ** **แบ็คเทสต์ฝั่งเซิร์ฟเวอร์** และ **ไลฟ์หลายโบรกเกอร์** (10+ crypto venue, IBKR, MT5, Alpaca) ในสแต็กระดับ production ที่คุณควบคุมได้ทั้งหมด
+> Fractal เป็น **quant OS แบบ self-hosted และเน้นโลคัล** — ไม่ใช่แชทบอทที่มีปุ่มซื้อ รวม **มัลติ LLM วิจัย** **กลยุทธ์ Python เนทีฟ** **แบ็คเทสต์ฝั่งเซิร์ฟเวอร์** และ **ไลฟ์หลายโบรกเกอร์** (10+ crypto venue, IBKR, MT5, Alpaca) ในสแต็กระดับ production ที่คุณควบคุมได้ทั้งหมด
 
 <div align="center">
-  <img src="screenshots/ezgif.com-animated-gif-maker.gif" alt="QuantDinger demo" width="920" style="border-radius: 12px; border: 1px solid #eaeef2;">
+  <img src="screenshots/ezgif.com-animated-gif-maker.gif" alt="Fractal demo" width="920" style="border-radius: 12px; border: 1px solid #eaeef2;">
   <p><sub><em>จากศูนย์ถึงรันได้—กราฟ AI วิจัย และเวิร์กโฟลว์กลยุทธ์ในไม่กี่นาที</em></sub></p>
 </div>
 
 <div align="center">
-  <img src="screenshots/architecture.png" alt="สถาปัตยกรรม QuantDinger" width="960">
+  <img src="screenshots/architecture.png" alt="สถาปัตยกรรม Fractal" width="960">
   <p><sub><em>ลูปปิด 5 ชั้น: <strong>ไอเดีย → อินดิเคเตอร์ → กลยุทธ์ → แบ็คเทสต์ → ปรับแต่ง → ดำเนินการ → มอนิเตอร์</strong></em></sub></p>
 </div>
 
 ## ไฮไลต์ทางเทคนิค
 
-| | จุดเด่นของ QuantDinger |
+| | จุดเด่นของ Fractal |
 |---|------------------------|
 | **quant OS ครบวงจร** | กราฟ IDE AI แบ็คเทสต์ bot ไลฟ์ quick trade จัดการบัญชีโบรกเกอร์—ผลิตภัณฑ์เดียว |
-| **Agent-native** | **Agent Gateway** + PyPI [`quantdinger-mcp`](https://pypi.org/project/quantdinger-mcp/) — Cursor / Claude Code / Codex พร้อม audit log |
+| **Agent-native** | **Agent Gateway** + PyPI [`fractal-mcp`](https://pypi.org/project/fractal-mcp/) — Cursor / Claude Code / Codex พร้อม audit log |
 | **runtime กลยุทธ์คู่** | `IndicatorStrategy` (สัญญาณเวกเตอร์) และ `ScriptStrategy` (`on_bar`) |
 | **หลาย venue** | CCXT crypto, IBKR, MT5, Alpaca — หน้าบัญชีโบรกเกอร์รวม |
 | **infra ระดับ production** | PostgreSQL 16 + Redis 7, Worker, อิมเมจ GHCR multi-arch |
@@ -93,15 +93,15 @@
 ### ติดตั้งบรรทัดเดียว (Linux / macOS)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/brokermr810/QuantDinger/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/brokermr810/Fractal/main/install.sh | bash
 ```
 
-ติดตั้งที่ `~/quantdinger` โดยค่าเริ่มต้น รันซ้ำเพื่อ pull อิมเมจล่าสุด → **`http://localhost:8888`** (`quantdinger` / `123456` เปลี่ยนรหัสทันที)
+ติดตั้งที่ `~/fractal` โดยค่าเริ่มต้น รันซ้ำเพื่อ pull อิมเมจล่าสุด → **`http://localhost:8888`** (`fractal` / `123456` เปลี่ยนรหัสทันที)
 
 ### มาตรฐาน: โคลนที่เก็บ (macOS / Linux)
 
 ```bash
-git clone https://github.com/brokermr810/QuantDinger.git && cd QuantDinger && cp backend_api_python/env.example backend_api_python/.env && chmod +x scripts/generate-secret-key.sh && ./scripts/generate-secret-key.sh && docker-compose up -d --build
+git clone https://github.com/brokermr810/Fractal.git && cd Fractal && cp backend_api_python/env.example backend_api_python/.env && chmod +x scripts/generate-secret-key.sh && ./scripts/generate-secret-key.sh && docker-compose up -d --build
 ```
 
 หากไม่มี `docker-compose` ให้ลอง `docker compose`
@@ -111,8 +111,8 @@ git clone https://github.com/brokermr810/QuantDinger.git && cd QuantDinger && cp
 เปิด **Docker Desktop** แล้วรันใน PowerShell:
 
 ```powershell
-git clone https://github.com/brokermr810/QuantDinger.git
-Set-Location QuantDinger
+git clone https://github.com/brokermr810/Fractal.git
+Set-Location Fractal
 Copy-Item backend_api_python\env.example -Destination backend_api_python\.env
 $key = & python -c "import secrets; print(secrets.token_hex(32))" 2>$null
 if (-not $key) { $key = & py -c "import secrets; print(secrets.token_hex(32))" 2>$null }
@@ -127,15 +127,15 @@ docker-compose up -d --build
 
 ---
 
-เปิด **`http://localhost:8888`** ล็อกอินด้วย **`quantdinger` / `123456`** แล้ว **เปลี่ยนรหัสผู้ดูแลระบบทันที** รายละเอียดเพิ่มเติมอยู่ที่ [การติดตั้งและการเริ่มต้น](#การติดตั้งและการเริ่มต้น)
+เปิด **`http://localhost:8888`** ล็อกอินด้วย **`fractal` / `123456`** แล้ว **เปลี่ยนรหัสผู้ดูแลระบบทันที** รายละเอียดเพิ่มเติมอยู่ที่ [การติดตั้งและการเริ่มต้น](#การติดตั้งและการเริ่มต้น)
 
 ## ที่เก็บที่เกี่ยวข้อง
 
 | ที่เก็บ | เนื้อหา |
 |---------|---------|
-| **[QuantDinger](https://github.com/brokermr810/QuantDinger)** (repo นี้) | แบ็กเอนด์ Compose เอกสาร Web สำเร็จรูป |
-| **[QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue)** | **ซอร์สเว็บฟรอนต์** (Vue) — แท็ก `v*` จะเผยแพร่ `ghcr.io/brokermr810/quantdinger-frontend` อัตโนมัติ |
-| **[QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile)** | **ไคลเอนต์มือถือ** (โอเพนซอร์ส) |
+| **[Fractal](https://github.com/brokermr810/Fractal)** (repo นี้) | แบ็กเอนด์ Compose เอกสาร Web สำเร็จรูป |
+| **[Fractal-Vue](https://github.com/brokermr810/Fractal-Vue)** | **ซอร์สเว็บฟรอนต์** (Vue) — แท็ก `v*` จะเผยแพร่ `ghcr.io/brokermr810/fractal-frontend` อัตโนมัติ |
+| **[Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile)** | **ไคลเอนต์มือถือ** (โอเพนซอร์ส) |
 
 <h2 id="mcp--agent-gateway">MCP / Agent Gateway</h2>
 
@@ -143,7 +143,7 @@ docker-compose up -d --build
 
 - **คู่มือเชื่อมต่อ:** [**MCP_SETUP.md**](agent/MCP_SETUP.md) — โฮสต์ / Self-hosted, stdio ในเครื่อง, HTTP ระยะไกล, Claude Code CLI รวมในที่เดียว
 - [AGENT_QUICKSTART.md](agent/AGENT_QUICKSTART.md) · [AI_INTEGRATION_DESIGN.md](agent/AI_INTEGRATION_DESIGN.md) · [agent-openapi.json](agent/agent-openapi.json)
-- เซิร์ฟเวอร์ MCP: [`../mcp_server/README.md`](../mcp_server/README.md) · PyPI [`quantdinger-mcp`](https://pypi.org/project/quantdinger-mcp/)
+- เซิร์ฟเวอร์ MCP: [`../mcp_server/README.md`](../mcp_server/README.md) · PyPI [`fractal-mcp`](https://pypi.org/project/fractal-mcp/)
 
 **ความปลอดภัย:** การเรียก Agent ทุกครั้งถูกบันทึกใน audit log โทเค็นการเทรด (T) เริ่มต้นเป็น **เทรดจำลองเท่านั้น** การเทรดจริงต้องมีทั้ง `AGENT_LIVE_TRADING_ENABLED=true` บนเซิร์ฟเวอร์และ `paper_only=false` บนโทเค็น
 
@@ -161,7 +161,7 @@ docker-compose up -d --build
 
 ## สถาปัตยกรรม
 
-**หลักการ:** แยกข้อมูลตลาด · กลยุทธ์/แบ็คเทสต์ · การดำเนินการ Nginx + Vue SPA, Flask + Gunicorn, PostgreSQL 16, Redis 7 การ deploy: `install.sh` บรรทัดเดียว, GHCR zero-repo, full repo Compose, AWS AMI, [SaaS](https://ai.quantdinger.com)
+**หลักการ:** แยกข้อมูลตลาด · กลยุทธ์/แบ็คเทสต์ · การดำเนินการ Nginx + Vue SPA, Flask + Gunicorn, PostgreSQL 16, Redis 7 การ deploy: `install.sh` บรรทัดเดียว, GHCR zero-repo, full repo Compose, AWS AMI, [SaaS](https://ai.fractal.com)
 
 ## ทัวร์ภาพ
 
@@ -191,12 +191,12 @@ docker-compose up -d --build
 3. `docker-compose up -d --build`
    - **ทางเลือก (ไม่ต้อง clone repo)**: ดึงอิมเมจ backend + frontend สำเร็จรูปแบบหลายสถาปัตยกรรม (amd64/arm64) จาก GHCR โดยตรง:
      ```bash
-     curl -O https://raw.githubusercontent.com/brokermr810/QuantDinger/main/docker-compose.ghcr.yml
-     curl -o backend.env https://raw.githubusercontent.com/brokermr810/QuantDinger/main/backend_api_python/env.example
+     curl -O https://raw.githubusercontent.com/brokermr810/Fractal/main/docker-compose.ghcr.yml
+     curl -o backend.env https://raw.githubusercontent.com/brokermr810/Fractal/main/backend_api_python/env.example
      docker compose -f docker-compose.ghcr.yml up -d
      ```
-     อิมเมจเริ่มต้น: `ghcr.io/brokermr810/quantdinger-{backend,frontend}:latest` ตรึงทั้งสองด้านพร้อมกันด้วย `IMAGE_TAG=v3.0.9` ใน `.env` ภายในเครื่อง (หรือ `BACKEND_TAG` / `FRONTEND_TAG` เพื่อตรึงทีละด้าน)
-   - **พัฒนาฟรอนต์เอนด์ในเครื่อง**: โคลน `QuantDinger-Vue` ไปยัง `./QuantDinger-Vue/` (gitignore แล้ว) แล้วรัน `docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build` รายละเอียดดู [README ภาษาอังกฤษ](../README.md#alternative-build-the-frontend-from-vue-source)
+     อิมเมจเริ่มต้น: `ghcr.io/brokermr810/fractal-{backend,frontend}:latest` ตรึงทั้งสองด้านพร้อมกันด้วย `IMAGE_TAG=v3.0.9` ใน `.env` ภายในเครื่อง (หรือ `BACKEND_TAG` / `FRONTEND_TAG` เพื่อตรึงทีละด้าน)
+   - **พัฒนาฟรอนต์เอนด์ในเครื่อง**: โคลน `Fractal-Vue` ไปยัง `./Fractal-Vue/` (gitignore แล้ว) แล้วรัน `docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build` รายละเอียดดู [README ภาษาอังกฤษ](../README.md#alternative-build-the-frontend-from-vue-source)
 4. **เว็บ:** `http://localhost:8888` · **สุขภาพ API:** `http://localhost:5000/api/health`
 5. เปลี่ยนรหัสผู้ดูแลเริ่มต้นก่อนโปรดักชัน ตั้ง **`FRONTEND_URL`** ใน `backend_api_python/.env` ให้ตรง URL จริง
 
@@ -222,36 +222,36 @@ docker-compose up -d --build
 
 **เขียนกลยุทธ์ด้วย Python ได้ไหม?** ได้ รองรับ `IndicatorStrategy` และ `ScriptStrategy`
 
-**ใช้เชิงพาณิชย์?** แบ็กเอนด์เป็น **Apache 2.0** ฟรอนต์ [QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue) มีใบอนุญาตแยก—อ่านก่อนใช้เชิงพาณิชย์ มือถือตาม [QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile)
+**ใช้เชิงพาณิชย์?** แบ็กเอนด์เป็น **Apache 2.0** ฟรอนต์ [Fractal-Vue](https://github.com/brokermr810/Fractal-Vue) มีใบอนุญาตแยก—อ่านก่อนใช้เชิงพาณิชย์ มือถือตาม [Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile)
 
-**มีแอปมือถือไหม?** ดู [QuantDinger-Mobile](https://github.com/brokermr810/QuantDinger-Mobile)
+**มีแอปมือถือไหม?** ดู [Fractal-Mobile](https://github.com/brokermr810/Fractal-Mobile)
 
 ## ลิงก์แนะนำตลาด (อ้างอิง)
 
 | ตลาด | ลิงก์ |
 |------|------|
-| Binance | [ลงทะเบียน](https://www.bsmkweb.cc/register?ref=QUANTDINGER) |
-| OKX | [ลงทะเบียน](https://www.xqmnobxky.com/join/QUANTDINGER) |
+| Binance | [ลงทะเบียน](https://www.bsmkweb.cc/register?ref=FRACTAL) |
+| OKX | [ลงทะเบียน](https://www.xqmnobxky.com/join/FRACTAL) |
 | Bybit | [ลงทะเบียน](https://partner.bybit.com/b/DINGER) |
 
 ## ใบอนุญาต
 
 - แบ็กเอนด์: **Apache License 2.0** ([`../LICENSE`](../LICENSE))
-- UI เว็บที่แนบมา: แจกแบบสำเร็จรูป ซอร์สที่ [QuantDinger-Vue](https://github.com/brokermr810/QuantDinger-Vue) (ใบอนุญาตแยก)
+- UI เว็บที่แนบมา: แจกแบบสำเร็จรูป ซอร์สที่ [Fractal-Vue](https://github.com/brokermr810/Fractal-Vue) (ใบอนุญาตแยก)
 - เครื่องหมายการค้า: [`../TRADEMARKS.md`](../TRADEMARKS.md)
 
 ## ข้อจำกัดความรับผิด
 
-QuantDinger มีไว้สำหรับการวิจัย การศึกษา และการเทรดที่สอดคล้องกฎหมายเท่านั้น **ไม่ใช่คำแนะนำการลงทุน** การใช้งานเป็นความรับผิดชอบของคุณ
+Fractal มีไว้สำหรับการวิจัย การศึกษา และการเทรดที่สอดคล้องกฎหมายเท่านั้น **ไม่ใช่คำแนะนำการลงทุน** การใช้งานเป็นความรับผิดชอบของคุณ
 
 ## ชุมชน
 
-- [Telegram](https://t.me/quantdinger) · [Discord](https://discord.com/invite/tyx5B6TChr) · [Issues](https://github.com/brokermr810/QuantDinger/issues)
-- Email: [support@quantdinger.com](mailto:support@quantdinger.com)
+- [Telegram](https://t.me/fractal) · [Discord](https://discord.com/invite/tyx5B6TChr) · [Issues](https://github.com/brokermr810/Fractal/issues)
+- Email: [support@fractal.com](mailto:support@fractal.com)
 
 ## แนวโน้ม Star
 
-[![Star History Chart](https://api.star-history.com/svg?repos=brokermr810/QuantDinger&type=Date)](https://star-history.com/#brokermr810/QuantDinger&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=brokermr810/Fractal&type=Date)](https://star-history.com/#brokermr810/Fractal&Date)
 
 ## ขอบคุณ
 

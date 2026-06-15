@@ -2441,7 +2441,7 @@ def ai_generate_strategy():
                 base_cfg['marketCategory'] = detected_market
             elif not base_cfg.get('marketCategory'):
                 base_cfg['marketCategory'] = 'Crypto'
-            # USStock and Forex on QuantDinger are always spot; lock it so
+            # USStock and Forex on Fractal are always spot; lock it so
             # the LLM can't accidentally suggest 'swap' which would later
             # fail broker_market_policy validation.
             if base_cfg.get('marketCategory') in ('USStock', 'Forex'):
@@ -2607,7 +2607,7 @@ Percent / ratio convention:
 
         def _repair_strategy_code_via_llm(bad_code: str, validation: dict) -> str:
             repair_prompt = (
-                "You produced QuantDinger strategy script code that failed automatic validation. "
+                "You produced Fractal strategy script code that failed automatic validation. "
                 "Fix the code while preserving the user's trading idea. Return one full replacement script only.\n\n"
                 f"# Original user request\n{prompt.strip()}\n\n"
                 f"# Validation issues to fix\n{_format_strategy_validation_issues(validation)}\n\n"
@@ -2616,7 +2616,7 @@ Percent / ratio convention:
                 + "\n```\n\n"
                 "# Repair requirements\n"
                 "- Must define both on_init(ctx) and on_bar(ctx, bar).\n"
-                "- Must compile and run in QuantDinger strategy runtime.\n"
+                "- Must compile and run in Fractal strategy runtime.\n"
                 "- Prefer ctx.param(...) for defaults; use explicit open/add/close actions.\n"
                 "- Entry conditions must be edge/crossing events; scale-ins must call add_long/add_short deliberately.\n"
                 "- Return Python only, no markdown, no explanation."

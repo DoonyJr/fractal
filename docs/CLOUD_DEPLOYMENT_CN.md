@@ -1,6 +1,6 @@
-# QuantDinger 云服务器部署指南
+# Fractal 云服务器部署指南
 
-本文面向生产/准生产环境，使用云服务器 + Docker Compose 部署 QuantDinger，并补充域名、HTTPS、反向代理与前后端分离说明。
+本文面向生产/准生产环境，使用云服务器 + Docker Compose 部署 Fractal，并补充域名、HTTPS、反向代理与前后端分离说明。
 
 ## 推荐架构
 
@@ -57,8 +57,8 @@ docker compose version
 ## 3. 拉取项目
 
 ```bash
-git clone https://github.com/brokermr810/QuantDinger.git
-cd QuantDinger
+git clone https://github.com/brokermr810/Fractal.git
+cd Fractal
 ```
 
 ## 4. 配置后端 `.env`
@@ -78,7 +78,7 @@ cp backend_api_python/env.example backend_api_python/.env
 至少检查并修改这些配置：
 
 ```ini
-ADMIN_USER=quantdinger
+ADMIN_USER=fractal
 ADMIN_PASSWORD=your_strong_password
 SECRET_KEY=your_generated_secret
 ```
@@ -156,7 +156,7 @@ sudo apt update
 sudo apt install -y nginx
 ```
 
-推荐站点配置 `/etc/nginx/sites-available/quantdinger.conf`：
+推荐站点配置 `/etc/nginx/sites-available/fractal.conf`：
 
 ```nginx
 server {
@@ -179,7 +179,7 @@ server {
 启用站点：
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/quantdinger.conf /etc/nginx/sites-enabled/quantdinger.conf
+sudo ln -s /etc/nginx/sites-available/fractal.conf /etc/nginx/sites-enabled/fractal.conf
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -224,7 +224,7 @@ https://app.example.com
 
 原因：
 
-- 前端以预构建镜像（`ghcr.io/brokermr810/quantdinger-frontend`）方式拉取，无需本地构建
+- 前端以预构建镜像（`ghcr.io/brokermr810/fractal-frontend`）方式拉取，无需本地构建
 - 前端容器内部已把 `/api/*` 代理到 Docker 网络中的 `backend:5000`
 - 用户只需要维护一个域名和一套 HTTPS
 
@@ -360,12 +360,12 @@ docker-compose logs backend --tail=100
 docker-compose restart frontend
 ```
 
-### 4. `docker compose up` 拉不到 `quantdinger-frontend`
+### 4. `docker compose up` 拉不到 `fractal-frontend`
 
-前端镜像托管在 GHCR（`ghcr.io/brokermr810/quantdinger-frontend`）。若拉取失败：
+前端镜像托管在 GHCR（`ghcr.io/brokermr810/fractal-frontend`）。若拉取失败：
 
 ```bash
-docker pull ghcr.io/brokermr810/quantdinger-frontend:latest
+docker pull ghcr.io/brokermr810/fractal-frontend:latest
 ```
 
 常见原因：

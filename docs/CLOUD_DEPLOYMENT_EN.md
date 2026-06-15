@@ -1,4 +1,4 @@
-# QuantDinger Cloud Server Deployment Guide
+# Fractal Cloud Server Deployment Guide
 
 This guide covers production-style deployment on a cloud server with Docker Compose, domain setup, HTTPS, reverse proxy, and frontend/backend separation options.
 
@@ -57,8 +57,8 @@ If Docker Hub is slow or blocked in your network, you can switch image source la
 ## 3. Clone the Project
 
 ```bash
-git clone https://github.com/brokermr810/QuantDinger.git
-cd QuantDinger
+git clone https://github.com/brokermr810/Fractal.git
+cd Fractal
 ```
 
 ## 4. Configure `backend_api_python/.env`
@@ -78,7 +78,7 @@ Generate and write `SECRET_KEY`:
 At minimum, review these values:
 
 ```ini
-ADMIN_USER=quantdinger
+ADMIN_USER=fractal
 ADMIN_PASSWORD=your_strong_password
 SECRET_KEY=your_generated_secret
 ```
@@ -156,7 +156,7 @@ sudo apt update
 sudo apt install -y nginx
 ```
 
-Recommended site config `/etc/nginx/sites-available/quantdinger.conf`:
+Recommended site config `/etc/nginx/sites-available/fractal.conf`:
 
 ```nginx
 server {
@@ -179,7 +179,7 @@ server {
 Enable it:
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/quantdinger.conf /etc/nginx/sites-enabled/quantdinger.conf
+sudo ln -s /etc/nginx/sites-available/fractal.conf /etc/nginx/sites-enabled/fractal.conf
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -224,7 +224,7 @@ This is the recommended mode for the open-source edition.
 
 Why:
 
-- The frontend is pulled as a prebuilt image (`ghcr.io/brokermr810/quantdinger-frontend`) — no local build
+- The frontend is pulled as a prebuilt image (`ghcr.io/brokermr810/fractal-frontend`) — no local build
 - The frontend container already proxies `/api/*` to `backend:5000` inside Docker
 - Only one public domain and one TLS configuration are needed
 
@@ -360,12 +360,12 @@ docker-compose logs backend --tail=100
 docker-compose restart frontend
 ```
 
-### 4. `docker compose up` fails to pull `quantdinger-frontend`
+### 4. `docker compose up` fails to pull `fractal-frontend`
 
-The frontend image lives on GHCR (`ghcr.io/brokermr810/quantdinger-frontend`). If the pull fails:
+The frontend image lives on GHCR (`ghcr.io/brokermr810/fractal-frontend`). If the pull fails:
 
 ```bash
-docker pull ghcr.io/brokermr810/quantdinger-frontend:latest
+docker pull ghcr.io/brokermr810/fractal-frontend:latest
 ```
 
 Common causes:

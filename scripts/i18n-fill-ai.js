@@ -41,7 +41,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const LANG_DIR = path.join(__dirname, '..', 'QuantDinger-Vue-src', 'src', 'locales', 'lang')
+const LANG_DIR = path.join(__dirname, '..', 'Fractal-Vue-src', 'src', 'locales', 'lang')
 const CACHE_DIR = path.join(__dirname, '.i18n-cache')
 const ALL_LANGS = ['ar-SA', 'de-DE', 'en-US', 'fr-FR', 'ja-JP', 'ko-KR', 'th-TH', 'vi-VN', 'zh-TW']
 const BASE = 'zh-CN'
@@ -155,8 +155,8 @@ const PROVIDERS = {
     headers: (key) => ({
       Authorization: `Bearer ${key}`,
       'content-type': 'application/json',
-      'HTTP-Referer': 'https://quantdinger.local',
-      'X-Title': 'QuantDinger i18n'
+      'HTTP-Referer': 'https://fractal.local',
+      'X-Title': 'Fractal i18n'
     }),
     buildBody: (model, system, user) => ({
       model,
@@ -267,7 +267,7 @@ function appendEntriesToFile (filePath, lang, entries /* [{key, value}] */) {
 }
 
 // ---------- AI ----------
-const SYSTEM_PROMPT = (targetLangName, note) => `You are a professional i18n translator for QuantDinger — a web application covering crypto/stock charts, technical indicators, backtesting, live trading, and automated trading bots.
+const SYSTEM_PROMPT = (targetLangName, note) => `You are a professional i18n translator for Fractal — a web application covering crypto/stock charts, technical indicators, backtesting, live trading, and automated trading bots.
 
 TARGET LANGUAGE: ${targetLangName}
 ${note ? 'STYLE GUIDANCE: ' + note : ''}
@@ -276,7 +276,7 @@ RULES (critical, follow exactly):
 1. Input is a JSON object mapping key -> { "zh": "Simplified Chinese source", "en": "English reference" }
 2. Output ONLY a JSON object mapping the same keys -> translated string value. No markdown, no prose, no code fences, no explanation.
 3. Preserve every placeholder exactly: {name}, {count}, %d, %s, %.2f, {{variable}}, HTML tags, newlines \\n.
-4. Do NOT translate these proper nouns/terms: BTC, ETH, USDT, USDC, API, OKX, Binance, Bitget, Bybit, Gate, MEXC, HTX, Kraken, TradingView, RSI, MACD, EMA, SMA, VWAP, Bollinger, ATR, QuantDinger, AI, JSON.
+4. Do NOT translate these proper nouns/terms: BTC, ETH, USDT, USDC, API, OKX, Binance, Bitget, Bybit, Gate, MEXC, HTX, Kraken, TradingView, RSI, MACD, EMA, SMA, VWAP, Bollinger, ATR, Fractal, AI, JSON.
 5. Trading/finance domain vocabulary must be accurate:
    - 做多/做空/持仓/平仓/加仓/止盈/止损/回测/实盘/挂单/市价/限价/网格/马丁格尔/定投/趋势/资金费率/杠杆 etc.
 6. UI labels should be short and idiomatic — don't translate "确定" into a full sentence; use the target language's standard "OK / Confirm" equivalent.

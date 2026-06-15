@@ -4,8 +4,8 @@
 # This workflow ensures the backend codebase has no syntax errors and passes linting.
 # It does NOT run tests, start servers, or require external services.
 #
-# Note: Frontend source code and CI live in the private QuantDinger-Vue repo.
-# The published `ghcr.io/<owner>/quantdinger-frontend` image is consumed
+# Note: Frontend source code and CI live in the private Fractal-Vue repo.
+# The published `ghcr.io/<owner>/fractal-frontend` image is consumed
 # directly by both docker-compose files — no frontend source or build
 # artefacts are checked in here.
 
@@ -108,7 +108,7 @@ jobs:
 
       - name: Verify VERSION matches all declarations
         # Fails if any *tracked* version constant drifts from repo-root VERSION.
-        # Frontend paths under QuantDinger-Vue-src/ are gitignored (private FE
+        # Frontend paths under Fractal-Vue-src/ are gitignored (private FE
         # repo) and are skipped when absent. Run bump_version.py locally with
         # the full FE checkout to sync those files before building the image.
         run: python scripts/check_version.py

@@ -1,13 +1,13 @@
-# QuantDinger MCP server
+# Fractal MCP server
 
-[![PyPI](https://img.shields.io/pypi/v/quantdinger-mcp?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/quantdinger-mcp/)
-[![Python](https://img.shields.io/pypi/pyversions/quantdinger-mcp?style=flat-square&logo=python&logoColor=white)](https://pypi.org/project/quantdinger-mcp/)
+[![PyPI](https://img.shields.io/pypi/v/fractal-mcp?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/fractal-mcp/)
+[![Python](https://img.shields.io/pypi/pyversions/fractal-mcp?style=flat-square&logo=python&logoColor=white)](https://pypi.org/project/fractal-mcp/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](../LICENSE)
 
 Thin Model Context Protocol server that exposes a curated subset of the
-QuantDinger Agent Gateway (`/api/agent/v1`) as MCP tools, so AI clients
+Fractal Agent Gateway (`/api/agent/v1`) as MCP tools, so AI clients
 that support MCP (Cursor, Claude-style desktop apps, OpenClaw, NanoBot, etc.)
-can drive QuantDinger without writing custom HTTP code.
+can drive Fractal without writing custom HTTP code.
 
 This package is an **additive** integration. The Agent Gateway REST API
 remains the source of truth.
@@ -65,11 +65,11 @@ Read-class (R), Workspace write (W), and Backtest-class (B) tools.
 From PyPI (recommended — works on any machine without cloning the repo):
 
 ```bash
-pipx install quantdinger-mcp
+pipx install fractal-mcp
 # or, no install at all (cached on first run):
-uvx quantdinger-mcp
+uvx fractal-mcp
 # or, into a venv:
-pip install quantdinger-mcp
+pip install fractal-mcp
 ```
 
 Editable install for hacking on the server itself:
@@ -85,33 +85,33 @@ Configuration is env-only so the same binary works in desktop and cloud.
 
 | Variable | Required | Purpose |
 |----------|----------|---------|
-| `QUANTDINGER_BASE_URL`     | yes | e.g. `http://localhost:8888` |
-| `QUANTDINGER_AGENT_TOKEN`  | yes | a token issued via `/api/agent/v1/admin/tokens` |
-| `QUANTDINGER_MCP_TRANSPORT`| no  | `stdio` (default), `sse`, or `streamable-http` |
-| `QUANTDINGER_MCP_HOST`     | no  | bind host for HTTP transports (default `127.0.0.1`) |
-| `QUANTDINGER_MCP_PORT`     | no  | bind port for HTTP transports (default `8000`) |
-| `QUANTDINGER_TIMEOUT_S`    | no  | upstream HTTP timeout (default `60`) |
-| `QUANTDINGER_MCP_JOB_STREAM_MAX_EVENTS` | no | SSE cap (default `200`) |
-| `QUANTDINGER_MCP_JOB_STREAM_MAX_SECONDS` | no | SSE time cap (default `300`) |
-| `QUANTDINGER_MCP_JOB_POLL_MAX_SECONDS` | no | `wait_for_job` cap (default `300`) |
+| `FRACTAL_BASE_URL`     | yes | e.g. `http://localhost:8888` |
+| `FRACTAL_AGENT_TOKEN`  | yes | a token issued via `/api/agent/v1/admin/tokens` |
+| `FRACTAL_MCP_TRANSPORT`| no  | `stdio` (default), `sse`, or `streamable-http` |
+| `FRACTAL_MCP_HOST`     | no  | bind host for HTTP transports (default `127.0.0.1`) |
+| `FRACTAL_MCP_PORT`     | no  | bind port for HTTP transports (default `8000`) |
+| `FRACTAL_TIMEOUT_S`    | no  | upstream HTTP timeout (default `60`) |
+| `FRACTAL_MCP_JOB_STREAM_MAX_EVENTS` | no | SSE cap (default `200`) |
+| `FRACTAL_MCP_JOB_STREAM_MAX_SECONDS` | no | SSE time cap (default `300`) |
+| `FRACTAL_MCP_JOB_POLL_MAX_SECONDS` | no | `wait_for_job` cap (default `300`) |
 
 ### stdio (desktop IDEs)
 
 ```bash
-QUANTDINGER_BASE_URL=http://localhost:8888 \
-QUANTDINGER_AGENT_TOKEN=qd_agent_xxxxx \
-quantdinger-mcp
+FRACTAL_BASE_URL=http://localhost:8888 \
+FRACTAL_AGENT_TOKEN=qd_agent_xxxxx \
+fractal-mcp
 ```
 
 ### SSE / Streamable HTTP (cloud agents, remote IDEs)
 
 ```bash
-QUANTDINGER_BASE_URL=http://localhost:8888 \
-QUANTDINGER_AGENT_TOKEN=qd_agent_xxxxx \
-QUANTDINGER_MCP_TRANSPORT=streamable-http \
-QUANTDINGER_MCP_HOST=0.0.0.0 \
-QUANTDINGER_MCP_PORT=7800 \
-quantdinger-mcp
+FRACTAL_BASE_URL=http://localhost:8888 \
+FRACTAL_AGENT_TOKEN=qd_agent_xxxxx \
+FRACTAL_MCP_TRANSPORT=streamable-http \
+FRACTAL_MCP_HOST=0.0.0.0 \
+FRACTAL_MCP_PORT=7800 \
+fractal-mcp
 ```
 
 The server is then reachable at `http://<host>:7800/`. Use `sse` instead of
@@ -124,11 +124,11 @@ The server is then reachable at `http://<host>:7800/`. Use `sse` instead of
 ```json
 {
   "mcpServers": {
-    "quantdinger": {
-      "command": "quantdinger-mcp",
+    "fractal": {
+      "command": "fractal-mcp",
       "env": {
-        "QUANTDINGER_BASE_URL": "http://localhost:8888",
-        "QUANTDINGER_AGENT_TOKEN": "qd_agent_xxxxxxxx"
+        "FRACTAL_BASE_URL": "http://localhost:8888",
+        "FRACTAL_AGENT_TOKEN": "qd_agent_xxxxxxxx"
       }
     }
   }

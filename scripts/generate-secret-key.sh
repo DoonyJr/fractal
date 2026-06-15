@@ -1,5 +1,5 @@
 #!/bin/bash
-# Helper script to generate a secure SECRET_KEY for QuantDinger
+# Helper script to generate a secure SECRET_KEY for Fractal
 # Usage: ./scripts/generate-secret-key.sh
 
 set -e

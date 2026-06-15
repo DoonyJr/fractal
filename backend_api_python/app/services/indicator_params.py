@@ -433,7 +433,7 @@ class IndicatorParamsParser:
         """
         Rewrite ``# @param`` default values in indicator source (IDE apply-params).
 
-        Mirrors the QuantDinger-Vue ``applyIndicatorParamsToCode`` logic so the
+        Mirrors the Fractal-Vue ``applyIndicatorParamsToCode`` logic so the
         backend can patch code when needed.
         """
         if not indicator_code or not param_values:

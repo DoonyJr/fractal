@@ -1,12 +1,12 @@
-# QuantDinger 功能使用项目日志（2026-05-15）
+# Fractal 功能使用项目日志（2026-05-15）
 
-> 本文档记录一次本地 QuantDinger 平台的功能配置、视觉伴随使用、AI 分析、策略生成与回测演示过程，并整理使用中发现的不完善点与后续二次开发建议。
+> 本文档记录一次本地 Fractal 平台的功能配置、视觉伴随使用、AI 分析、策略生成与回测演示过程，并整理使用中发现的不完善点与后续二次开发建议。
 
 ## 1. 背景
 
 本次使用目标：
 
-1. 启动并验证 QuantDinger 本地服务。
+1. 启动并验证 Fractal 本地服务。
 2. 配置平台可用的 LLM 服务，使 AI 分析、指标代码生成等能力可用。
 3. 通过浏览器伴随方式演示平台主要功能。
 4. 重点演示：
@@ -23,10 +23,10 @@
 
 | 服务 | 说明 | 实际访问/端口 |
 |---|---|---|
-| `quantdinger-frontend` | 前端页面 | `http://localhost:8889` |
-| `quantdinger-backend` | Flask API | `http://127.0.0.1:5001` |
-| `quantdinger-db` | PostgreSQL | `127.0.0.1:5433` |
-| `quantdinger-redis` | Redis | `127.0.0.1:6380` |
+| `fractal-frontend` | 前端页面 | `http://localhost:8889` |
+| `fractal-backend` | Flask API | `http://127.0.0.1:5001` |
+| `fractal-db` | PostgreSQL | `127.0.0.1:5433` |
+| `fractal-redis` | Redis | `127.0.0.1:6380` |
 
 后端健康检查地址：
 
@@ -39,7 +39,7 @@ http://127.0.0.1:5001/api/health
 本次登录使用：
 
 ```text
-用户名：quantdinger
+用户名：fractal
 密码：用户已改为自定义密码
 ```
 
@@ -49,7 +49,7 @@ http://127.0.0.1:5001/api/health
 
 ### 3.1 目标
 
-将 QuantDinger 的 LLM provider 配置为用户提供的 cliproxy OpenAI-compatible 服务。
+将 Fractal 的 LLM provider 配置为用户提供的 cliproxy OpenAI-compatible 服务。
 
 最终配置方向：
 
@@ -686,7 +686,7 @@ AI 分析 → 生成候选策略 → 自动回测 → AI 总结回测结果 → 
 
 本次已验证：
 
-1. QuantDinger 本地服务可访问。
+1. Fractal 本地服务可访问。
 2. 自定义 cliproxy LLM 配置可用于 AI 分析。
 3. BTC/USDT AI 分析功能可正常运行。
 4. 从 AI 分析报告点击“生成策略”可进入策略创建流程，并成功创建 BTC/USDT 策略。
@@ -718,4 +718,4 @@ AI 分析 → 生成候选策略 → 自动回测 → AI 总结回测结果 → 
 ---
 
 记录日期：2026-05-15  
-记录目的：作为 QuantDinger 功能使用日志和二次开发参考。
+记录目的：作为 Fractal 功能使用日志和二次开发参考。

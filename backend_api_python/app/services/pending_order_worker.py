@@ -2560,7 +2560,7 @@ class PendingOrderWorker:
                 symbol=normalized_symbol,
                 side=action,
                 volume=amount,
-                comment="QuantDinger",
+                comment="Fractal",
             )
 
             if not result.success:

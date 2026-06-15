@@ -1,4 +1,4 @@
-"""Gunicorn configuration for QuantDinger backend.
+"""Gunicorn configuration for Fractal backend.
 
 Background workers (strategy restore, portfolio monitor, etc.) are started
 inside ``create_app()`` which is called once per worker.  We use gthread

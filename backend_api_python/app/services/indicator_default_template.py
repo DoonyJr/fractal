@@ -1,5 +1,5 @@
 """
-Canonical default indicator templates (QuantDinger execution contract v1).
+Canonical default indicator templates (Fractal execution contract v1).
 
 Used by AI fallback code generation and as the reference for IDE / docs examples.
 See docs/SIGNAL_EXECUTION_STANDARD_CN.md.
@@ -20,7 +20,7 @@ def build_default_indicator_template(
     safe_name = (name or "策略模板（四路信号）").replace("\\", "\\\\").replace('"', '\\"')
     safe_desc = (description or "").replace("\\", "\\\\").replace('"', '\\"')
     return f'''# ============================================================
-# QuantDinger 默认指标模板 — 形态 B（四路信号）· 契约 v1
+# Fractal 默认指标模板 — 形态 B（四路信号）· 契约 v1
 # ------------------------------------------------------------
 # signal_form: four_way    exit_owner: engine    flip_mode: R2
 # 文档: docs/SIGNAL_EXECUTION_STANDARD_CN.md

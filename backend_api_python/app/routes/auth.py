@@ -280,6 +280,7 @@ def login():
                 'permissions': _get_permissions(user.get('role', 'admin'))
             },
             'must_change_initial_password': _userinfo_must_change_initial_password(user_id),
+            'is_demo': False,
         }
         
         return jsonify({
@@ -872,10 +873,9 @@ def reset_password():
 @login_required
 def change_password():
     """
-    Change password with email verification (for logged-in users).
+    Change password (for logged-in users).
     
     Request body:
-        code: str (verification code sent to user's email)
         new_password: str
     """
     ip_address = _get_client_ip()
@@ -884,37 +884,24 @@ def change_password():
     
     try:
         from app.services.security_service import get_security_service
-        from app.services.email_service import get_email_service
         from app.services.user_service import get_user_service
         
         security = get_security_service()
-        email_service = get_email_service()
         user_service = get_user_service()
         
         data = request.get_json()
         if not data:
             return jsonify({'code': 0, 'msg': 'No data provided', 'data': None}), 400
         
-        code = data.get('code', '').strip()
         new_password = data.get('new_password', '')
         
-        if not code or not new_password:
+        if not new_password:
             return jsonify({'code': 0, 'msg': 'Missing required fields', 'data': None}), 400
         
         # Validate password strength
         pwd_valid, pwd_msg = security.validate_password_strength(new_password)
         if not pwd_valid:
             return jsonify({'code': 0, 'msg': pwd_msg, 'data': None}), 400
-        
-        # Get user
-        user = user_service.get_user_by_id(user_id)
-        if not user or not user.get('email'):
-            return jsonify({'code': 0, 'msg': 'User email not found', 'data': None}), 400
-        
-        # Verify email code
-        code_valid, code_msg = email_service.verify_code(user['email'], code, 'change_password')
-        if not code_valid:
-            return jsonify({'code': 0, 'msg': code_msg, 'data': None}), 400
         
         # Update password
         success = user_service.update_password(user_id, new_password)
@@ -1178,6 +1165,7 @@ def get_user_info():
                         'permissions': _get_permissions(user_data.get('role', 'user'))
                     },
                     'must_change_initial_password': _userinfo_must_change_initial_password(uid),
+                    'is_demo': False,
                 }
             })
         
@@ -1194,7 +1182,9 @@ def get_user_info():
                 'role': {
                     'id': role,
                     'permissions': _get_permissions(role)
-                }
+                },
+                'must_change_initial_password': False,
+                'is_demo': False,
             }
         })
     except Exception as e:

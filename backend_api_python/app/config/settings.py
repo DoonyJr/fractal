@@ -21,7 +21,7 @@ class MetaConfig(type):
 
     @property
     def APP_NAME(cls):
-        return 'QuantDinger Python API'
+        return 'Fractal Python API'
 
     @property
     def VERSION(cls):
@@ -30,11 +30,11 @@ class MetaConfig(type):
     # ==================== 认证配置 ====================
     @property
     def SECRET_KEY(cls):
-        return os.getenv('SECRET_KEY', 'quantdinger-secret-key-change-me')
+        return os.getenv('SECRET_KEY', 'fractal-secret-key-change-me')
 
     @property
     def ADMIN_USER(cls):
-        return os.getenv('ADMIN_USER', 'quantdinger')
+        return os.getenv('ADMIN_USER', 'fractal')
 
     @property
     def ADMIN_PASSWORD(cls):

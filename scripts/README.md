@@ -1,6 +1,6 @@
-# QuantDinger i18n 工具
+# Fractal i18n 工具
 
-补齐 `QuantDinger-Vue-src/src/locales/lang/*.js` 多语言文件缺失 key 的工具链。
+补齐 `Fractal-Vue-src/src/locales/lang/*.js` 多语言文件缺失 key 的工具链。
 
 ## 当前缺失情况
 
@@ -134,17 +134,17 @@ node scripts/i18n-diff.js
 
 ```bash
 # 单个文件回滚
-copy QuantDinger-Vue-src\src\locales\lang\ja-JP.js.bak QuantDinger-Vue-src\src\locales\lang\ja-JP.js
+copy Fractal-Vue-src\src\locales\lang\ja-JP.js.bak Fractal-Vue-src\src\locales\lang\ja-JP.js
 
 # 全部回滚
-for %f in (QuantDinger-Vue-src\src\locales\lang\*.bak) do copy "%f" "%~dpnf"
+for %f in (Fractal-Vue-src\src\locales\lang\*.bak) do copy "%f" "%~dpnf"
 ```
 
 跑完满意后:
 
 ```bash
 # 删除所有 .bak
-del QuantDinger-Vue-src\src\locales\lang\*.bak
+del Fractal-Vue-src\src\locales\lang\*.bak
 # 删除缓存
 rmdir /s /q scripts\.i18n-cache
 ```

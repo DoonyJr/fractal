@@ -433,7 +433,7 @@ def _place_mt5_order(
         symbol=normalized_symbol,
         side=action,
         volume=amount,
-        comment="QuantDinger",
+        comment="Hades",
     )
 
     # Convert MT5Client result to LiveOrderResult format

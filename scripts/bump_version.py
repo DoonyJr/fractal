@@ -31,7 +31,7 @@ PATCHES: list[tuple[str, str, str]] = [
         "{v}",
     ),
     (
-        "QuantDinger-Vue-src/package.json",
+        "Fractal-Vue-src/package.json",
         rf'"version"\s*:\s*"{SEMVER}"',
         '"version": "{v}"',
     ),

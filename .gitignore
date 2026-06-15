@@ -1,19 +1,19 @@
 # ============================================
-# QuantDinger - Open Source Repository
+# Fractal - Open Source Repository
 # ============================================
 
 # ========================
 # Frontend
 # ========================
-# Frontend source lives in the private QuantDinger-Vue repo. The published
-# `ghcr.io/<owner>/quantdinger-frontend` image is consumed via docker-compose
-# by default. For local source iteration, clone QuantDinger-Vue into the
-# `/QuantDinger-Vue/` slot below and run `docker compose up --build` — that
+# Frontend source lives in the private Fractal-Vue repo. The published
+# `ghcr.io/<owner>/fractal-frontend` image is consumed via docker-compose
+# by default. For local source iteration, clone Fractal-Vue into the
+# `/Fractal-Vue/` slot below and run `docker compose up --build` — that
 # path is referenced by docker-compose.yml's frontend `build.context`
 # directive. Nothing under these paths should ever be committed here.
-/quantdinger_vue/
-/QuantDinger-Vue-src/
-/QuantDinger-Vue/
+/fractal_vue/
+/Fractal-Vue-src/
+/Fractal-Vue/
 /frontend/
 
 # ========================
@@ -73,15 +73,15 @@ backend_api_python/dist/
 mcp_server/dist/
 mcp_server/build/
 mcp_server/.smoketest/
-mcp_server/src/quantdinger_mcp.egg-info/
-backend_api_python/data/quantdinger.db
+mcp_server/src/fractal_mcp.egg-info/
+backend_api_python/data/fractal.db
 backend_api_python/data/memory/
 
 # ========================
 # i18n tooling
 # ========================
 scripts/.i18n-cache/
-QuantDinger-Vue-src/src/locales/lang/*.bak
+Fractal-Vue-src/src/locales/lang/*.bak
 
 # ========================
 # Docker

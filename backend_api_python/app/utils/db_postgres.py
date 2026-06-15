@@ -132,9 +132,9 @@ def _get_connection_pool():
                 maxconn=DB_POOL_MAX,
                 host=params.get('host', 'localhost'),
                 port=params.get('port', 5432),
-                user=params.get('user', 'quantdinger'),
+                user=params.get('user', 'fractal'),
                 password=params.get('password', ''),
-                dbname=params.get('dbname', 'quantdinger'),
+                dbname=params.get('dbname', 'fractal'),
                 connect_timeout=10,
                 # Apply timezone at connection establishment so we don't need
                 # per-checkout SET TIME ZONE (which left connections in an
