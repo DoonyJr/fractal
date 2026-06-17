@@ -2,10 +2,12 @@
   "name": "fractal",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "cd Fractal-Vue && npm run dev",
-    "build": "cd Fractal-Vue && npm run build",
-    "preview": "cd Fractal-Vue && npm run preview",
-    "lint": "cd Fractal-Vue && npm run lint"
+    "dev": "node dev-server.js",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:build": "docker compose up -d --build",
+    "preview": "node dev-server.js"
   }
 }
